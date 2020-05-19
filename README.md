@@ -1,13 +1,13 @@
 # GitHub520
 <p align="center">
   <img src="https://vip1.loli.net/2020/05/19/fLSBE29NxoFtOcd.gif"/>
-  <br><strong>HelloGitHub</strong> 分享 GitHub 上有趣、入门级的开源项目。<br>兴趣是最好的老师，这里能够帮你找到编程的兴趣！
+  <br><strong><a href="https://github.com/521xueweihan/HelloGitHub" target="_blank">HelloGitHub</a></strong> 分享 GitHub 上有趣、入门级的开源项目。<br>兴趣是最好的老师，这里能够帮你找到编程的兴趣！
 </p>
 
 ## 一、介绍
 对 GitHub 说"爱"太难了：访问慢、图片加载不出来。
 
-*注：* 本项目还处于测试阶段，仅在本机测试通过，如有问题欢迎提 [issues](https://github.com/521xueweihan/GitHub520/issues)
+*注：* 本项目还处于测试阶段，仅在本机测试通过，如有问题欢迎提 [issues](https://github.com/521xueweihan/GitHub520/issues/new)
 
 ---
 
@@ -17,7 +17,7 @@
 
 花 5 分钟时间，让你"爱"上 GitHub。
 
-## 二、修改 hosts 文件方法
+## 二、使用方法
 
 ### 2.1 复制下面的内容
 ```bash
@@ -38,7 +38,7 @@
 # GitHub520 Host End
 ```
 
-上面内容会自动定时更新，保证最新有效。数据时间：2020-05-19 15:53:24
+上面内容会自动定时更新，保证最新有效。数据时间：2020-05-20T00:20:49+08:00
 
 ### 2.2 修改 hosts 文件
 hosts 文件在每个系统的位置不一，详情如下：
@@ -76,7 +76,7 @@ hosts 文件在每个系统的位置不一，详情如下：
 
 
 ## TODO
-- [ x ] 定时自动更新 hosts 内容
+- [x] 定时自动更新 hosts 内容
 - [ ] 寻到最有 ip 解析结果
 
 
