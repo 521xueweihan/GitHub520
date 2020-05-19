@@ -18,6 +18,7 @@
 花 5 分钟时间，让你"爱"上 GitHub。
 
 ## 二、修改 hosts 文件方法
+
 ### 2.1 复制下面的内容
 ```bash
 # GitHub520 Host Start
@@ -36,6 +37,8 @@
 199.232.68.133                                    avatars0.githubusercontent.com
 # GitHub520 Host End
 ```
+
+上面内容会自动定时更新，保证最新有效。数据时间：2020-05-19 15:53:24
 
 ### 2.2 修改 hosts 文件
 hosts 文件在每个系统的位置不一，详情如下：
@@ -71,8 +74,9 @@ hosts 文件在每个系统的位置不一，详情如下：
 
 ![](./img/new.png)
 
+
 ## TODO
-- [ ] 定时自动更新 hosts 内容
+- [ x ] 定时自动更新 hosts 内容
 - [ ] 寻到最有 ip 解析结果
 
 
