@@ -18,24 +18,13 @@
 花 5 分钟时间，让你"爱"上 GitHub。
 
 ## 二、修改 hosts 文件方法
+
 ### 2.1 复制下面的内容
 ```bash
-# GitHub520 Host Start
-185.199.108.154                                   github.githubassets.com
-199.232.68.133                                    camo.githubusercontent.com
-199.232.68.133                                    github.map.fastly.net
-199.232.69.194                                    github.global.ssl.fastly.net
-140.82.113.4                                      github.com
-140.82.114.5                                      api.github.com
-199.232.68.133                                    raw.githubusercontent.com
-199.232.68.133                                    avatars5.githubusercontent.com
-199.232.68.133                                    avatars4.githubusercontent.com
-199.232.68.133                                    avatars3.githubusercontent.com
-199.232.68.133                                    avatars2.githubusercontent.com
-199.232.68.133                                    avatars1.githubusercontent.com
-199.232.68.133                                    avatars0.githubusercontent.com
-# GitHub520 Host End
+{hosts_str}
 ```
+
+上面内容会自动定时更新，保证最新有效。数据时间：{update_time}
 
 ### 2.2 修改 hosts 文件
 hosts 文件在每个系统的位置不一，详情如下：
@@ -71,8 +60,9 @@ hosts 文件在每个系统的位置不一，详情如下：
 
 ![](./img/new.png)
 
+
 ## TODO
-- [ ] 定时自动更新 hosts 内容
+- [ x ] 定时自动更新 hosts 内容
 - [ ] 寻到最有 ip 解析结果
 
 
