@@ -7,7 +7,7 @@
 #   Desc    :   获取最新的 GitHub 相关域名对应 IP
 import os
 import re
-import datetime
+from datetime import datetime, timezone, timedelta
 from collections import Counter
 
 from retry import retry
@@ -32,7 +32,8 @@ IPADDRESS_PREFIX = ".ipaddress.com"
 
 
 def write_file(hosts_content: str):
-    update_time = datetime.datetime.now().strftime("%Y-%m-%d %H:%M:%S")
+    update_time = datetime.utcnow().astimezone(
+        timezone(timedelta(hours=8))).replace(microsecond=0).isoformat()
     output_file_path = os.path.join(os.path.dirname(__file__), "README.md")
     template_path = os.path.join(os.path.dirname(__file__),
                                  "README_template.md")
