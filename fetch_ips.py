@@ -37,6 +37,13 @@ def write_file(hosts_content: str):
     output_file_path = os.path.join(os.path.dirname(__file__), "README.md")
     template_path = os.path.join(os.path.dirname(__file__),
                                  "README_template.md")
+    with open(output_file_path, "r") as old_readme_fb:
+        old_content = old_readme_fb.read()
+        old_hosts = old_content.split("```bash")[1].split("```")[0].strip()
+    if old_hosts == hosts_content:
+        print("host not change")
+        return
+
     with open(template_path, "r") as temp_fb:
         template_str = temp_fb.read()
         hosts_content = template_str.format(hosts_str=hosts_content,
@@ -66,7 +73,6 @@ def get_ip(session: requests.session, raw_url: str):
     url = make_ipaddress_url(raw_url)
     try:
         rs = session.get(url, timeout=5)
-        print("request: {}".format(url))
         pattern = r"\b(?:[0-9]{1,3}\.){3}[0-9]{1,3}\b"
         ip_list = re.findall(pattern, rs.text)
         ip_counter_obj = Counter(ip_list).most_common(1)

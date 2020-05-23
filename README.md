@@ -38,7 +38,7 @@
 # GitHub520 Host End
 ```
 
-上面内容会自动定时更新，保证最新有效。数据时间：2020-05-23T12:10:30+08:00
+上面内容会自动定时更新，保证最新有效。数据更新时间：2020-05-23T04:29:21+08:00（内容无变动不会更新）
 
 ### 2.2 修改 hosts 文件
 hosts 文件在每个系统的位置不一，详情如下：
@@ -53,6 +53,8 @@ hosts 文件在每个系统的位置不一，详情如下：
 1. Windows 使用记事本。
 2. Linux、Mac 使用 Root 权限：`sudo vi /etc/hosts`。
 3. iPhone、iPad 须越狱、Android 必须要 root。
+
+**Tip**：也可采用 [SwitchHosts](https://github.com/oldj/SwitchHosts) 工具管理 hosts
 
 ### 2.3 激活生效
 大部分情况下是直接生效，如未生效可尝试下面的办法，刷新 DNS：
@@ -77,6 +79,7 @@ hosts 文件在每个系统的位置不一，详情如下：
 
 ## TODO
 - [x] 定时自动更新 hosts 内容
+- [x] hosts 内容无变动不会更新
 - [ ] 寻到最有 ip 解析结果
 
 
