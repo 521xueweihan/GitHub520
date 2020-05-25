@@ -26,8 +26,8 @@
 199.232.68.133                                    camo.githubusercontent.com
 199.232.68.133                                    github.map.fastly.net
 199.232.69.194                                    github.global.ssl.fastly.net
-140.82.112.3                                      github.com
-140.82.114.5                                      api.github.com
+140.82.114.3                                      github.com
+140.82.113.6                                      api.github.com
 199.232.68.133                                    raw.githubusercontent.com
 199.232.68.133                                    avatars5.githubusercontent.com
 199.232.68.133                                    avatars4.githubusercontent.com
@@ -38,7 +38,7 @@
 # GitHub520 Host End
 ```
 
-上面内容会自动定时更新，保证最新有效。数据更新时间：2020-05-25T12:10:37+08:00（内容无变动不会更新）
+上面内容会自动定时更新，保证最新有效。数据更新时间：2020-05-25T16:11:09+08:00（内容无变动不会更新）
 
 ### 2.2 修改 hosts 文件
 hosts 文件在每个系统的位置不一，详情如下：
