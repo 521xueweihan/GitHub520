@@ -22,6 +22,7 @@ RAW_URL = [
     "github.com",
     "api.github.com",
     "raw.githubusercontent.com",
+    "favicons.githubusercontent.com",
     "avatars5.githubusercontent.com",
     "avatars4.githubusercontent.com",
     "avatars3.githubusercontent.com",
