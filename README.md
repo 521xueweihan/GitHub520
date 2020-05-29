@@ -22,9 +22,9 @@
 ### 2.1 复制下面的内容
 ```bash
 # GitHub520 Host Start
-52.188.146.85                                     github.githubassets.com
+52.240.57.126                                     github.githubassets.com
 199.232.68.133                                    camo.githubusercontent.com
-52.188.146.85                                     github.map.fastly.net
+52.240.57.126                                     github.map.fastly.net
 199.232.69.194                                    github.global.ssl.fastly.net
 140.82.112.4                                      github.com
 140.82.112.6                                      api.github.com
@@ -39,7 +39,7 @@
 # GitHub520 Host End
 ```
 
-上面内容会自动定时更新，保证最新有效。数据更新时间：2020-05-29T19:37:06+08:00（内容无变动不会更新）
+上面内容会自动定时更新，保证最新有效。数据更新时间：2020-05-29T20:10:15+08:00（内容无变动不会更新）
 
 ### 2.1 手动方式
 #### 2.1.1 修改 hosts 文件
