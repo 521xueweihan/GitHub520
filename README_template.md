@@ -26,7 +26,8 @@
 
 上面内容会自动定时更新，保证最新有效。数据更新时间：{update_time}（内容无变动不会更新）
 
-### 2.2 修改 hosts 文件
+### 2.1 手动方式
+#### 2.1.1 修改 hosts 文件
 hosts 文件在每个系统的位置不一，详情如下：
 - Windows 系统：`C:\Windows\System32\drivers\etc\hosts`
 - Linux 系统：`/etc/hosts`
@@ -40,9 +41,7 @@ hosts 文件在每个系统的位置不一，详情如下：
 2. Linux、Mac 使用 Root 权限：`sudo vi /etc/hosts`。
 3. iPhone、iPad 须越狱、Android 必须要 root。
 
-**Tip**：也可采用 [SwitchHosts](https://github.com/oldj/SwitchHosts) 工具管理 hosts
-
-### 2.3 激活生效
+#### 2.1.2 激活生效
 大部分情况下是直接生效，如未生效可尝试下面的办法，刷新 DNS：
 
 1. Windows：在 CMD 窗口输入：`ipconfig /flushdns`
@@ -52,6 +51,26 @@ hosts 文件在每个系统的位置不一，详情如下：
 3. Mac 命令：`sudo killall -HUP mDNSResponder`
 
 **Tips：** 上述方法无效可以尝试重启机器。
+
+### 2.2 通过 Hosts 切换工具
+
+**Tip**：推荐 [SwitchHosts](https://github.com/oldj/SwitchHosts) 工具管理 hosts
+
+以 SwitchHosts 为例，看一下怎么使用的，配置参考下面：
+
+Title: 随意
+
+Type: `Remote`
+
+URL: `https://raw.githubusercontent.com/521xueweihan/GitHub520/master/hosts`
+
+Auto Refresh: 最好选 `1 hour`
+
+如图：
+
+![](./img/switch-hosts.png)
+
+这样每次 hots 有更新都能及时进行更新，免去手动更新
 
 ## 三、效果对比
 之前的样子：
