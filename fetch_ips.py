@@ -35,10 +35,12 @@ IPADDRESS_PREFIX = ".ipaddress.com"
 def write_file(hosts_content: str):
     update_time = datetime.utcnow().astimezone(
         timezone(timedelta(hours=8))).replace(microsecond=0).isoformat()
-    output_file_path = os.path.join(os.path.dirname(__file__), "README.md")
+    output_doc_file_path = os.path.join(os.path.dirname(__file__), "README.md")
     template_path = os.path.join(os.path.dirname(__file__),
                                  "README_template.md")
-    with open(output_file_path, "r") as old_readme_fb:
+    # write yaml file
+    write_yaml_file(hosts_content)
+    with open(output_doc_file_path, "r") as old_readme_fb:
         old_content = old_readme_fb.read()
         old_hosts = old_content.split("```bash")[1].split("```")[0].strip()
     if old_hosts == hosts_content:
@@ -49,9 +51,13 @@ def write_file(hosts_content: str):
         template_str = temp_fb.read()
         hosts_content = template_str.format(hosts_str=hosts_content,
                                             update_time=update_time)
-        with open(output_file_path, "w") as output_fb:
+        with open(output_doc_file_path, "w") as output_fb:
             output_fb.write(hosts_content)
 
+def write_yaml_file(hosts_content: str):
+    output_yaml_file_path = os.path.join(os.path.dirname(__file__), 'hosts')
+    with open(output_yaml_file_path, "w") as output_yaml_fb:
+        output_yaml_fb.write(hosts_content)
 
 def make_ipaddress_url(raw_url: str):
     """
