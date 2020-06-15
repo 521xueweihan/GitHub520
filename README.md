@@ -42,7 +42,7 @@
 
 ```
 
-上面内容会自动定时更新，保证最新有效。数据更新时间：2020-06-15T17:35:00+08:00（内容无变动不会更新）
+上面内容会自动定时更新，保证最新有效。数据更新时间：2020-06-16T01:44:49+08:00（内容无变动不会更新）
 
 ### 2.1 手动方式
 #### 2.1.1 修改 hosts 文件
@@ -70,25 +70,28 @@ hosts 文件在每个系统的位置不一，详情如下：
 
 **Tips：** 上述方法无效可以尝试重启机器。
 
-### 2.2 通过 Hosts 切换工具
+### 2.2 自动方式
 
 **Tip**：推荐 [SwitchHosts](https://github.com/oldj/SwitchHosts) 工具管理 hosts
 
 以 SwitchHosts 为例，看一下怎么使用的，配置参考下面：
 
+```
 Title: 随意
 
 Type: `Remote`
 
-URL: `https://raw.githubusercontent.com/521xueweihan/GitHub520/master/hosts`
+URL: `https://gitee.com/xueweihan/codes/6g793pm2k1hacwfbyesl464/raw?blob_name=GitHub520.yml`
 
 Auto Refresh: 最好选 `1 hour`
+
+```
 
 如图：
 
 ![](./img/switch-hosts.png)
 
-这样每次 hots 有更新都能及时进行更新，免去手动更新
+这样每次 hosts 有更新都能及时进行更新，免去手动更新。
 
 ## 三、效果对比
 之前的样子：
