@@ -58,16 +58,13 @@ hosts 文件在每个系统的位置不一，详情如下：
 
 以 SwitchHosts 为例，看一下怎么使用的，配置参考下面：
 
-```
-Title: 随意
+- Title: 随意
 
-Type: `Remote`
+- Type: `Remote`
 
-URL: `https://gitee.com/xueweihan/codes/6g793pm2k1hacwfbyesl464/raw?blob_name=GitHub520.yml`
+- URL: `https://gitee.com/xueweihan/codes/6g793pm2k1hacwfbyesl464/raw?blob_name=GitHub520.yml`
 
-Auto Refresh: 最好选 `1 hour`
-
-```
+- Auto Refresh: 最好选 `1 hour`
 
 如图：
 
