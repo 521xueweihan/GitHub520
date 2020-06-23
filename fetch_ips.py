@@ -8,6 +8,8 @@
 import os
 import re
 import json
+import traceback
+
 from datetime import datetime, timezone, timedelta
 from collections import Counter
 
@@ -120,8 +122,9 @@ def update_gitee_gist(session: requests.session, host_content):
             print("update gitee gist success")
         else:
             print("update gitee gist fail: {} {}".format(response.status_code,
-                                                         response.text()))
+                                                         response.content))
     except Exception as e:
+        traceback.print_exc(e)
         raise Exception(e)
 
 
