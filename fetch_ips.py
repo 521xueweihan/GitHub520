@@ -24,6 +24,7 @@ RAW_URL = [
     "github.global.ssl.fastly.net",
     "github.com",
     "api.github.com",
+    "gist.github.com",
     "raw.githubusercontent.com",
     "user-images.githubusercontent.com",
     "favicons.githubusercontent.com",
