@@ -24,7 +24,7 @@
 # GitHub520 Host Start
 185.199.108.154               github.githubassets.com
 199.232.68.133                camo.githubusercontent.com
-20.44.98.176                  github.map.fastly.net
+40.121.152.212                github.map.fastly.net
 199.232.69.194                github.global.ssl.fastly.net
 140.82.112.4                  github.com
 140.82.114.6                  api.github.com
@@ -42,7 +42,7 @@
 
 ```
 
-上面内容会自动定时更新，保证最新有效。数据更新时间：2020-07-26T02:12:53+08:00（内容无变动不会更新）
+上面内容会自动定时更新，保证最新有效。数据更新时间：2020-07-26T04:13:42+08:00（内容无变动不会更新）
 
 ### 2.1 手动方式
 #### 2.1.1 修改 hosts 文件
