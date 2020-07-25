@@ -60,7 +60,7 @@ hosts 文件在每个系统的位置不一，详情如下：
 3. iPhone、iPad 须越狱、Android 必须要 root。
 
 #### 2.1.2 激活生效
-大部分情况下是直接生效，如未生效可尝试下面的办法，刷新 DNS：
+刷新 DNS：
 
 1. Windows：在 CMD 窗口输入：`ipconfig /flushdns`
 
