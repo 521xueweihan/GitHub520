@@ -26,7 +26,7 @@ hosts=[]
 with open(hostsfile,'r') as fd:
     hosts=fd.readlines()
 
-#删除hosts中第23行到41行（具体要修改多长，需要自己在hosts文件里面看长度，这里我的是23到40行）
+#删除hosts中第23行到40行（具体要修改多长，需要自己在hosts文件里面看长度，这里我的是23到40行）
 for i in range(23,41)[::-1]:
     del hosts[i]
 
