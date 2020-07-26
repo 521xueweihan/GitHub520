@@ -1,0 +1,8 @@
+#python.exe 所在的文件夹
+C:\Users\(你的电脑用户名)\AppData\Local\Programs\Python\Python38
+
+#python.exe 的地址
+C:\Users\(你的电脑用户名)\AppData\Local\Programs\Python\Python38\python.exe
+
+#你的程序地址
+E:\Project\Python\自动改hosts\GitHub520\ChangeHosts.py

@@ -72,6 +72,7 @@ hosts 文件在每个系统的位置不一，详情如下：
 
 ### 2.2 自动方式
 
+#### 2.2.1使用软件[SwitchHosts]
 **Tip**：推荐 [SwitchHosts](https://github.com/oldj/SwitchHosts) 工具管理 hosts
 
 以 SwitchHosts 为例，看一下怎么使用的，配置参考下面：
@@ -89,6 +90,30 @@ hosts 文件在每个系统的位置不一，详情如下：
 ![](./img/switch-hosts.png)
 
 这样每次 hosts 有更新都能及时进行更新，免去手动更新。
+
+#### 2.2.2 使用Python脚本
+
+##### 该方法的基本思路：
+&emsp; 1. 利用Python爬虫取得GitHub520中更新的hosts，并更新hosts文件
+2. 利用Windows的计划任务实现每小时自动运行一次脚本
+
+##### 具体步骤：
+1. Python自动修改hosts的脚本已经写好，即ChangeHosts.py，需要下载到自己的电脑中
+2. 修改hosts需要管理员权限，方法如图：
+
+![](./img/add_permissions.png)
+
+3. 设定计划任务，一般情况只能每天运行一次，每小时运行一次的方法参考CSDN链接：[利用windows计划任务实现每小时甚至每分钟运行一次你的Python代码](https://blog.csdn.net/kangxiaoyanl/article/details/104444534)，修改完毕后效果如图:
+
+![](./img/Auto_Planning.png)
+
+##### 注意：
+1. ChangeHosts.py中的部分参数可能需要根据实际情况修改，第30行处的```range(23:41)```中23和41分别为```# GitHub520 Host Start```和```# GitHub520 Host End```的行数，如下图是一个hosts文件的参考，这里请根据自己实际情况修改。
+
+![hosts参考](./img/example_hosts.png)
+
+2. 在仓库文件中有一个```自动修改hosts需要的路径.txt```文件，是配合上述链接中的计划任务而建立的，实际上建好任务后可以删除
+3. ChangeHosts.py脚本设定的是运行完毕之后等待3秒自动结束（time.sleep(3)），可以在源码中取消等待（取消time.sleep(3)和import time）。
 
 ## 三、效果对比
 之前的样子：

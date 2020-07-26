@@ -21,10 +21,28 @@
 
 ### 2.1 复制下面的内容
 ```bash
-{hosts_str}
+# GitHub520 Host Start
+185.199.108.154               github.githubassets.com
+199.232.68.133                camo.githubusercontent.com
+199.232.68.133                github.map.fastly.net
+199.232.69.194                github.global.ssl.fastly.net
+140.82.112.3                  github.com
+140.82.114.5                  api.github.com
+199.232.68.133                raw.githubusercontent.com
+199.232.68.133                user-images.githubusercontent.com
+199.232.68.133                favicons.githubusercontent.com
+199.232.68.133                avatars5.githubusercontent.com
+199.232.68.133                avatars4.githubusercontent.com
+199.232.68.133                avatars3.githubusercontent.com
+52.188.204.90                 avatars2.githubusercontent.com
+199.232.68.133                avatars1.githubusercontent.com
+199.232.68.133                avatars0.githubusercontent.com
+# Star me GitHub url: https://github.com/521xueweihan/GitHub520
+# GitHub520 Host End
+
 ```
 
-上面内容会自动定时更新，保证最新有效。数据更新时间：{update_time}（内容无变动不会更新）
+上面内容会自动定时更新，保证最新有效。数据更新时间：2020-07-26T14:12:56+08:00（内容无变动不会更新）
 
 ### 2.1 手动方式
 #### 2.1.1 修改 hosts 文件
@@ -92,10 +110,9 @@ hosts 文件在每个系统的位置不一，详情如下：
 ##### 注意：
 1. ChangeHosts.py中的部分参数可能需要根据实际情况修改，第30行处的```range(23:41)```中23和41分别为```# GitHub520 Host Start```和```# GitHub520 Host End```的行数，如下图是一个hosts文件的参考，这里请根据自己实际情况修改。
 
-![hosts参考](./img/example_hosts.png)
+![](./img/example_hosts.png)
 
-2. 在仓库文件中有一个```自动修改hosts需要的路径.txt```文件，是配合上述链接中的计划任务而建立的，实际上建好任务后可以删除
-3. ChangeHosts.py脚本设定的是运行完毕之后等待3秒自动结束（time.sleep(3)），可以在源码中取消等待（取消time.sleep(3)和import time）。
+2. ChangeHosts.py脚本设定的是运行完毕之后等待3秒自动结束（time.sleep(3)），可以在源码中取消等待（取消time.sleep(3)和import time）。
 
 ## 三、效果对比
 之前的样子：
