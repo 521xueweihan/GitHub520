@@ -76,7 +76,7 @@ hosts 文件在每个系统的位置不一，详情如下：
 #### 2.2.2 使用Python脚本
 
 ##### 该方法的基本思路：
-&emsp; 1. 利用Python爬虫取得GitHub520中更新的hosts，并更新hosts文件
+1. 利用Python爬虫取得GitHub520中更新的hosts，并更新hosts文件
 2. 利用Windows的计划任务实现每小时自动运行一次脚本
 
 ##### 具体步骤：
