@@ -108,7 +108,7 @@ hosts 文件在每个系统的位置不一，详情如下：
 ![](./img/Auto_Planning.png)
 
 ##### 注意：
-1. ChangeHosts.py中的部分参数可能需要根据实际情况修改，第30行处的```range(23:41)```中23和41分别为```# GitHub520 Host Start```和```# GitHub520 Host End```的行数，如下图是一个hosts文件的参考，这里请根据自己实际情况修改。
+1. ChangeHosts.py中的部分参数可能需要根据实际情况修改，第30行处的```range(23,41)```中23和41分别为```# GitHub520 Host Start```和```# GitHub520 Host End```的行数，如下图是一个hosts文件的参考，这里请根据自己实际情况修改。
 
 ![hosts参考](./img/example_hosts.png)
 
