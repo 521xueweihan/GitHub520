@@ -6,11 +6,14 @@ import time
 hostsfile="C:\\Windows\\System32\\drivers\\etc\\hosts"
 
 #爬虫开始
-url='https://github.com/521xueweihan/GitHub520'
-r = requests.get(url,timeout=12)
-r.encoding = 'utf-8'
-t = r.text
-soup = bs4.BeautifulSoup(t,'html.parser')
+try :
+    url='https://github.com/521xueweihan/GitHub520'
+    r = requests.get(url,timeout=12)
+    r.encoding = 'utf-8'
+    t = r.text
+    soup = bs4.BeautifulSoup(t,'html.parser')
+except :
+    print('爬虫失败')
 #爬虫结束
 #取得hosts
 nh = []
@@ -30,7 +33,7 @@ for i in range(23,41)[::-1]:
 hosts.append(nh)
 hosts=''.join(hosts)
 
-with open('C:/Windows/System32/drivers/etc/hosts - 副本','w') as fd:
+with open('C:/Windows/System32/drivers/etc/hosts','w') as fd:
     fd.write(hosts)
 
 print('修改成功,3秒后自动关闭')
