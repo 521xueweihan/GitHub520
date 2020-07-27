@@ -72,6 +72,24 @@ hosts 文件在每个系统的位置不一，详情如下：
 
 这样每次 hosts 有更新都能及时进行更新，免去手动更新。
 
+### 2.3 AdGuard Home 用户（自动方式）
+
+在 **过滤器>DNS 封锁清单>添加阻止列表>添加一个自定义列表**，配置如下：
+
+- 名称: 随意
+
+- URL: `https://gitee.com/xueweihan/codes/6g793pm2k1hacwfbyesl464/raw?blob_name=GitHub520.yml`（和上面 SwitchHosts 使用的一样）
+
+如图：
+
+![](./img/AdGuard-rules.png)
+
+更新间隔在 **设置>常规设置>过滤器更新间隔（设置一小时一次即可）**，记得勾选上 **使用过滤器和 Hosts 文件以拦截指定域名**
+
+![](./img/AdGuard-rules2.png)
+
+**Tip**：不要添加在 **DNS 允许清单** 内，只能添加在 **DNS 封锁清单** 才管用。另外，AdGuard for Mac、AdGuard for Windows、AdGuard for Android、AdGuard for IOS 等等 **AdGuard 家族软件** 添加方法均类似。
+
 ## 三、效果对比
 之前的样子：
 
