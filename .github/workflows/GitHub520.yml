@@ -1,0 +1,51 @@
+# This workflow will install Python dependencies, run tests and lint with a variety of Python versions
+# For more information see: https://help.github.com/actions/language-and-framework-guides/using-python-with-github-actions
+
+name: GitHub520
+
+on:
+  push:
+  schedule:
+    - cron: '0 */2 * * *'
+
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        python-version: [3.7]
+
+    steps:
+    - uses: actions/checkout@v2
+    - name: Set up Python ${{ matrix.python-version }}
+      uses: actions/setup-python@v2
+      with:
+        python-version: ${{ matrix.python-version }}
+    - name: Install dependencies
+      run: |
+        python -m pip install --upgrade pip
+        if [ -f requirements.txt ]; then pip install -r requirements.txt; fi
+    - name: update readme
+      env:
+        gitee_token: ${{ secrets.GITEE_TOKEN }}
+        gitee_gist_id: ${{ secrets.GITEE_GIST_ID }}
+        gitee_gist_file_name: ${{ secrets.GITEE_GIST_FILE_NAME }}
+      run: |
+        # fetch new ip content and update readme file
+        python fetch_ips.py
+    - name: commit
+      id: commit
+      run: |
+        git config --global user.email sunxuebangong@gmail.com
+        git config --global user.name action_bot
+        git add .
+        git commit -m "update readme content"
+      continue-on-error: true
+    - name: Check on failures
+      if: steps.commit.outputs.status == 'failure'
+      run: exit 1
+    - name: Push changes
+      uses: ad-m/github-push-action@master
+      with:
+        github_token: ${{ secrets.GITHUB_TOKEN }}
