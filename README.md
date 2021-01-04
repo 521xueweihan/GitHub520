@@ -28,7 +28,7 @@
 199.232.69.194                github.global.ssl.fastly.net
 140.82.112.4                  gist.github.com
 185.199.108.153               github.io
-140.82.114.4                  github.com
+140.82.114.3                  github.com
 140.82.113.6                  api.github.com
 199.232.96.133                raw.githubusercontent.com
 199.232.96.133                user-images.githubusercontent.com
@@ -39,18 +39,18 @@
 199.232.96.133                avatars2.githubusercontent.com
 199.232.96.133                avatars1.githubusercontent.com
 199.232.96.133                avatars0.githubusercontent.com
-140.82.113.9                  codeload.github.com
+140.82.112.9                  codeload.github.com
 52.216.128.147                github-cloud.s3.amazonaws.com
-52.216.109.163                github-com.s3.amazonaws.com
+52.216.131.91                 github-com.s3.amazonaws.com
 52.216.107.188                github-production-release-asset-2e65be.s3.amazonaws.com
-52.216.207.115                github-production-user-asset-6210df.s3.amazonaws.com
-52.216.146.43                 github-production-repository-file-5c1aeb.s3.amazonaws.com
+52.217.98.52                  github-production-user-asset-6210df.s3.amazonaws.com
+52.217.101.164                github-production-repository-file-5c1aeb.s3.amazonaws.com
 # Star me GitHub url: https://github.com/521xueweihan/GitHub520
 # GitHub520 Host End
 
 ```
 
-上面内容会自动定时更新，保证最新有效。数据更新时间：2021-01-02T14:26:43+08:00（内容无变动不会更新）
+上面内容会自动定时更新，保证最新有效。数据更新时间：2021-01-04T10:14:05+08:00（内容无变动不会更新）
 
 ### 2.1 手动方式
 #### 2.1.1 修改 hosts 文件
