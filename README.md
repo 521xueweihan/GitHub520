@@ -44,7 +44,7 @@
 52.217.41.36                  github-com.s3.amazonaws.com
 52.216.107.188                github-production-release-asset-2e65be.s3.amazonaws.com
 52.216.147.180                github-production-user-asset-6210df.s3.amazonaws.com
-52.217.101.164                github-production-repository-file-5c1aeb.s3.amazonaws.com
+52.216.140.148                github-production-repository-file-5c1aeb.s3.amazonaws.com
 18.234.32.149                 www.githubstatus.com
 185.199.108.153               githubstatus.com
 64.71.168.201                 github.community
@@ -53,7 +53,7 @@
 
 ```
 
-上面内容会自动定时更新，保证最新有效。数据更新时间：2021-01-12T20:32:32+08:00（内容无变动不会更新）
+上面内容会自动定时更新，保证最新有效。数据更新时间：2021-01-12T20:40:52+08:00（内容无变动不会更新）
 
 ### 2.1 手动方式
 #### 2.1.1 修改 hosts 文件
