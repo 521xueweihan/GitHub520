@@ -62,7 +62,7 @@ hosts 文件在每个系统的位置不一，详情如下：
 
 - Type: `Remote`
 
-- URL: `https://gitee.com/HelloGitHub-Team/codes/6g793pm2k1hacwfbyesl464/raw?blob_name=GitHub520.yml`
+- URL: `https://raw.githubusercontent.com/521xueweihan/GitHub520/main/hosts`
 
 - Auto Refresh: 最好选 `1 hour`
 
@@ -78,7 +78,7 @@ hosts 文件在每个系统的位置不一，详情如下：
 
 - 名称: 随意
 
-- URL: `https://gitee.com/HelloGitHub-Team/codes/6g793pm2k1hacwfbyesl464/raw?blob_name=GitHub520.yml`（和上面 SwitchHosts 使用的一样）
+- URL: `https://raw.githubusercontent.com/521xueweihan/GitHub520/main/hosts`（和上面 SwitchHosts 使用的一样）
 
 如图：
 
