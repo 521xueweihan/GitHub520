@@ -26,9 +26,9 @@
 199.232.96.133                camo.githubusercontent.com
 199.232.96.133                github.map.fastly.net
 199.232.69.194                github.global.ssl.fastly.net
-140.82.113.4                  gist.github.com
+140.82.113.3                  gist.github.com
 185.199.108.153               github.io
-140.82.114.3                  github.com
+140.82.113.4                  github.com
 140.82.114.5                  api.github.com
 199.232.96.133                raw.githubusercontent.com
 199.232.96.133                user-images.githubusercontent.com
@@ -39,13 +39,12 @@
 199.232.96.133                avatars2.githubusercontent.com
 199.232.96.133                avatars1.githubusercontent.com
 199.232.96.133                avatars0.githubusercontent.com
-140.82.114.9                  codeload.github.com
+140.82.112.10                 codeload.github.com
 52.216.128.147                github-cloud.s3.amazonaws.com
 52.216.225.208                github-com.s3.amazonaws.com
 52.216.107.188                github-production-release-asset-2e65be.s3.amazonaws.com
 52.216.147.180                github-production-user-asset-6210df.s3.amazonaws.com
 52.216.140.148                github-production-repository-file-5c1aeb.s3.amazonaws.com
-18.234.32.149                 www.githubstatus.com
 185.199.108.153               githubstatus.com
 64.71.168.201                 github.community
 # Star me GitHub url: https://github.com/521xueweihan/GitHub520
@@ -53,7 +52,7 @@
 
 ```
 
-上面内容会自动定时更新，保证最新有效。数据更新时间：2021-01-12T23:19:43+08:00（内容无变动不会更新）
+上面内容会自动定时更新，保证最新有效。数据更新时间：2021-01-13T00:38:03+08:00（内容无变动不会更新）
 
 ### 2.1 手动方式
 #### 2.1.1 修改 hosts 文件
@@ -91,7 +90,7 @@ hosts 文件在每个系统的位置不一，详情如下：
 
 - Type: `Remote`
 
-- URL: `https://gitee.com/HelloGitHub-Team/codes/6g793pm2k1hacwfbyesl464/raw?blob_name=GitHub520.yml`
+- URL: `https://raw.githubusercontent.com/521xueweihan/GitHub520/main/hosts`
 
 - Auto Refresh: 最好选 `1 hour`
 
@@ -107,7 +106,7 @@ hosts 文件在每个系统的位置不一，详情如下：
 
 - 名称: 随意
 
-- URL: `https://gitee.com/HelloGitHub-Team/codes/6g793pm2k1hacwfbyesl464/raw?blob_name=GitHub520.yml`（和上面 SwitchHosts 使用的一样）
+- URL: `https://raw.githubusercontent.com/521xueweihan/GitHub520/main/hosts`（和上面 SwitchHosts 使用的一样）
 
 如图：
 
