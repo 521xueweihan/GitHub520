@@ -35,6 +35,7 @@ RAW_URL = [
     "avatars2.githubusercontent.com",
     "avatars1.githubusercontent.com",
     "avatars0.githubusercontent.com",
+    "avatars.githubusercontent.com",
     "codeload.github.com",
     "github-cloud.s3.amazonaws.com",
     "github-com.s3.amazonaws.com",
