@@ -23,13 +23,16 @@
 ```bash
 # GitHub520 Host Start
 185.199.108.154               github.githubassets.com
+140.82.112.21                 central.github.com
+199.232.96.133                desktop.githubusercontent.com
+185.199.108.153               assets-cdn.github.com
 199.232.96.133                camo.githubusercontent.com
 199.232.96.133                github.map.fastly.net
 199.232.69.194                github.global.ssl.fastly.net
-140.82.112.3                  gist.github.com
+140.82.113.4                  gist.github.com
 185.199.108.153               github.io
-140.82.114.3                  github.com
-140.82.113.5                  api.github.com
+140.82.112.4                  github.com
+140.82.113.6                  api.github.com
 199.232.96.133                raw.githubusercontent.com
 199.232.96.133                user-images.githubusercontent.com
 199.232.96.133                favicons.githubusercontent.com
@@ -53,7 +56,7 @@
 
 ```
 
-上面内容会自动定时更新，保证最新有效。数据更新时间：2021-02-01T18:25:37+08:00（内容无变动不会更新）
+上面内容会自动定时更新，保证最新有效。数据更新时间：2021-02-01T22:23:13+08:00（内容无变动不会更新）
 
 ### 2.1 手动方式
 #### 2.1.1 修改 hosts 文件

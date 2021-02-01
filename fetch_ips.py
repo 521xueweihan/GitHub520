@@ -19,6 +19,9 @@ import requests
 
 RAW_URL = [
     "github.githubassets.com",
+    "central.github.com",
+    "desktop.githubusercontent.com",
+    "assets-cdn.github.com",
     "camo.githubusercontent.com",
     "github.map.fastly.net",
     "github.global.ssl.fastly.net",
