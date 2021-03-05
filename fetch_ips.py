@@ -52,13 +52,14 @@ RAW_URL = [
 IPADDRESS_PREFIX = ".ipaddress.com"
 
 HOSTS_TEMPLATE = """# GitHub520 Host Start
-{content}# Star me GitHub url: https://github.com/521xueweihan/GitHub520
+{content}
+
+# Update time: {update_time}
+# Star me GitHub url: https://github.com/521xueweihan/GitHub520
 # GitHub520 Host End\n"""
 
 
-def write_file(hosts_content: str):
-    update_time = datetime.utcnow().astimezone(
-        timezone(timedelta(hours=8))).replace(microsecond=0).isoformat()
+def write_file(hosts_content: str, update_time: str):
     output_doc_file_path = os.path.join(os.path.dirname(__file__), "README.md")
     template_path = os.path.join(os.path.dirname(__file__),
                                  "README_template.md")
@@ -67,6 +68,7 @@ def write_file(hosts_content: str):
     with open(output_doc_file_path, "r") as old_readme_fb:
         old_content = old_readme_fb.read()
         old_hosts = old_content.split("```bash")[1].split("```")[0].strip()
+        old_hosts = old_hosts.split("# Update time:")[0]
     if old_hosts == hosts_content:
         print("host not change")
         return False
@@ -80,7 +82,7 @@ def write_file(hosts_content: str):
     return True
 
 
-def write_yaml_file(hosts_content: str):
+def write_yaml_file(hosts_content: str, ):
     output_yaml_file_path = os.path.join(os.path.dirname(__file__), 'hosts')
     with open(output_yaml_file_path, "w") as output_yaml_fb:
         output_yaml_fb.write(hosts_content)
@@ -156,9 +158,10 @@ def main():
 
     if not content:
         return
-
-    hosts_content = HOSTS_TEMPLATE.format(content=content)
-    has_change = write_file(hosts_content)
+    update_time = datetime.utcnow().astimezone(
+        timezone(timedelta(hours=8))).replace(microsecond=0).isoformat()
+    hosts_content = HOSTS_TEMPLATE.format(content=content, update_time=update_time)
+    has_change = write_file(hosts_content, update_time)
     if has_change:
         try:
             update_gitee_gist(session, hosts_content)
