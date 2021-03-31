@@ -4,7 +4,7 @@
   <br><strong><a href="https://github.com/521xueweihan/HelloGitHub" target="_blank">HelloGitHub</a></strong> 分享 GitHub 上有趣、入门级的开源项目。<br>兴趣是最好的老师，这里能够帮你找到编程的兴趣！
 </p>
 
-👉 [HelloGitHub 3D 星史](https://static.hellogithub.com/5y/2020.html)👈 周日我在 [「HelloGitHub 视频号」](https://static.hellogithub.com/5y/img/v.jpeg) 举办五周年直播活动，奖品丰厚邀您参加！
+有问题可以来[「HelloGitHub 视频号」](https://static.hellogithub.com/5y/img/v.jpeg)问我，不定期直播。
 
 ## 一、介绍
 对 GitHub 说"爱"太难了：访问慢、图片加载不出来。
