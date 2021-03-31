@@ -4,7 +4,7 @@
   <br><strong><a href="https://github.com/521xueweihan/HelloGitHub" target="_blank">HelloGitHub</a></strong> 分享 GitHub 上有趣、入门级的开源项目。<br>兴趣是最好的老师，这里能够帮你找到编程的兴趣！
 </p>
 
-👉 [HelloGitHub 3D 星史](https://static.hellogithub.com/5y/2020.html)👈 周日我在 [「HelloGitHub 视频号」](https://static.hellogithub.com/5y/img/v.jpeg) 举办五周年直播活动，奖品丰厚邀您参加！
+有问题可以来[「HelloGitHub 视频号」](https://static.hellogithub.com/5y/img/v.jpeg)问我，不定期直播。
 
 ## 一、介绍
 对 GitHub 说"爱"太难了：访问慢、图片加载不出来。
@@ -31,10 +31,10 @@
 185.199.108.133               camo.githubusercontent.com
 185.199.108.133               github.map.fastly.net
 199.232.69.194                github.global.ssl.fastly.net
-140.82.113.3                  gist.github.com
+140.82.113.4                  gist.github.com
 185.199.108.153               github.io
-140.82.113.3                  github.com
-140.82.112.5                  api.github.com
+140.82.113.4                  github.com
+140.82.114.6                  api.github.com
 185.199.108.133               raw.githubusercontent.com
 185.199.108.133               user-images.githubusercontent.com
 185.199.108.133               favicons.githubusercontent.com
@@ -45,8 +45,8 @@
 185.199.108.133               avatars1.githubusercontent.com
 185.199.108.133               avatars0.githubusercontent.com
 185.199.108.133               avatars.githubusercontent.com
-140.82.114.9                  codeload.github.com
-52.216.185.235                github-cloud.s3.amazonaws.com
+140.82.112.9                  codeload.github.com
+52.217.14.116                 github-cloud.s3.amazonaws.com
 52.217.138.97                 github-com.s3.amazonaws.com
 52.217.193.113                github-production-release-asset-2e65be.s3.amazonaws.com
 52.216.185.107                github-production-user-asset-6210df.s3.amazonaws.com
@@ -56,13 +56,13 @@
 185.199.108.133               media.githubusercontent.com
 
 
-# Update time: 2021-03-31T08:14:58+08:00
+# Update time: 2021-03-31T09:31:54+08:00
 # Star me GitHub url: https://github.com/521xueweihan/GitHub520
 # GitHub520 Host End
 
 ```
 
-上面内容会自动定时更新，保证最新有效。数据更新时间：2021-03-31T08:14:58+08:00（内容无变动不会更新）
+上面内容会自动定时更新，保证最新有效。数据更新时间：2021-03-31T09:31:54+08:00（内容无变动不会更新）
 
 ### 2.1 手动方式
 #### 2.1.1 修改 hosts 文件
