@@ -18,6 +18,8 @@ from retry import retry
 import requests
 
 RAW_URL = [
+    "alive.github.com",
+    "live.github.com",
     "github.githubassets.com",
     "central.github.com",
     "desktop.githubusercontent.com",
