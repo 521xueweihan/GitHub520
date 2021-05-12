@@ -58,13 +58,13 @@
 185.199.108.133               media.githubusercontent.com
 
 
-# Update time: 2021-05-12T18:12:07+08:00
+# Update time: 2021-05-12T18:19:42+08:00
 # Star me GitHub url: https://github.com/521xueweihan/GitHub520
 # GitHub520 Host End
 
 ```
 
-上面内容会自动定时更新，保证最新有效。数据更新时间：2021-05-12T18:12:07+08:00（内容无变动不会更新）
+上面内容会自动定时更新，保证最新有效。数据更新时间：2021-05-12T18:19:42+08:00（内容无变动不会更新）
 
 ### 2.1 手动方式
 #### 2.1.1 修改 hosts 文件
@@ -86,7 +86,7 @@ hosts 文件在每个系统的位置不一，详情如下：
 
 1. Windows：在 CMD 窗口输入：`ipconfig /flushdns`
 
-2. Linux 命令：`sudo rcnscd restart`
+2. Linux 命令：`sudo nscd restart`，如报错则须安装：`sudo apt install nscd`
 
 3. Mac 命令：`sudo killall -HUP mDNSResponder`
 
@@ -102,7 +102,7 @@ hosts 文件在每个系统的位置不一，详情如下：
 
 - Type: `Remote`
 
-- URL: `https://cdn.jsdelivr.net/gh/521xueweihan/GitHub520@main/hosts`
+- URL: `https://raw.fastgit.org/521xueweihan/GitHub520/main/hosts`
 
 - Auto Refresh: 最好选 `1 hour`
 
