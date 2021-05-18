@@ -130,6 +130,10 @@ hosts 文件在每个系统的位置不一，详情如下：
 
 **Tip**：不要添加在 **DNS 允许清单** 内，只能添加在 **DNS 封锁清单** 才管用。另外，AdGuard for Mac、AdGuard for Windows、AdGuard for Android、AdGuard for IOS 等等 **AdGuard 家族软件** 添加方法均类似。
 
+### 2.4 Chrome 插件方式
+
+`FasterHosts` 是个 Chrome 插件，主要原理是拦截浏览器的某些请求，将 `domain` 替换成访问速度较快的那个。hosts 资源来自 [GitHub520](https://github.com/521xueweihan/GitHub520)，每 1 小时更新一次。
+
 ## 三、效果对比
 之前的样子：
 
