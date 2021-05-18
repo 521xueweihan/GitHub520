@@ -132,7 +132,13 @@ hosts 文件在每个系统的位置不一，详情如下：
 
 ### 2.4 Chrome 插件方式
 
-`FasterHosts` 是个 Chrome 插件，主要原理是拦截浏览器的某些请求，将 `domain` 替换成访问速度较快的那个。hosts 资源来自 [GitHub520](https://github.com/521xueweihan/GitHub520)，每 1 小时更新一次。
+[FasterHosts](https://github.com/gauseen/faster-hosts) 是个 Chrome 插件，主要原理是拦截浏览器的某些请求，将 `domain` 替换成访问速度较快的那个。hosts 资源来自 [GitHub520](https://github.com/521xueweihan/GitHub520)，每 1 小时更新一次。
+
+> 1. 下载 [FasterHosts](https://github.com/gauseen/faster-hosts/archive/master.zip) 然后解压，找到 `extension` 子目录
+> 2. 打开 Chrome，输入: `chrome://extensions/`
+> 3. 勾选 Developer Mode
+> 4. 选择 Load unpacked extension... 然后定位到刚才解压的文件夹里面的 chrome 目录，确定
+> 5. 这就安装好了，去掉 Developer Mode 勾选
 
 ## 三、效果对比
 之前的样子：
