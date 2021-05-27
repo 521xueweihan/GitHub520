@@ -98,9 +98,9 @@ hosts 文件在每个系统的位置不一，详情如下：
 
 > 1. 下载 [FasterHosts](https://github.com/gauseen/faster-hosts/archive/master.zip) 然后解压，找到 `extension` 子目录
 > 2. 打开 Chrome，输入: `chrome://extensions/`
-> 3. 打开「开发这模式」
+> 3. 打开「开发者模式」
 > 4. 选择「加载已解压的扩展程序」，然后定位到刚才解压的文件夹里面的 `extension` 目录，确定
-> 5. 这就安装好了，关闭「开发这模式」
+> 5. 这就安装好了，关闭「开发者模式」
 
 ## 三、效果对比
 之前的样子：
