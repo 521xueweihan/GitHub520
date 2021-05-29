@@ -111,6 +111,7 @@ def update_gitee_gist(session: requests.session, host_content):
     gitee_token = os.getenv("gitee_token")
     gitee_gist_id = os.getenv("gitee_gist_id")
     gist_file_name = os.getenv("gitee_gist_file_name")
+    print(gitee_token, gitee_gist_id, gist_file_name)
     url = "https://gitee.com/api/v5/gists/{}".format(gitee_gist_id)
     headers = {"Content-Type": "application/json"}
     data = {
