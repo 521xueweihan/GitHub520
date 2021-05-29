@@ -1,6 +1,6 @@
 #!/usr/bin/env python
 # -*- coding:utf-8 -*-
-#   
+#
 #   Author  :   XueWeiHan
 #   E-mail  :   595666367@qq.com
 #   Date    :   2020-05-19 15:27
@@ -18,38 +18,22 @@ from retry import retry
 import requests
 
 RAW_URL = [
-    "alive.github.com",
-    "live.github.com",
-    "github.githubassets.com",
-    "central.github.com",
-    "desktop.githubusercontent.com",
-    "assets-cdn.github.com",
-    "camo.githubusercontent.com",
-    "github.map.fastly.net",
-    "github.global.ssl.fastly.net",
-    "gist.github.com",
-    "github.io",
-    "github.com",
-    "api.github.com",
-    "raw.githubusercontent.com",
-    "user-images.githubusercontent.com",
-    "favicons.githubusercontent.com",
-    "avatars5.githubusercontent.com",
-    "avatars4.githubusercontent.com",
-    "avatars3.githubusercontent.com",
-    "avatars2.githubusercontent.com",
-    "avatars1.githubusercontent.com",
-    "avatars0.githubusercontent.com",
-    "avatars.githubusercontent.com",
-    "codeload.github.com",
-    "github-cloud.s3.amazonaws.com",
-    "github-com.s3.amazonaws.com",
+    "alive.github.com", "live.github.com", "github.githubassets.com",
+    "central.github.com", "desktop.githubusercontent.com",
+    "assets-cdn.github.com", "camo.githubusercontent.com",
+    "github.map.fastly.net", "github.global.ssl.fastly.net", "gist.github.com",
+    "github.io", "github.com", "api.github.com", "raw.githubusercontent.com",
+    "user-images.githubusercontent.com", "favicons.githubusercontent.com",
+    "avatars5.githubusercontent.com", "avatars4.githubusercontent.com",
+    "avatars3.githubusercontent.com", "avatars2.githubusercontent.com",
+    "avatars1.githubusercontent.com", "avatars0.githubusercontent.com",
+    "avatars.githubusercontent.com", "codeload.github.com",
+    "github-cloud.s3.amazonaws.com", "github-com.s3.amazonaws.com",
     "github-production-release-asset-2e65be.s3.amazonaws.com",
     "github-production-user-asset-6210df.s3.amazonaws.com",
     "github-production-repository-file-5c1aeb.s3.amazonaws.com",
-    "githubstatus.com",
-    "github.community",
-    "media.githubusercontent.com"]
+    "githubstatus.com", "github.community", "media.githubusercontent.com"
+]
 
 IPADDRESS_PREFIX = ".ipaddress.com"
 
@@ -128,21 +112,27 @@ def update_gitee_gist(session: requests.session, host_content):
     gitee_gist_id = os.getenv("gitee_gist_id")
     gist_file_name = os.getenv("gitee_gist_file_name")
     url = "https://gitee.com/api/v5/gists/{}".format(gitee_gist_id)
-    headers = {
-        "Content-Type": "application/json"}
+    headers = {"Content-Type": "application/json"}
     data = {
         "access_token": gitee_token,
-        "files": {gist_file_name: {"content": host_content}},
-        "public": "true"}
+        "files": {
+            gist_file_name: {
+                "content": host_content
+            }
+        },
+        "public": "true"
+    }
     json_data = json.dumps(data)
     try:
-        response = session.patch(url, data=json_data, headers=headers,
+        response = session.patch(url,
+                                 data=json_data,
+                                 headers=headers,
                                  timeout=20)
         if response.status_code == 200:
             print("update gitee gist success")
         else:
-            print("update gitee gist fail: {} {}".format(response.status_code,
-                                                         response.content))
+            print("update gitee gist fail: {} {}".format(
+                response.status_code, response.content))
     except Exception as e:
         traceback.print_exc(e)
         raise Exception(e)
@@ -160,9 +150,10 @@ def main():
 
     if not content:
         return
-    update_time = datetime.utcnow().astimezone(
-        timezone(timedelta(hours=8))).replace(microsecond=0).isoformat()
-    hosts_content = HOSTS_TEMPLATE.format(content=content, update_time=update_time)
+    update_time = datetime.utcnow().astimezone(timezone(
+        timedelta(hours=8))).replace(microsecond=0).isoformat()
+    hosts_content = HOSTS_TEMPLATE.format(content=content,
+                                          update_time=update_time)
     has_change = write_file(hosts_content, update_time)
     if has_change:
         try:
