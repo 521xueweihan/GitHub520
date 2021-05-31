@@ -28,7 +28,11 @@
 
 上面内容会自动定时更新，保证最新有效。数据更新时间：{update_time}（内容无变动不会更新）
 
+- 文件：`https://raw.fastgit.org/521xueweihan/GitHub520/main/hosts`
+- JSON：`https://raw.fastgit.org/521xueweihan/GitHub520/main/hosts.json`
+
 ### 2.1 手动方式
+
 #### 2.1.1 修改 hosts 文件
 hosts 文件在每个系统的位置不一，详情如下：
 - Windows 系统：`C:\Windows\System32\drivers\etc\hosts`

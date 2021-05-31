@@ -13,9 +13,8 @@ import traceback
 from datetime import datetime, timezone, timedelta
 from collections import Counter
 
-from retry import retry
-
 import requests
+from retry import retry
 
 RAW_URL = [
     "alive.github.com",
@@ -65,8 +64,7 @@ def write_file(hosts_content: str, update_time: str):
     output_doc_file_path = os.path.join(os.path.dirname(__file__), "README.md")
     template_path = os.path.join(os.path.dirname(__file__),
                                  "README_template.md")
-    # 应该取消 write yaml file，改成 gitee gist 地址同步（国内访问流畅）
-    write_yaml_file(hosts_content)
+    write_host_file(hosts_content)
     with open(output_doc_file_path, "r") as old_readme_fb:
         old_content = old_readme_fb.read()
         old_hosts = old_content.split("```bash")[1].split("```")[0].strip()
@@ -84,10 +82,16 @@ def write_file(hosts_content: str, update_time: str):
     return True
 
 
-def write_yaml_file(hosts_content: str, ):
-    output_yaml_file_path = os.path.join(os.path.dirname(__file__), 'hosts')
-    with open(output_yaml_file_path, "w") as output_yaml_fb:
-        output_yaml_fb.write(hosts_content)
+def write_host_file(hosts_content: str):
+    output_file_path = os.path.join(os.path.dirname(__file__), 'hosts')
+    with open(output_file_path, "w") as output_fb:
+        output_fb.write(hosts_content)
+
+
+def write_json_file(hosts_dict: dict):
+    output_file_path = os.path.join(os.path.dirname(__file__), 'hosts.json')
+    with open(output_file_path, "w") as output_fb:
+        json.dump(hosts_dict, output_fb)
 
 
 def make_ipaddress_url(raw_url: str):
@@ -151,10 +155,12 @@ def update_gitee_gist(session: requests.session, host_content):
 def main():
     session = requests.session()
     content = ""
+    content_dict = {}
     for raw_url in RAW_URL:
         try:
             host_name, ip = get_ip(session, raw_url)
             content += ip.ljust(30) + host_name + "\n"
+            content_dict[ip] = host_name
         except Exception:
             continue
 
@@ -165,10 +171,7 @@ def main():
     hosts_content = HOSTS_TEMPLATE.format(content=content, update_time=update_time)
     has_change = write_file(hosts_content, update_time)
     if has_change:
-        try:
-            update_gitee_gist(session, hosts_content)
-        except Exception as e:
-            print("update gitee gist fail:{}".format(e))
+        write_json_file(content_dict)
     print(hosts_content)
 
 
