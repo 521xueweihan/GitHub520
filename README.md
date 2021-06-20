@@ -35,7 +35,7 @@
 199.232.69.194                github.global.ssl.fastly.net
 140.82.114.3                  gist.github.com
 185.199.108.153               github.io
-140.82.114.4                  github.com
+140.82.114.3                  github.com
 140.82.114.6                  api.github.com
 185.199.108.133               raw.githubusercontent.com
 185.199.108.133               user-images.githubusercontent.com
@@ -47,24 +47,24 @@
 185.199.108.133               avatars1.githubusercontent.com
 185.199.108.133               avatars0.githubusercontent.com
 185.199.108.133               avatars.githubusercontent.com
-140.82.114.9                  codeload.github.com
-52.216.184.35                 github-cloud.s3.amazonaws.com
-52.217.38.12                  github-com.s3.amazonaws.com
-52.216.77.188                 github-production-release-asset-2e65be.s3.amazonaws.com
-52.216.108.147                github-production-user-asset-6210df.s3.amazonaws.com
-52.216.77.188                 github-production-repository-file-5c1aeb.s3.amazonaws.com
+140.82.113.9                  codeload.github.com
+52.217.85.36                  github-cloud.s3.amazonaws.com
+52.217.42.4                   github-com.s3.amazonaws.com
+52.217.160.169                github-production-release-asset-2e65be.s3.amazonaws.com
+52.217.163.129                github-production-user-asset-6210df.s3.amazonaws.com
+52.217.200.129                github-production-repository-file-5c1aeb.s3.amazonaws.com
 185.199.108.153               githubstatus.com
 64.71.168.201                 github.community
 185.199.108.133               media.githubusercontent.com
 
 
-# Update time: 2021-06-20T14:05:26+08:00
+# Update time: 2021-06-20T16:05:05+08:00
 # Star me GitHub url: https://github.com/521xueweihan/GitHub520
 # GitHub520 Host End
 
 ```
 
-上面内容会自动定时更新，保证最新有效。数据更新时间：2021-06-20T14:05:26+08:00（内容无变动不会更新）
+上面内容会自动定时更新，保证最新有效。数据更新时间：2021-06-20T16:05:05+08:00（内容无变动不会更新）
 
 - 文件：`https://raw.fastgit.org/521xueweihan/GitHub520/main/hosts`
 - JSON：`https://raw.fastgit.org/521xueweihan/GitHub520/main/hosts.json`
