@@ -47,8 +47,8 @@
 185.199.108.133               avatars1.githubusercontent.com
 185.199.108.133               avatars0.githubusercontent.com
 185.199.108.133               avatars.githubusercontent.com
-140.82.113.10                 codeload.github.com
-52.216.229.131                github-cloud.s3.amazonaws.com
+140.82.114.9                  codeload.github.com
+52.217.33.140                 github-cloud.s3.amazonaws.com
 52.217.98.76                  github-com.s3.amazonaws.com
 52.216.164.3                  github-production-release-asset-2e65be.s3.amazonaws.com
 52.216.160.147                github-production-user-asset-6210df.s3.amazonaws.com
@@ -58,13 +58,13 @@
 185.199.108.133               media.githubusercontent.com
 
 
-# Update time: 2021-07-04T16:05:11+08:00
+# Update time: 2021-07-04T18:05:17+08:00
 # Star me GitHub url: https://github.com/521xueweihan/GitHub520
 # GitHub520 Host End
 
 ```
 
-上面内容会自动定时更新，保证最新有效。数据更新时间：2021-07-04T16:05:11+08:00（内容无变动不会更新）
+上面内容会自动定时更新，保证最新有效。数据更新时间：2021-07-04T18:05:17+08:00（内容无变动不会更新）
 
 - 文件：`https://raw.fastgit.org/521xueweihan/GitHub520/main/hosts`
 - JSON：`https://raw.fastgit.org/521xueweihan/GitHub520/main/hosts.json`
