@@ -29,6 +29,7 @@ RAW_URL = [
     "gist.github.com",
     "github.io",
     "github.com",
+    "github.blog",
     "api.github.com",
     "raw.githubusercontent.com",
     "user-images.githubusercontent.com",
@@ -56,7 +57,8 @@ HOSTS_TEMPLATE = """# GitHub520 Host Start
 {content}
 
 # Update time: {update_time}
-# Star me GitHub url: https://github.com/521xueweihan/GitHub520
+# Update url: https://api.hellogithub.com/GitHub520/hosts
+# Star me: https://github.com/521xueweihan/GitHub520
 # GitHub520 Host End\n"""
 
 
