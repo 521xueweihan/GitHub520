@@ -57,7 +57,7 @@ HOSTS_TEMPLATE = """# GitHub520 Host Start
 {content}
 
 # Update time: {update_time}
-# Update url: https://api.hellogithub.com/GitHub520/hosts
+# Update url: https://raw.hellogithub.com/hosts
 # Star me: https://github.com/521xueweihan/GitHub520
 # GitHub520 Host End\n"""
 
@@ -90,10 +90,10 @@ def write_host_file(hosts_content: str):
         output_fb.write(hosts_content)
 
 
-def write_json_file(hosts_dict: dict):
+def write_json_file(hosts_list: list):
     output_file_path = os.path.join(os.path.dirname(__file__), 'hosts.json')
     with open(output_file_path, "w") as output_fb:
-        json.dump(hosts_dict, output_fb)
+        json.dump(hosts_list, output_fb)
 
 
 def make_ipaddress_url(raw_url: str):
@@ -157,12 +157,12 @@ def update_gitee_gist(session: requests.session, host_content):
 def main():
     session = requests.session()
     content = ""
-    content_dict = {}
+    content_list = []
     for raw_url in RAW_URL:
         try:
             host_name, ip = get_ip(session, raw_url)
             content += ip.ljust(30) + host_name + "\n"
-            content_dict[ip] = host_name
+            content_list.append((ip, host_name,))
         except Exception:
             continue
 
@@ -173,7 +173,7 @@ def main():
     hosts_content = HOSTS_TEMPLATE.format(content=content, update_time=update_time)
     has_change = write_file(hosts_content, update_time)
     if has_change:
-        write_json_file(content_dict)
+        write_json_file(content_list)
     print(hosts_content)
 
 
