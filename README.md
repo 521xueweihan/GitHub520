@@ -32,10 +32,10 @@
 185.199.108.153               assets-cdn.github.com
 185.199.108.133               camo.githubusercontent.com
 185.199.108.133               github.map.fastly.net
-199.232.5.194                 github.global.ssl.fastly.net
+199.232.69.194                github.global.ssl.fastly.net
 140.82.114.4                  gist.github.com
 185.199.108.153               github.io
-140.82.112.3                  github.com
+140.82.112.4                  github.com
 192.0.66.2                    github.blog
 140.82.114.6                  api.github.com
 185.199.108.133               raw.githubusercontent.com
@@ -59,14 +59,14 @@
 185.199.108.133               media.githubusercontent.com
 
 
-# Update time: 2021-08-26T04:04:59+08:00
+# Update time: 2021-08-26T06:05:12+08:00
 # Update url: https://raw.hellogithub.com/hosts
 # Star me: https://github.com/521xueweihan/GitHub520
 # GitHub520 Host End
 
 ```
 
-上面内容会自动定时更新，保证最新有效。数据更新时间：2021-08-26T04:04:59+08:00（内容无变动不会更新）
+上面内容会自动定时更新，保证最新有效。数据更新时间：2021-08-26T06:05:12+08:00（内容无变动不会更新）
 
 - 文件：`https://raw.hellogithub.com/hosts`
 - JSON：`https://raw.hellogithub.com/hosts.json`
