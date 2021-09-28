@@ -49,7 +49,7 @@
 185.199.108.133               avatars0.githubusercontent.com
 185.199.108.133               avatars.githubusercontent.com
 140.82.114.9                  codeload.github.com
-52.216.85.219                 github-cloud.s3.amazonaws.com
+52.217.163.9                  github-cloud.s3.amazonaws.com
 52.217.38.252                 github-com.s3.amazonaws.com
 52.216.76.212                 github-production-release-asset-2e65be.s3.amazonaws.com
 52.217.79.228                 github-production-user-asset-6210df.s3.amazonaws.com
@@ -59,14 +59,14 @@
 185.199.108.133               media.githubusercontent.com
 
 
-# Update time: 2021-09-29T04:05:07+08:00
+# Update time: 2021-09-29T06:05:01+08:00
 # Update url: https://raw.hellogithub.com/hosts
 # Star me: https://github.com/521xueweihan/GitHub520
 # GitHub520 Host End
 
 ```
 
-上面内容会自动定时更新，保证最新有效。数据更新时间：2021-09-29T04:05:07+08:00（内容无变动不会更新）
+上面内容会自动定时更新，保证最新有效。数据更新时间：2021-09-29T06:05:01+08:00（内容无变动不会更新）
 
 - 文件：`https://raw.hellogithub.com/hosts`
 - JSON：`https://raw.hellogithub.com/hosts.json`
