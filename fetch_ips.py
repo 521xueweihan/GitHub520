@@ -49,6 +49,7 @@ RAW_URL = [
     "github-production-repository-file-5c1aeb.s3.amazonaws.com",
     "githubstatus.com",
     "github.community",
+    "github.dev",
     "media.githubusercontent.com"]
 
 IPADDRESS_PREFIX = ".ipaddress.com"
