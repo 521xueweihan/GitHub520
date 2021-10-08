@@ -4,7 +4,7 @@
   <br><strong><a href="https://github.com/521xueweihan/HelloGitHub" target="_blank">HelloGitHub</a></strong> 分享 GitHub 上有趣、入门级的开源项目。<br>兴趣是最好的老师，这里能够帮你找到编程的兴趣！
 </p>
 
-有问题可以来[「HelloGitHub 视频号」](https://static.hellogithub.com/5y/img/v.jpeg)问我，不定期直播。
+有问题可以来[「HelloGitHub 视频号」](https://cdn.jsdelivr.net/gh/521xueweihan/img_logo@main/logo/v.jpeg)问我，不定期直播。
 
 ## 一、介绍
 对 GitHub 说"爱"太难了：访问慢、图片加载不出来。
@@ -33,11 +33,11 @@
 185.199.108.133               camo.githubusercontent.com
 185.199.108.133               github.map.fastly.net
 199.232.69.194                github.global.ssl.fastly.net
-140.82.114.4                  gist.github.com
+140.82.113.3                  gist.github.com
 185.199.108.153               github.io
-140.82.113.4                  github.com
+140.82.113.3                  github.com
 192.0.66.2                    github.blog
-140.82.114.6                  api.github.com
+140.82.113.6                  api.github.com
 185.199.108.133               raw.githubusercontent.com
 185.199.108.133               user-images.githubusercontent.com
 185.199.108.133               favicons.githubusercontent.com
@@ -49,24 +49,25 @@
 185.199.108.133               avatars0.githubusercontent.com
 185.199.108.133               avatars.githubusercontent.com
 140.82.114.9                  codeload.github.com
-52.216.154.236                github-cloud.s3.amazonaws.com
+52.216.248.84                 github-cloud.s3.amazonaws.com
 52.216.143.68                 github-com.s3.amazonaws.com
 52.216.146.155                github-production-release-asset-2e65be.s3.amazonaws.com
 52.217.70.108                 github-production-user-asset-6210df.s3.amazonaws.com
 52.216.187.91                 github-production-repository-file-5c1aeb.s3.amazonaws.com
 185.199.108.153               githubstatus.com
 64.71.144.202                 github.community
+23.100.27.125                 github.dev
 185.199.108.133               media.githubusercontent.com
 
 
-# Update time: 2021-10-08T10:17:44+08:00
+# Update time: 2021-10-08T12:25:55+08:00
 # Update url: https://raw.hellogithub.com/hosts
 # Star me: https://github.com/521xueweihan/GitHub520
 # GitHub520 Host End
 
 ```
 
-上面内容会自动定时更新，保证最新有效。数据更新时间：2021-10-08T10:17:44+08:00（内容无变动不会更新）
+上面内容会自动定时更新，保证最新有效。数据更新时间：2021-10-08T12:25:55+08:00（内容无变动不会更新）
 
 - 文件：`https://raw.hellogithub.com/hosts`
 - JSON：`https://raw.hellogithub.com/hosts.json`
@@ -92,7 +93,7 @@ hosts 文件在每个系统的位置不一，详情如下：
 
 1. Windows：在 CMD 窗口输入：`ipconfig /flushdns`
 
-2. Linux 命令：`sudo nscd restart`，如报错则须安装：`sudo apt install nscd`
+2. Linux 命令：`sudo nscd restart`，如报错则须安装：`sudo apt install nscd` 或 `sudo /etc/init.d/nscd restart`
 
 3. Mac 命令：`sudo killall -HUP mDNSResponder`
 
