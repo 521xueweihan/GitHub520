@@ -4,7 +4,7 @@
   <br><strong><a href="https://github.com/521xueweihan/HelloGitHub" target="_blank">HelloGitHub</a></strong> 分享 GitHub 上有趣、入门级的开源项目。<br>兴趣是最好的老师，这里能够帮你找到编程的兴趣！
 </p>
 
-有问题可以来[「HelloGitHub 视频号」](https://cdn.jsdelivr.net/gh/521xueweihan/img_logo@main/logo/v.jpeg)问我，不定期直播。
+hosts 镜像站的服务器即将到期，续费需要 1000 元 😢，有余粮的朋友可以[点击扫码赞助](https://cdn.jsdelivr.net/gh/521xueweihan/img_logo@main/logo/receiving_code.png)！
 
 ## 一、介绍
 对 GitHub 说"爱"太难了：访问慢、图片加载不出来。
