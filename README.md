@@ -101,6 +101,13 @@ hosts 文件在每个系统的位置不一，详情如下：
 
 ### 2.2 自动方式
 
+#### 2.2.1 One-liner (for linux)
+
+`sed -i "/# GitHub520 Host Start/Q" /etc/hosts && curl https://raw.hellogithub.com/hosts >> /etc/hosts`
+自动更新`/etc/hosts`文件，可以添加到cron定时执行。使用前确保Github520内容在该文件最后部分。
+
+#### 2.2.2
+
 **Tip**：推荐 [SwitchHosts](https://github.com/oldj/SwitchHosts) 工具管理 hosts
 
 以 SwitchHosts 为例，看一下怎么使用的，配置参考下面：
