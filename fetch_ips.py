@@ -50,7 +50,9 @@ RAW_URL = [
     "githubstatus.com",
     "github.community",
     "github.dev",
-    "media.githubusercontent.com"]
+    "media.githubusercontent.com",
+    "cloud.githubusercontent.com",
+    "objects.githubusercontent.com"]
 
 IPADDRESS_PREFIX = ".ipaddress.com"
 
