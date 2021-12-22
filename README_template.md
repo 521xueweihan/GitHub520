@@ -78,7 +78,12 @@ hosts 文件在每个系统的位置不一，详情如下：
 
 这样每次 hosts 有更新都能及时进行更新，免去手动更新。
 
-### 2.3 AdGuard Home 用户（自动方式）
+### 2.3 One-liner (适用于类Unix系统)
+
+`sed -i "/# GitHub520 Host Start/Q" /etc/hosts && curl https://raw.hellogithub.com/hosts >> /etc/hosts`
+自动更新`/etc/hosts`文件，可以添加到cron定时执行。使用前确保Github520内容在该文件最后部分。
+
+### 2.4 AdGuard Home 用户（自动方式）
 
 在 **过滤器>DNS 封锁清单>添加阻止列表>添加一个自定义列表**，配置如下：
 
@@ -96,7 +101,7 @@ hosts 文件在每个系统的位置不一，详情如下：
 
 **Tip**：不要添加在 **DNS 允许清单** 内，只能添加在 **DNS 封锁清单** 才管用。另外，AdGuard for Mac、AdGuard for Windows、AdGuard for Android、AdGuard for IOS 等等 **AdGuard 家族软件** 添加方法均类似。
 
-### 2.4 Chrome 插件方式
+### 2.5 Chrome 插件方式
 
 [FasterHosts](https://github.com/gauseen/faster-hosts) 是个 Chrome 插件，主要原理是拦截浏览器的某些请求，将 `domain` 替换成访问速度较快的那个。hosts 资源来自 [GitHub520](https://github.com/521xueweihan/GitHub520)，每 1 小时更新一次。
 
