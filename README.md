@@ -35,7 +35,7 @@ hosts 镜像站的服务器即将到期，续费需要 1000 元 😢，有余粮
 199.232.69.194                github.global.ssl.fastly.net
 140.82.113.3                  gist.github.com
 185.199.108.153               github.io
-140.82.112.3                  github.com
+140.82.113.3                  github.com
 192.0.66.2                    github.blog
 140.82.114.5                  api.github.com
 185.199.108.133               raw.githubusercontent.com
@@ -58,16 +58,18 @@ hosts 镜像站的服务器即将到期，续费需要 1000 元 😢，有余粮
 64.71.144.202                 github.community
 23.100.27.125                 github.dev
 185.199.108.133               media.githubusercontent.com
+185.199.108.133               cloud.githubusercontent.com
+185.199.108.133               objects.githubusercontent.com
 
 
-# Update time: 2021-12-22T16:05:56+08:00
+# Update time: 2021-12-22T16:25:47+08:00
 # Update url: https://raw.hellogithub.com/hosts
 # Star me: https://github.com/521xueweihan/GitHub520
 # GitHub520 Host End
 
 ```
 
-上面内容会自动定时更新，保证最新有效。数据更新时间：2021-12-22T16:05:56+08:00（内容无变动不会更新）
+上面内容会自动定时更新，保证最新有效。数据更新时间：2021-12-22T16:25:47+08:00（内容无变动不会更新）
 
 - 文件：`https://raw.hellogithub.com/hosts`
 - JSON：`https://raw.hellogithub.com/hosts.json`
@@ -119,7 +121,12 @@ hosts 文件在每个系统的位置不一，详情如下：
 
 这样每次 hosts 有更新都能及时进行更新，免去手动更新。
 
-### 2.3 AdGuard Home 用户（自动方式）
+### 2.3 One-liner (适用于类Unix系统)
+
+`sed -i "/# GitHub520 Host Start/Q" /etc/hosts && curl https://raw.hellogithub.com/hosts >> /etc/hosts`
+自动更新`/etc/hosts`文件，可以添加到cron定时执行。使用前确保Github520内容在该文件最后部分。
+
+### 2.4 AdGuard Home 用户（自动方式）
 
 在 **过滤器>DNS 封锁清单>添加阻止列表>添加一个自定义列表**，配置如下：
 
@@ -137,7 +144,7 @@ hosts 文件在每个系统的位置不一，详情如下：
 
 **Tip**：不要添加在 **DNS 允许清单** 内，只能添加在 **DNS 封锁清单** 才管用。另外，AdGuard for Mac、AdGuard for Windows、AdGuard for Android、AdGuard for IOS 等等 **AdGuard 家族软件** 添加方法均类似。
 
-### 2.4 Chrome 插件方式
+### 2.5 Chrome 插件方式
 
 [FasterHosts](https://github.com/gauseen/faster-hosts) 是个 Chrome 插件，主要原理是拦截浏览器的某些请求，将 `domain` 替换成访问速度较快的那个。hosts 资源来自 [GitHub520](https://github.com/521xueweihan/GitHub520)，每 1 小时更新一次。
 
