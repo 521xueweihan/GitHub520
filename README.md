@@ -4,7 +4,8 @@
   <br><strong><a href="https://github.com/521xueweihan/HelloGitHub" target="_blank">HelloGitHub</a></strong> 分享 GitHub 上有趣、入门级的开源项目。<br>兴趣是最好的老师，这里能够帮你找到编程的兴趣！
 </p>
 
-hosts 镜像站的服务器即将到期，续费需要 1000 元 😢，有余粮的朋友可以[点击扫码赞助](https://cdn.jsdelivr.net/gh/521xueweihan/img_logo@main/logo/receiving_code.png)！
+hosts 的服务器续费了 3 年到 2024 年，共花了：1500+💰
+有余粮的朋友[点击扫码赞助](https://cdn.jsdelivr.net/gh/521xueweihan/img_logo@main/logo/receiving_code.png)，感谢🙏
 
 ## 一、介绍
 对 GitHub 说"爱"太难了：访问慢、图片加载不出来。
@@ -33,7 +34,7 @@ hosts 镜像站的服务器即将到期，续费需要 1000 元 😢，有余粮
 185.199.108.133               camo.githubusercontent.com
 185.199.108.133               github.map.fastly.net
 199.232.69.194                github.global.ssl.fastly.net
-140.82.112.4                  gist.github.com
+140.82.112.3                  gist.github.com
 185.199.108.153               github.io
 140.82.113.3                  github.com
 192.0.66.2                    github.blog
@@ -48,7 +49,7 @@ hosts 镜像站的服务器即将到期，续费需要 1000 元 😢，有余粮
 185.199.108.133               avatars1.githubusercontent.com
 185.199.108.133               avatars0.githubusercontent.com
 199.232.68.133                avatars.githubusercontent.com
-140.82.112.10                 codeload.github.com
+140.82.112.9                  codeload.github.com
 52.217.164.217                github-cloud.s3.amazonaws.com
 52.216.224.128                github-com.s3.amazonaws.com
 52.217.92.180                 github-production-release-asset-2e65be.s3.amazonaws.com
@@ -62,14 +63,14 @@ hosts 镜像站的服务器即将到期，续费需要 1000 元 😢，有余粮
 185.199.108.133               objects.githubusercontent.com
 
 
-# Update time: 2021-12-28T18:05:36+08:00
+# Update time: 2021-12-28T18:35:07+08:00
 # Update url: https://raw.hellogithub.com/hosts
 # Star me: https://github.com/521xueweihan/GitHub520
 # GitHub520 Host End
 
 ```
 
-上面内容会自动定时更新，保证最新有效。数据更新时间：2021-12-28T18:05:36+08:00（内容无变动不会更新）
+上面内容会自动定时更新，保证最新有效。数据更新时间：2021-12-28T18:35:07+08:00（内容无变动不会更新）
 
 - 文件：`https://raw.hellogithub.com/hosts`
 - JSON：`https://raw.hellogithub.com/hosts.json`
