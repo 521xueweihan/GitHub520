@@ -26,8 +26,8 @@
 ### 2.1 复制下面的内容
 ```bash
 # GitHub520 Host Start
-140.82.112.26                 alive.github.com
-140.82.113.25                 live.github.com
+140.82.113.25                 alive.github.com
+140.82.114.25                 live.github.com
 185.199.108.154               github.githubassets.com
 140.82.112.22                 central.github.com
 185.199.108.133               desktop.githubusercontent.com
@@ -37,9 +37,9 @@
 199.232.69.194                github.global.ssl.fastly.net
 140.82.113.3                  gist.github.com
 185.199.108.153               github.io
-140.82.113.4                  github.com
+140.82.112.3                  github.com
 192.0.66.2                    github.blog
-140.82.113.6                  api.github.com
+140.82.114.5                  api.github.com
 185.199.108.133               raw.githubusercontent.com
 185.199.108.133               user-images.githubusercontent.com
 185.199.108.133               favicons.githubusercontent.com
@@ -51,7 +51,7 @@
 185.199.108.133               avatars0.githubusercontent.com
 185.199.108.133               avatars.githubusercontent.com
 140.82.112.9                  codeload.github.com
-52.216.18.216                 github-cloud.s3.amazonaws.com
+52.217.106.84                 github-cloud.s3.amazonaws.com
 52.216.224.128                github-com.s3.amazonaws.com
 52.217.92.180                 github-production-release-asset-2e65be.s3.amazonaws.com
 52.216.112.235                github-production-user-asset-6210df.s3.amazonaws.com
@@ -64,14 +64,14 @@
 185.199.108.133               objects.githubusercontent.com
 
 
-# Update time: 2021-12-30T18:05:29+08:00
+# Update time: 2021-12-30T20:06:01+08:00
 # Update url: https://raw.hellogithub.com/hosts
 # Star me: https://github.com/521xueweihan/GitHub520
 # GitHub520 Host End
 
 ```
 
-上面内容会自动定时更新，保证最新有效。数据更新时间：2021-12-30T18:05:29+08:00（内容无变动不会更新）
+上面内容会自动定时更新，保证最新有效。数据更新时间：2021-12-30T20:06:01+08:00（内容无变动不会更新）
 
 - 文件：`https://raw.hellogithub.com/hosts`
 - JSON：`https://raw.hellogithub.com/hosts.json`
