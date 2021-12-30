@@ -8,9 +8,9 @@
 185.199.108.133               camo.githubusercontent.com
 185.199.108.133               github.map.fastly.net
 199.232.69.194                github.global.ssl.fastly.net
-140.82.113.3                  gist.github.com
+140.82.114.3                  gist.github.com
 185.199.108.153               github.io
-140.82.112.3                  github.com
+140.82.114.4                  github.com
 192.0.66.2                    github.blog
 140.82.114.5                  api.github.com
 185.199.108.133               raw.githubusercontent.com
@@ -23,12 +23,12 @@
 185.199.108.133               avatars1.githubusercontent.com
 185.199.108.133               avatars0.githubusercontent.com
 185.199.108.133               avatars.githubusercontent.com
-140.82.112.9                  codeload.github.com
+140.82.113.10                 codeload.github.com
 52.217.106.84                 github-cloud.s3.amazonaws.com
-52.216.224.128                github-com.s3.amazonaws.com
-52.217.92.180                 github-production-release-asset-2e65be.s3.amazonaws.com
-52.216.112.235                github-production-user-asset-6210df.s3.amazonaws.com
-52.217.139.241                github-production-repository-file-5c1aeb.s3.amazonaws.com
+52.217.93.28                  github-com.s3.amazonaws.com
+52.216.153.172                github-production-release-asset-2e65be.s3.amazonaws.com
+52.217.199.249                github-production-user-asset-6210df.s3.amazonaws.com
+52.217.200.1                  github-production-repository-file-5c1aeb.s3.amazonaws.com
 185.199.108.153               githubstatus.com
 64.71.144.202                 github.community
 23.100.27.125                 github.dev
@@ -37,7 +37,7 @@
 185.199.108.133               objects.githubusercontent.com
 
 
-# Update time: 2021-12-30T20:06:01+08:00
+# Update time: 2021-12-30T22:05:45+08:00
 # Update url: https://raw.hellogithub.com/hosts
 # Star me: https://github.com/521xueweihan/GitHub520
 # GitHub520 Host End
