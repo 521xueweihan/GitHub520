@@ -37,7 +37,7 @@
 199.232.69.194                github.global.ssl.fastly.net
 140.82.114.4                  gist.github.com
 185.199.108.153               github.io
-140.82.114.4                  github.com
+140.82.113.4                  github.com
 192.0.66.2                    github.blog
 140.82.113.5                  api.github.com
 185.199.110.133               raw.githubusercontent.com
@@ -50,10 +50,10 @@
 185.199.110.133               avatars1.githubusercontent.com
 185.199.110.133               avatars0.githubusercontent.com
 185.199.110.133               avatars.githubusercontent.com
-140.82.114.10                 codeload.github.com
-52.217.10.76                  github-cloud.s3.amazonaws.com
+140.82.114.9                  codeload.github.com
+52.216.162.155                github-cloud.s3.amazonaws.com
 52.217.95.25                  github-com.s3.amazonaws.com
-3.5.0.173                     github-production-release-asset-2e65be.s3.amazonaws.com
+52.217.134.89                 github-production-release-asset-2e65be.s3.amazonaws.com
 52.217.199.249                github-production-user-asset-6210df.s3.amazonaws.com
 52.217.200.1                  github-production-repository-file-5c1aeb.s3.amazonaws.com
 185.199.108.153               githubstatus.com
@@ -64,14 +64,14 @@
 185.199.110.133               objects.githubusercontent.com
 
 
-# Update time: 2022-01-06T18:05:26+08:00
+# Update time: 2022-01-06T20:06:03+08:00
 # Update url: https://raw.hellogithub.com/hosts
 # Star me: https://github.com/521xueweihan/GitHub520
 # GitHub520 Host End
 
 ```
 
-上面内容会自动定时更新，保证最新有效。数据更新时间：2022-01-06T18:05:26+08:00（内容无变动不会更新）
+上面内容会自动定时更新，保证最新有效。数据更新时间：2022-01-06T20:06:03+08:00（内容无变动不会更新）
 
 - 文件：`https://raw.hellogithub.com/hosts`
 - JSON：`https://raw.hellogithub.com/hosts.json`
