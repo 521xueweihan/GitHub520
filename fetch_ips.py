@@ -1,6 +1,5 @@
 #!/usr/bin/env python
 # -*- coding:utf-8 -*-
-#   
 #   Author  :   XueWeiHan
 #   E-mail  :   595666367@qq.com
 #   Date    :   2020-05-19 15:27
@@ -8,7 +7,6 @@
 import os
 import re
 import json
-import traceback
 
 from datetime import datetime, timezone, timedelta
 from collections import Counter
@@ -55,50 +53,38 @@ RAW_URL = [
     "objects.githubusercontent.com"]
 
 IPADDRESS_PREFIX = ".ipaddress.com"
+HOSTFILE_PATH = "/etc/hosts"
 
-HOSTS_TEMPLATE = """# GitHub520 Host Start
+HOSTS_TEMPLATE = """# Github Hosts Start
 {content}
 
 # Update time: {update_time}
-# Update url: https://raw.hellogithub.com/hosts
-# Star me: https://github.com/521xueweihan/GitHub520
-# GitHub520 Host End\n"""
+# Github Hosts End\n"""
 
 
-def write_file(hosts_content: str, update_time: str):
-    output_doc_file_path = os.path.join(os.path.dirname(__file__), "README.md")
-    template_path = os.path.join(os.path.dirname(__file__),
-                                 "README_template.md")
-    write_host_file(hosts_content)
-    if os.path.exists(output_doc_file_path):
-        with open(output_doc_file_path, "r") as old_readme_fb:
-            old_content = old_readme_fb.read()
-            old_hosts = old_content.split("```bash")[1].split("```")[0].strip()
-            old_hosts = old_hosts.split("# Update time:")[0].strip()
-            hosts_content_hosts = hosts_content.split("# Update time:")[0].strip()
-        if old_hosts == hosts_content_hosts:
-            print("host not change")
-            return False
-
-    with open(template_path, "r") as temp_fb:
-        template_str = temp_fb.read()
-        hosts_content = template_str.format(hosts_str=hosts_content,
-                                            update_time=update_time)
-        with open(output_doc_file_path, "w") as output_fb:
-            output_fb.write(hosts_content)
-    return True
-
-
-def write_host_file(hosts_content: str):
-    output_file_path = os.path.join(os.path.dirname(__file__), 'hosts')
-    with open(output_file_path, "w") as output_fb:
-        output_fb.write(hosts_content)
-
-
-def write_json_file(hosts_list: list):
-    output_file_path = os.path.join(os.path.dirname(__file__), 'hosts.json')
-    with open(output_file_path, "w") as output_fb:
-        json.dump(hosts_list, output_fb)
+def write_file(hosts_content: str):
+    mark_start = "# Github Hosts Start"
+    mark_end = "# Github Hosts End"
+    start = 0
+    end = 0
+    final_content = ""
+    with open(HOSTFILE_PATH, 'r') as hosts_file:
+        lines = hosts_file.readlines()
+        count = 0
+        for l in lines:
+            if l.find(mark_start) != -1:
+                start = count
+            if l.find(mark_end) != -1:
+                end = count
+                break
+            count = count + 1
+        del lines[start:end + 1]
+        final_content = ' '.join(map(str, lines))
+    print(final_content)
+    final_content = final_content + hosts_content
+    print(final_content)
+    with open(HOSTFILE_PATH, 'w') as hosts_file:
+        hosts_file.write(final_content)
 
 
 def make_ipaddress_url(raw_url: str):
@@ -133,33 +119,10 @@ def get_ip(session: requests.session, raw_url: str):
         raise Exception
 
 
-@retry(tries=3)
-def update_gitee_gist(session: requests.session, host_content):
-    gitee_token = os.getenv("gitee_token")
-    gitee_gist_id = os.getenv("gitee_gist_id")
-    gist_file_name = os.getenv("gitee_gist_file_name")
-    url = "https://gitee.com/api/v5/gists/{}".format(gitee_gist_id)
-    headers = {
-        "Content-Type": "application/json"}
-    data = {
-        "access_token": gitee_token,
-        "files": {gist_file_name: {"content": host_content}},
-        "public": "true"}
-    json_data = json.dumps(data)
-    try:
-        response = session.patch(url, data=json_data, headers=headers,
-                                 timeout=20)
-        if response.status_code == 200:
-            print("update gitee gist success")
-        else:
-            print("update gitee gist fail: {} {}".format(response.status_code,
-                                                         response.content))
-    except Exception as e:
-        traceback.print_exc(e)
-        raise Exception(e)
-
-
 def main():
+    if os.geteuid() != 0:
+        print("need root.")
+        return
     session = requests.session()
     content = ""
     content_list = []
@@ -176,10 +139,7 @@ def main():
     update_time = datetime.utcnow().astimezone(
         timezone(timedelta(hours=8))).replace(microsecond=0).isoformat()
     hosts_content = HOSTS_TEMPLATE.format(content=content, update_time=update_time)
-    has_change = write_file(hosts_content, update_time)
-    if has_change:
-        write_json_file(content_list)
-    print(hosts_content)
+    write_file(hosts_content)
 
 
 if __name__ == '__main__':
