@@ -50,6 +50,8 @@ RAW_URL = [
     "githubstatus.com",
     "github.community",
     "github.dev",
+    "collector.github.com",
+    "pipelines.actions.githubusercontent.com",
     "media.githubusercontent.com",
     "cloud.githubusercontent.com",
     "objects.githubusercontent.com"]
