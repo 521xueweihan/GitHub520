@@ -26,10 +26,10 @@
 ### 2.1 复制下面的内容
 ```bash
 # GitHub520 Host Start
-140.82.112.26                 alive.github.com
-140.82.114.26                 live.github.com
+140.82.113.26                 alive.github.com
+140.82.114.25                 live.github.com
 185.199.108.154               github.githubassets.com
-140.82.114.21                 central.github.com
+140.82.112.21                 central.github.com
 185.199.108.133               desktop.githubusercontent.com
 185.199.108.153               assets-cdn.github.com
 185.199.108.133               camo.githubusercontent.com
@@ -51,8 +51,8 @@
 185.199.108.133               avatars0.githubusercontent.com
 185.199.108.133               avatars.githubusercontent.com
 140.82.114.9                  codeload.github.com
-52.216.40.113                 github-cloud.s3.amazonaws.com
-52.217.203.169                github-com.s3.amazonaws.com
+54.231.196.121                github-cloud.s3.amazonaws.com
+54.231.132.25                 github-com.s3.amazonaws.com
 52.217.1.76                   github-production-release-asset-2e65be.s3.amazonaws.com
 52.217.203.169                github-production-user-asset-6210df.s3.amazonaws.com
 52.216.241.132                github-production-repository-file-5c1aeb.s3.amazonaws.com
@@ -66,14 +66,14 @@
 185.199.108.133               objects.githubusercontent.com
 
 
-# Update time: 2022-05-25T20:07:27+08:00
+# Update time: 2022-05-25T22:06:33+08:00
 # Update url: https://raw.hellogithub.com/hosts
 # Star me: https://github.com/521xueweihan/GitHub520
 # GitHub520 Host End
 
 ```
 
-上面内容会自动定时更新，保证最新有效。数据更新时间：2022-05-25T20:07:27+08:00（内容无变动不会更新）
+上面内容会自动定时更新，保证最新有效。数据更新时间：2022-05-25T22:06:33+08:00（内容无变动不会更新）
 
 - 文件：`https://raw.hellogithub.com/hosts`
 - JSON：`https://raw.hellogithub.com/hosts.json`
