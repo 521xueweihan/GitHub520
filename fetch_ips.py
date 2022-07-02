@@ -54,7 +54,8 @@ RAW_URL = [
     "pipelines.actions.githubusercontent.com",
     "media.githubusercontent.com",
     "cloud.githubusercontent.com",
-    "objects.githubusercontent.com"]
+    "objects.githubusercontent.com",
+    "vscode.dev"]
 
 IPADDRESS_PREFIX = ".ipaddress.com"
 
