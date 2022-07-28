@@ -30,9 +30,9 @@
 140.82.113.3                  live.github.com
 35.175.202.122                github.githubassets.com
 140.82.113.3                  central.github.com
-3.235.227.173                 desktop.githubusercontent.com
+3.238.95.160                  desktop.githubusercontent.com
 140.82.113.3                  assets-cdn.github.com
-3.237.51.91                   camo.githubusercontent.com
+54.211.210.82                 camo.githubusercontent.com
 151.101.1.6                   github.map.fastly.net
 151.101.1.6                   github.global.ssl.fastly.net
 140.82.113.3                  gist.github.com
@@ -40,16 +40,16 @@
 140.82.113.3                  github.com
 192.0.66.2                    github.blog
 140.82.113.3                  api.github.com
-18.206.182.87                 raw.githubusercontent.com
-3.88.161.22                   user-images.githubusercontent.com
-100.26.176.85                 favicons.githubusercontent.com
-34.236.245.132                avatars5.githubusercontent.com
-3.235.227.173                 avatars4.githubusercontent.com
-35.175.136.232                avatars3.githubusercontent.com
-35.175.137.105                avatars2.githubusercontent.com
-3.239.4.9                     avatars1.githubusercontent.com
-34.201.24.176                 avatars0.githubusercontent.com
-54.204.69.122                 avatars.githubusercontent.com
+18.215.243.254                raw.githubusercontent.com
+3.239.4.9                     user-images.githubusercontent.com
+3.238.112.100                 favicons.githubusercontent.com
+107.23.239.223                avatars5.githubusercontent.com
+52.90.86.124                  avatars4.githubusercontent.com
+3.85.49.186                   avatars3.githubusercontent.com
+54.208.32.15                  avatars2.githubusercontent.com
+44.197.123.105                avatars1.githubusercontent.com
+3.94.7.160                    avatars0.githubusercontent.com
+54.208.32.15                  avatars.githubusercontent.com
 140.82.113.3                  codeload.github.com
 72.21.206.80                  github-cloud.s3.amazonaws.com
 72.21.206.80                  github-com.s3.amazonaws.com
@@ -60,21 +60,21 @@
 64.71.144.211                 github.community
 52.224.38.193                 github.dev
 140.82.113.3                  collector.github.com
-3.91.73.69                    pipelines.actions.githubusercontent.com
-54.167.107.170                media.githubusercontent.com
-54.167.107.170                cloud.githubusercontent.com
-44.193.74.191                 objects.githubusercontent.com
+54.211.210.82                 pipelines.actions.githubusercontent.com
+54.224.65.32                  media.githubusercontent.com
+34.206.64.37                  cloud.githubusercontent.com
+54.145.6.17                   objects.githubusercontent.com
 13.107.213.51                 vscode.dev
 
 
-# Update time: 2022-07-28T16:06:15+08:00
+# Update time: 2022-07-28T18:05:52+08:00
 # Update url: https://raw.hellogithub.com/hosts
 # Star me: https://github.com/521xueweihan/GitHub520
 # GitHub520 Host End
 
 ```
 
-上面内容会自动定时更新，保证最新有效。数据更新时间：2022-07-28T16:06:15+08:00（内容无变动不会更新）
+上面内容会自动定时更新，保证最新有效。数据更新时间：2022-07-28T18:05:52+08:00（内容无变动不会更新）
 
 - 文件：`https://raw.hellogithub.com/hosts`
 - JSON：`https://raw.hellogithub.com/hosts.json`
