@@ -26,31 +26,31 @@
 ### 2.1 复制下面的内容
 ```bash
 # GitHub520 Host Start
-140.82.114.4                  alive.github.com
-140.82.114.4                  live.github.com
-44.210.149.73                 github.githubassets.com
-140.82.114.4                  central.github.com
-44.204.200.4                  desktop.githubusercontent.com
-140.82.114.4                  assets-cdn.github.com
-3.222.251.181                 camo.githubusercontent.com
+140.82.112.4                  alive.github.com
+140.82.112.4                  live.github.com
+52.41.218.119                 github.githubassets.com
+140.82.112.4                  central.github.com
+54.218.101.216                desktop.githubusercontent.com
+140.82.112.4                  assets-cdn.github.com
+54.245.147.77                 camo.githubusercontent.com
 151.101.1.6                   github.map.fastly.net
 151.101.1.6                   github.global.ssl.fastly.net
-140.82.114.4                  gist.github.com
+140.82.112.4                  gist.github.com
 185.199.108.153               github.io
-140.82.114.4                  github.com
+140.82.112.4                  github.com
 192.0.66.2                    github.blog
-140.82.114.4                  api.github.com
-3.222.251.181                 raw.githubusercontent.com
-3.229.142.82                  user-images.githubusercontent.com
-184.73.137.8                  favicons.githubusercontent.com
-184.73.137.8                  avatars5.githubusercontent.com
-44.212.93.150                 avatars4.githubusercontent.com
-3.229.142.82                  avatars3.githubusercontent.com
-3.84.251.33                   avatars2.githubusercontent.com
-44.204.27.163                 avatars1.githubusercontent.com
-3.83.164.165                  avatars0.githubusercontent.com
-44.197.235.147                avatars.githubusercontent.com
-140.82.114.4                  codeload.github.com
+140.82.112.4                  api.github.com
+35.90.202.95                  raw.githubusercontent.com
+54.201.219.223                user-images.githubusercontent.com
+54.245.25.74                  favicons.githubusercontent.com
+35.88.174.187                 avatars5.githubusercontent.com
+52.41.218.119                 avatars4.githubusercontent.com
+54.186.111.205                avatars3.githubusercontent.com
+54.186.111.205                avatars2.githubusercontent.com
+52.39.69.104                  avatars1.githubusercontent.com
+35.88.174.187                 avatars0.githubusercontent.com
+34.210.59.99                  avatars.githubusercontent.com
+140.82.112.4                  codeload.github.com
 72.21.206.80                  github-cloud.s3.amazonaws.com
 72.21.206.80                  github-com.s3.amazonaws.com
 72.21.206.80                  github-production-release-asset-2e65be.s3.amazonaws.com
@@ -59,22 +59,22 @@
 185.199.108.153               githubstatus.com
 140.82.114.18                 github.community
 52.224.38.193                 github.dev
-140.82.114.4                  collector.github.com
-3.234.222.97                  pipelines.actions.githubusercontent.com
-3.83.164.165                  media.githubusercontent.com
-3.230.144.54                  cloud.githubusercontent.com
-18.232.56.132                 objects.githubusercontent.com
+140.82.112.4                  collector.github.com
+54.201.219.223                pipelines.actions.githubusercontent.com
+35.88.107.200                 media.githubusercontent.com
+54.218.101.216                cloud.githubusercontent.com
+52.41.218.119                 objects.githubusercontent.com
 13.107.213.40                 vscode.dev
 
 
-# Update time: 2022-10-29T00:06:14+08:00
+# Update time: 2022-10-29T02:06:44+08:00
 # Update url: https://raw.hellogithub.com/hosts
 # Star me: https://github.com/521xueweihan/GitHub520
 # GitHub520 Host End
 
 ```
 
-上面内容会自动定时更新，保证最新有效。数据更新时间：2022-10-29T00:06:14+08:00（内容无变动不会更新）
+上面内容会自动定时更新，保证最新有效。数据更新时间：2022-10-29T02:06:44+08:00（内容无变动不会更新）
 
 - 文件：`https://raw.hellogithub.com/hosts`
 - JSON：`https://raw.hellogithub.com/hosts.json`
