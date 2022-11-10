@@ -27,33 +27,22 @@
 ```bash
 # GitHub520 Host Start
 140.82.113.3                  alive.github.com
-44.201.20.15                  github.githubassets.com
-140.82.113.3                  central.github.com
-54.85.21.221                  desktop.githubusercontent.com
 151.101.1.6                   github.map.fastly.net
-140.82.113.3                  gist.github.com
 185.199.108.153               github.io
 192.0.66.2                    github.blog
-140.82.113.3                  api.github.com
-18.208.129.84                 user-images.githubusercontent.com
-44.192.82.207                 avatars5.githubusercontent.com
-54.167.43.96                  avatars3.githubusercontent.com
-44.208.25.147                 avatars1.githubusercontent.com
-44.204.59.46                  avatars.githubusercontent.com
+185.199.108.153               githubstatus.com
+140.82.113.18                 github.community
 52.224.38.193                 github.dev
-140.82.113.3                  collector.github.com
-54.144.217.141                pipelines.actions.githubusercontent.com
-13.107.219.40                 vscode.dev
 
 
-# Update time: 2022-11-10T12:19:02+08:00
+# Update time: 2022-11-10T14:08:11+08:00
 # Update url: https://raw.hellogithub.com/hosts
 # Star me: https://github.com/521xueweihan/GitHub520
 # GitHub520 Host End
 
 ```
 
-上面内容会自动定时更新，保证最新有效。数据更新时间：2022-11-10T12:19:02+08:00（内容无变动不会更新）
+上面内容会自动定时更新，保证最新有效。数据更新时间：2022-11-10T14:08:11+08:00（内容无变动不会更新）
 
 - 文件：`https://raw.hellogithub.com/hosts`
 - JSON：`https://raw.hellogithub.com/hosts.json`
