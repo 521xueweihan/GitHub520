@@ -26,11 +26,7 @@ jobs:
       run: |
         sudo python -m pip install --upgrade pip
         if [ -f requirements.txt ]; then sudo pip install -r requirements.txt; fi
-    - name: update readme
-      env:
-        gitee_token: ${{ secrets.GITEE_TOKEN }}
-        gitee_gist_id: ${{ secrets.GITEE_GIST_ID }}
-        gitee_gist_file_name: ${{ secrets.GITEE_GIST_FILE_NAME }}
+    - name: run script
       run: |
         # fetch new ip content and update readme file
         sudo python fetch_ips.py
