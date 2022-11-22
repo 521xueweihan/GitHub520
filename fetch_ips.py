@@ -96,6 +96,7 @@ def get_best_ip(ip_list: list) -> str:
     min_ms = ping_timeout * 1000
     for ip in ip_list:
         ping_result = ping(ip, timeout=ping_timeout)
+        print(ping_result.rtt_avg_ms)
         if ping_result.rtt_avg_ms == ping_timeout * 1000:
             # 超时认为 IP 失效
             continue
