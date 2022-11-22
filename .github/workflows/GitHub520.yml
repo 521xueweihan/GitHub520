@@ -24,8 +24,8 @@ jobs:
         python-version: ${{ matrix.python-version }}
     - name: Install dependencies
       run: |
-        python -m pip install --upgrade pip
-        if [ -f requirements.txt ]; then pip install -r requirements.txt; fi
+        sudo python -m pip install --upgrade pip
+        if [ -f requirements.txt ]; then sudo pip install -r requirements.txt; fi
     - name: update readme
       env:
         gitee_token: ${{ secrets.GITEE_TOKEN }}
@@ -33,7 +33,7 @@ jobs:
         gitee_gist_file_name: ${{ secrets.GITEE_GIST_FILE_NAME }}
       run: |
         # fetch new ip content and update readme file
-        python fetch_ips.py
+        sudo python fetch_ips.py
     - name: commit
       id: commit
       run: |
