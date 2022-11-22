@@ -163,8 +163,8 @@ def main(verbose=False) -> None:
     hosts_content = HOSTS_TEMPLATE.format(content=content,
                                           update_time=update_time)
     has_change = write_file(hosts_content, update_time)
-    if has_change:
-        write_json_file(content_list)
+    # if has_change:
+    #     write_json_file(content_list)
     if verbose:
         print(hosts_content)
         print('End script.')
