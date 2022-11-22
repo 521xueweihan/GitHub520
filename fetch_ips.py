@@ -16,10 +16,6 @@ from pythonping import ping
 from requests_html import HTMLSession
 from retry import retry
 
-# GITHUB_URLS = [
-#     'alive.github.com'
-# ]
-
 GITHUB_URLS = [
     'alive.github.com', 'api.github.com', 'assets-cdn.github.com',
     'avatars.githubusercontent.com', 'avatars0.githubusercontent.com',
@@ -106,6 +102,18 @@ def get_best_ip(ip_list: list) -> str:
 
 
 @retry(tries=3)
+def get_json(session: Any) -> Optional[list]:
+    url = 'https://raw.hellogithub.com/hosts.json'
+    try:
+        rs = session.get(url)
+        data = json.loads(rs.text)
+        return data
+    except Exception as ex:
+        print(f"get: {url}, error: {ex}")
+        raise Exception
+
+
+@retry(tries=3)
 def get_ip(session: Any, github_url: str) -> Optional[str]:
     url = f'https://www.ipaddress.com/site/{github_url}'
     headers = {
@@ -133,16 +141,20 @@ def main(verbose=False) -> None:
         print('Start script.')
     session = HTMLSession()
     content = ""
-    content_list = []
-    for index, github_url in enumerate(GITHUB_URLS):
-        try:
-            ip = get_ip(session, github_url)
-            content += ip.ljust(30) + github_url + "\n"
-            content_list.append((ip, github_url,))
-        except Exception:
-            continue
-        if verbose:
-            print(f'process url: {index + 1}/{len(GITHUB_URLS)}')
+    content_list = get_json(session)
+    for item in content_list:
+        content += item[0].ljust(30) + item[1] + "\n"
+    # content_list = []
+    # for index, github_url in enumerate(GITHUB_URLS):
+    #     try:
+    #         # ip = get_ip(session, github_url)
+    #
+    #         content += ip.ljust(30) + github_url + "\n"
+    #         content_list.append((ip, github_url,))
+    #     except Exception:
+    #         continue
+    #     if verbose:
+    #         print(f'process url: {index + 1}/{len(GITHUB_URLS)}')
 
     if not content:
         return
