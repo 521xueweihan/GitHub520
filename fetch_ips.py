@@ -109,21 +109,18 @@ def make_ipaddress_url(raw_url: str):
     :param raw_url: 原始 url
     :return: ipaddress 的 url
     """
-    dot_count = raw_url.count(".")
-    if dot_count > 1:
-        raw_url_list = raw_url.split(".")
-        tmp_url = raw_url_list[-2] + "." + raw_url_list[-1]
-        ipaddress_url = "https://" + tmp_url + IPADDRESS_PREFIX + "/" + raw_url
-    else:
-        ipaddress_url = "https://" + raw_url + IPADDRESS_PREFIX
-    return ipaddress_url
+    return f'https://www.ipaddress.com/site/{raw_url}'
 
 
 @retry(tries=3)
 def get_ip(session: requests.session, raw_url: str):
     url = make_ipaddress_url(raw_url)
     try:
-        rs = session.get(url, timeout=5)
+        headers = {
+            'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7)'
+                          ' AppleWebKit/537.36 (KHTML, like Gecko) Chrome/1'
+                          '06.0.0.0 Safari/537.36'}
+        rs = session.get(url, headers=headers, timeout=5)
         pattern = r"\b(?:[0-9]{1,3}\.){3}[0-9]{1,3}\b"
         ip_list = re.findall(pattern, rs.text)
         ip_counter_obj = Counter(ip_list).most_common(1)
@@ -135,32 +132,6 @@ def get_ip(session: requests.session, raw_url: str):
         raise Exception
 
 
-@retry(tries=3)
-def update_gitee_gist(session: requests.session, host_content):
-    gitee_token = os.getenv("gitee_token")
-    gitee_gist_id = os.getenv("gitee_gist_id")
-    gist_file_name = os.getenv("gitee_gist_file_name")
-    url = "https://gitee.com/api/v5/gists/{}".format(gitee_gist_id)
-    headers = {
-        "Content-Type": "application/json"}
-    data = {
-        "access_token": gitee_token,
-        "files": {gist_file_name: {"content": host_content}},
-        "public": "true"}
-    json_data = json.dumps(data)
-    try:
-        response = session.patch(url, data=json_data, headers=headers,
-                                 timeout=20)
-        if response.status_code == 200:
-            print("update gitee gist success")
-        else:
-            print("update gitee gist fail: {} {}".format(response.status_code,
-                                                         response.content))
-    except Exception as e:
-        traceback.print_exc(e)
-        raise Exception(e)
-
-
 def main():
     session = requests.session()
     content = ""
@@ -170,7 +141,8 @@ def main():
             host_name, ip = get_ip(session, raw_url)
             content += ip.ljust(30) + host_name + "\n"
             content_list.append((ip, host_name,))
-        except Exception:
+        except Exception as e:
+            traceback.print_exc(e)
             continue
 
     if not content:
