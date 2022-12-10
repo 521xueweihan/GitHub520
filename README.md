@@ -36,7 +36,7 @@
 ```bash
 # GitHub520 Host Start
 140.82.112.25                 alive.github.com
-140.82.114.6                  api.github.com
+140.82.112.5                  api.github.com
 185.199.110.153               assets-cdn.github.com
 185.199.108.133               avatars.githubusercontent.com
 185.199.108.133               avatars0.githubusercontent.com
@@ -56,13 +56,13 @@
 52.217.48.36                  github-cloud.s3.amazonaws.com
 52.217.198.241                github-com.s3.amazonaws.com
 52.217.18.76                  github-production-release-asset-2e65be.s3.amazonaws.com
-52.217.44.156                 github-production-repository-file-5c1aeb.s3.amazonaws.com
+52.216.76.76                  github-production-repository-file-5c1aeb.s3.amazonaws.com
 52.216.110.51                 github-production-user-asset-6210df.s3.amazonaws.com
 192.0.66.2                    github.blog
 140.82.112.3                  github.com
 140.82.114.17                 github.community
 185.199.109.154               github.githubassets.com
-151.101.65.194                github.global.ssl.fastly.net
+151.101.129.194               github.global.ssl.fastly.net
 185.199.110.153               github.io
 185.199.108.133               github.map.fastly.net
 185.199.110.153               githubstatus.com
@@ -75,14 +75,14 @@
 13.107.238.40                 vscode.dev
 
 
-# Update time: 2022-12-10T08:18:10+08:00
+# Update time: 2022-12-10T10:23:57+08:00
 # Update url: https://raw.hellogithub.com/hosts
 # Star me: https://github.com/521xueweihan/GitHub520
 # GitHub520 Host End
 
 ```
 
-该内容会自动定时更新， 数据更新时间：2022-12-10T08:18:10+08:00
+该内容会自动定时更新， 数据更新时间：2022-12-10T10:23:57+08:00
 
 #### 2.1.2 修改 hosts 文件
 
