@@ -18,9 +18,9 @@
 185.199.108.133               favicons.githubusercontent.com
 140.82.113.4                  gist.github.com
 52.217.48.36                  github-cloud.s3.amazonaws.com
-54.231.169.113                github-com.s3.amazonaws.com
-52.216.169.3                  github-production-release-asset-2e65be.s3.amazonaws.com
-54.231.172.137                github-production-repository-file-5c1aeb.s3.amazonaws.com
+52.216.82.216                 github-com.s3.amazonaws.com
+52.216.33.65                  github-production-release-asset-2e65be.s3.amazonaws.com
+52.216.76.76                  github-production-repository-file-5c1aeb.s3.amazonaws.com
 52.216.154.148                github-production-user-asset-6210df.s3.amazonaws.com
 192.0.66.2                    github.blog
 140.82.112.4                  github.com
@@ -33,13 +33,13 @@
 140.82.113.26                 live.github.com
 185.199.108.133               media.githubusercontent.com
 185.199.108.133               objects.githubusercontent.com
-13.107.42.16                  pipelines.actions.githubusercontent.com
+13.107.43.16                  pipelines.actions.githubusercontent.com
 185.199.108.133               raw.githubusercontent.com
 185.199.108.133               user-images.githubusercontent.com
 13.107.227.40                 vscode.dev
 
 
-# Update time: 2022-12-15T08:20:19+08:00
+# Update time: 2022-12-15T10:29:30+08:00
 # Update url: https://raw.hellogithub.com/hosts
 # Star me: https://github.com/521xueweihan/GitHub520
 # GitHub520 Host End
