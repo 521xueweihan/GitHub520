@@ -44,7 +44,7 @@
 185.199.108.133               avatars2.githubusercontent.com
 185.199.108.133               avatars3.githubusercontent.com
 185.199.108.133               avatars4.githubusercontent.com
-185.199.108.133               avatars5.githubusercontent.com
+185.199.111.133               avatars5.githubusercontent.com
 185.199.108.133               camo.githubusercontent.com
 140.82.112.21                 central.github.com
 185.199.108.133               cloud.githubusercontent.com
@@ -53,11 +53,11 @@
 185.199.108.133               desktop.githubusercontent.com
 185.199.108.133               favicons.githubusercontent.com
 140.82.112.3                  gist.github.com
-52.216.113.3                  github-cloud.s3.amazonaws.com
+52.216.36.185                 github-cloud.s3.amazonaws.com
 52.216.107.116                github-com.s3.amazonaws.com
-52.216.33.65                  github-production-release-asset-2e65be.s3.amazonaws.com
-52.216.217.153                github-production-repository-file-5c1aeb.s3.amazonaws.com
-52.216.154.148                github-production-user-asset-6210df.s3.amazonaws.com
+52.217.194.97                 github-production-release-asset-2e65be.s3.amazonaws.com
+52.217.97.4                   github-production-repository-file-5c1aeb.s3.amazonaws.com
+52.217.77.20                  github-production-user-asset-6210df.s3.amazonaws.com
 192.0.66.2                    github.blog
 140.82.114.3                  github.com
 140.82.114.18                 github.community
@@ -65,7 +65,7 @@
 151.101.65.194                github.global.ssl.fastly.net
 185.199.110.153               github.io
 185.199.108.133               github.map.fastly.net
-185.199.110.153               githubstatus.com
+185.199.109.153               githubstatus.com
 140.82.113.26                 live.github.com
 185.199.108.133               media.githubusercontent.com
 185.199.108.133               objects.githubusercontent.com
@@ -75,14 +75,14 @@
 13.107.227.40                 vscode.dev
 
 
-# Update time: 2022-12-18T20:05:38+08:00
+# Update time: 2022-12-18T22:05:32+08:00
 # Update url: https://raw.hellogithub.com/hosts
 # Star me: https://github.com/521xueweihan/GitHub520
 # GitHub520 Host End
 
 ```
 
-该内容会自动定时更新， 数据更新时间：2022-12-18T20:05:38+08:00
+该内容会自动定时更新， 数据更新时间：2022-12-18T22:05:32+08:00
 
 #### 2.1.2 修改 hosts 文件
 
