@@ -41,7 +41,7 @@
 185.199.108.133               avatars.githubusercontent.com
 185.199.108.133               avatars0.githubusercontent.com
 185.199.108.133               avatars1.githubusercontent.com
-185.199.111.133               avatars2.githubusercontent.com
+185.199.108.133               avatars2.githubusercontent.com
 185.199.108.133               avatars3.githubusercontent.com
 185.199.108.133               avatars4.githubusercontent.com
 185.199.108.133               avatars5.githubusercontent.com
@@ -55,7 +55,7 @@
 140.82.113.3                  gist.github.com
 54.231.165.153                github-cloud.s3.amazonaws.com
 52.216.213.177                github-com.s3.amazonaws.com
-54.231.224.145                github-production-release-asset-2e65be.s3.amazonaws.com
+52.216.184.219                github-production-release-asset-2e65be.s3.amazonaws.com
 54.231.172.81                 github-production-repository-file-5c1aeb.s3.amazonaws.com
 52.217.91.201                 github-production-user-asset-6210df.s3.amazonaws.com
 192.0.66.2                    github.blog
@@ -75,14 +75,14 @@
 13.107.226.51                 vscode.dev
 
 
-# Update time: 2023-01-24T10:23:53+08:00
+# Update time: 2023-01-24T12:05:38+08:00
 # Update url: https://raw.hellogithub.com/hosts
 # Star me: https://github.com/521xueweihan/GitHub520
 # GitHub520 Host End
 
 ```
 
-该内容会自动定时更新， 数据更新时间：2023-01-24T10:23:53+08:00
+该内容会自动定时更新， 数据更新时间：2023-01-24T12:05:38+08:00
 
 #### 2.1.2 修改 hosts 文件
 
