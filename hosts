@@ -21,12 +21,12 @@
 3.5.2.131                     github-com.s3.amazonaws.com
 52.216.210.177                github-production-release-asset-2e65be.s3.amazonaws.com
 54.231.169.169                github-production-repository-file-5c1aeb.s3.amazonaws.com
-52.217.227.137                github-production-user-asset-6210df.s3.amazonaws.com
+52.216.95.75                  github-production-user-asset-6210df.s3.amazonaws.com
 192.0.66.2                    github.blog
 140.82.113.4                  github.com
 140.82.114.18                 github.community
 185.199.109.154               github.githubassets.com
-151.101.129.194               github.global.ssl.fastly.net
+151.101.65.194                github.global.ssl.fastly.net
 185.199.110.153               github.io
 185.199.108.133               github.map.fastly.net
 185.199.110.153               githubstatus.com
@@ -39,7 +39,7 @@
 13.107.238.40                 vscode.dev
 
 
-# Update time: 2023-02-12T16:05:28+08:00
+# Update time: 2023-02-12T18:05:12+08:00
 # Update url: https://raw.hellogithub.com/hosts
 # Star me: https://github.com/521xueweihan/GitHub520
 # GitHub520 Host End
