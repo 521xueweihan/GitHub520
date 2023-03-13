@@ -42,7 +42,7 @@
 185.199.108.133               avatars0.githubusercontent.com
 185.199.108.133               avatars1.githubusercontent.com
 185.199.108.133               avatars2.githubusercontent.com
-185.199.108.133               avatars3.githubusercontent.com
+185.199.111.133               avatars3.githubusercontent.com
 185.199.108.133               avatars4.githubusercontent.com
 185.199.108.133               avatars5.githubusercontent.com
 185.199.108.133               camo.githubusercontent.com
@@ -75,14 +75,14 @@
 13.107.238.51                 vscode.dev
 
 
-# Update time: 2023-03-13T09:49:09+08:00
+# Update time: 2023-03-13T09:53:22+08:00
 # Update url: https://raw.hellogithub.com/hosts
 # Star me: https://github.com/521xueweihan/GitHub520
 # GitHub520 Host End
 
 ```
 
-该内容会自动定时更新， 数据更新时间：2023-03-13T09:49:09+08:00
+该内容会自动定时更新， 数据更新时间：2023-03-13T09:53:22+08:00
 
 #### 2.1.2 修改 hosts 文件
 
@@ -132,11 +132,11 @@ hosts 文件在每个系统的位置不一，详情如下：
 
 ### 2.3 一行命令 (适用于类 Unix 系统)
 
-# for GNU sed (Ubuntu/CentOS/Fedora)
+#### GNU（Ubuntu/CentOS/Fedora）
 
 `sed -i "/# GitHub520 Host Start/Q" /etc/hosts && curl https://raw.hellogithub.com/hosts >> /etc/hosts`
 
-# for BSD/macOS sed
+#### BSD/macOS
 
 `sed -i "" "/# GitHub520 Host Start/,/# Github520 Host End/d" /etc/hosts && curl https://raw.hellogithub.com/hosts >> /etc/hosts`
 
