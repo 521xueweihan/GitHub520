@@ -34,7 +34,7 @@ GITHUB_URLS = [
     'githubstatus.com', 'live.github.com', 'media.githubusercontent.com',
     'objects.githubusercontent.com', 'pipelines.actions.githubusercontent.com',
     'raw.githubusercontent.com', 'user-images.githubusercontent.com',
-    'vscode.dev', 'copilot-proxy.githubusercontent.com'
+    'vscode.dev'
 ]
 
 HOSTS_TEMPLATE = """# GitHub520 Host Start
@@ -162,8 +162,8 @@ def main(verbose=False) -> None:
     hosts_content = HOSTS_TEMPLATE.format(content=content,
                                           update_time=update_time)
     has_change = write_file(hosts_content, update_time)
-    # if has_change:
-    #     write_json_file(content_list)
+    if has_change:
+        write_json_file(content_list)
     if verbose:
         print(hosts_content)
         print('End script.')
