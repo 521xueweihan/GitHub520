@@ -87,7 +87,13 @@ hosts 文件在每个系统的位置不一，详情如下：
 
 ### 2.3 一行命令 (适用于类 Unix 系统)
 
+# for GNU sed (Ubuntu/CentOS/Fedora)
+
 `sed -i "/# GitHub520 Host Start/Q" /etc/hosts && curl https://raw.hellogithub.com/hosts >> /etc/hosts`
+
+# for BSD/macOS sed
+
+`sed -i "" "/# GitHub520 Host Start/,/# Github520 Host End/d" /etc/hosts && curl https://raw.hellogithub.com/hosts >> /etc/hosts`
 
 将上面的命令添加到 cron，可定时执行。使用前确保 GitHub520 内容在该文件最后部分。
 
