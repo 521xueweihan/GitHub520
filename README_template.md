@@ -87,11 +87,11 @@ hosts 文件在每个系统的位置不一，详情如下：
 
 ### 2.3 一行命令 (适用于类 Unix 系统)
 
-# for GNU sed (Ubuntu/CentOS/Fedora)
+#### GNU（Ubuntu/CentOS/Fedora）
 
 `sed -i "/# GitHub520 Host Start/Q" /etc/hosts && curl https://raw.hellogithub.com/hosts >> /etc/hosts`
 
-# for BSD/macOS sed
+#### BSD/macOS
 
 `sed -i "" "/# GitHub520 Host Start/,/# Github520 Host End/d" /etc/hosts && curl https://raw.hellogithub.com/hosts >> /etc/hosts`
 
