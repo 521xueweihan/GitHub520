@@ -73,16 +73,17 @@
 185.199.108.133               raw.githubusercontent.com
 185.199.108.133               user-images.githubusercontent.com
 13.107.238.51                 vscode.dev
+140.82.114.21                 education.github.com
 
 
-# Update time: 2023-04-03T12:05:19+08:00
+# Update time: 2023-04-03T14:05:56+08:00
 # Update url: https://raw.hellogithub.com/hosts
 # Star me: https://github.com/521xueweihan/GitHub520
 # GitHub520 Host End
 
 ```
 
-该内容会自动定时更新， 数据更新时间：2023-04-03T12:05:19+08:00
+该内容会自动定时更新， 数据更新时间：2023-04-03T14:05:56+08:00
 
 #### 2.1.2 修改 hosts 文件
 
