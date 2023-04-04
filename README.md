@@ -135,7 +135,9 @@ hosts 文件在每个系统的位置不一，详情如下：
 
 #### GNU（Ubuntu/CentOS/Fedora）
 
+`sudo -i`
 `sed -i "/# GitHub520 Host Start/Q" /etc/hosts && curl https://raw.hellogithub.com/hosts >> /etc/hosts`
+`exit`
 
 #### BSD/macOS
 
