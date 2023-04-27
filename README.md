@@ -59,7 +59,7 @@
 52.217.9.180                  github-production-repository-file-5c1aeb.s3.amazonaws.com
 52.216.215.33                 github-production-user-asset-6210df.s3.amazonaws.com
 192.0.66.2                    github.blog
-140.82.113.4                  github.com
+140.82.112.4                  github.com
 140.82.114.18                 github.community
 185.199.109.154               github.githubassets.com
 151.101.65.194                github.global.ssl.fastly.net
@@ -76,14 +76,14 @@
 140.82.113.22                 education.github.com
 
 
-# Update time: 2023-04-27T20:06:42+08:00
+# Update time: 2023-04-27T22:04:52+08:00
 # Update url: https://raw.hellogithub.com/hosts
 # Star me: https://github.com/521xueweihan/GitHub520
 # GitHub520 Host End
 
 ```
 
-该内容会自动定时更新， 数据更新时间：2023-04-27T20:06:42+08:00
+该内容会自动定时更新， 数据更新时间：2023-04-27T22:04:52+08:00
 
 #### 2.1.2 修改 hosts 文件
 
