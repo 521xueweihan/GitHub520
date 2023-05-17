@@ -20,7 +20,7 @@
 52.217.70.220                 github-cloud.s3.amazonaws.com
 52.216.10.75                  github-com.s3.amazonaws.com
 52.217.137.1                  github-production-release-asset-2e65be.s3.amazonaws.com
-52.216.43.25                  github-production-repository-file-5c1aeb.s3.amazonaws.com
+54.231.168.49                 github-production-repository-file-5c1aeb.s3.amazonaws.com
 54.231.199.177                github-production-user-asset-6210df.s3.amazonaws.com
 192.0.66.2                    github.blog
 140.82.112.4                  github.com
@@ -35,12 +35,12 @@
 185.199.108.133               objects.githubusercontent.com
 13.107.42.16                  pipelines.actions.githubusercontent.com
 185.199.108.133               raw.githubusercontent.com
-185.199.111.133               user-images.githubusercontent.com
+185.199.108.133               user-images.githubusercontent.com
 13.107.226.40                 vscode.dev
 140.82.113.22                 education.github.com
 
 
-# Update time: 2023-05-17T16:05:32+08:00
+# Update time: 2023-05-17T18:05:19+08:00
 # Update url: https://raw.hellogithub.com/hosts
 # Star me: https://github.com/521xueweihan/GitHub520
 # GitHub520 Host End
