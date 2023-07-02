@@ -115,14 +115,14 @@ def get_json(session: Any) -> Optional[list]:
 
 @retry(tries=3)
 def get_ip(session: Any, github_url: str) -> Optional[str]:
-    url = f'https://www.ipaddress.com/site/{github_url}'
+    url = f'https://sites.ipaddress.com/{github_url}'
     headers = {
         'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7)'
                       ' AppleWebKit/537.36 (KHTML, like Gecko) Chrome/1'
                       '06.0.0.0 Safari/537.36'}
     try:
         rs = session.get(url, headers=headers, timeout=5)
-        table = rs.html.find('ul.separated2', first=True)
+        table = rs.html.find('#dns', first=True)
         pattern = r"\b(?:[0-9]{1,3}\.){3}[0-9]{1,3}\b"
         ip_list = re.findall(pattern, table.text)
         best_ip = get_best_ip(ip_list)
@@ -142,7 +142,7 @@ def main(verbose=False) -> None:
     content = ""
     content_list = get_json(session)
     for item in content_list:
-        content += item[0].ljust(30) + item[1] + "\n"
+       content += item[0].ljust(30) + item[1] + "\n"
     # content_list = []
     # for index, github_url in enumerate(GITHUB_URLS):
     #     try:
