@@ -89,13 +89,21 @@ hosts 文件在每个系统的位置不一，详情如下：
 
 #### GNU（Ubuntu/CentOS/Fedora）
 
-`sed -i "/# GitHub520 Host Start/Q" /etc/hosts && curl https://raw.hellogithub.com/hosts >> /etc/hosts`
+```
+sudo -i
+sed -i "/# GitHub520 Host Start/Q" /etc/hosts && curl https://raw.hellogithub.com/hosts >> /etc/hosts`
+exit
+```
 
 #### BSD/macOS
 
 `sed -i "" "/# GitHub520 Host Start/,/# Github520 Host End/d" /etc/hosts && curl https://raw.hellogithub.com/hosts >> /etc/hosts`
 
 将上面的命令添加到 cron，可定时执行。使用前确保 GitHub520 内容在该文件最后部分。
+
+#### 在 Dcker 中运行，若遇到 `Device or resource busy` 错误，可使用以下命令执行
+
+`cp /etc/hosts ~/hosts.new && sed -i "/# GitHub520 Host Start/Q" ~/hosts.new && curl https://raw.hellogithub.com/hosts >> ~/hosts.new && cp -f ~/hosts.new /etc/hosts`
 
 ### 2.4 AdGuard 用户（自动方式）
 
