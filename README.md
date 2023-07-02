@@ -53,11 +53,11 @@
 185.199.111.133               desktop.githubusercontent.com
 185.199.111.133               favicons.githubusercontent.com
 140.82.112.4                  gist.github.com
-52.217.114.169                github-cloud.s3.amazonaws.com
+52.216.215.57                 github-cloud.s3.amazonaws.com
 52.217.236.209                github-com.s3.amazonaws.com
 52.217.195.241                github-production-release-asset-2e65be.s3.amazonaws.com
-52.216.105.19                 github-production-repository-file-5c1aeb.s3.amazonaws.com
-52.217.195.169                github-production-user-asset-6210df.s3.amazonaws.com
+52.216.200.147                github-production-repository-file-5c1aeb.s3.amazonaws.com
+52.217.172.73                 github-production-user-asset-6210df.s3.amazonaws.com
 192.0.66.2                    github.blog
 140.82.112.4                  github.com
 140.82.114.17                 github.community
@@ -76,14 +76,14 @@
 140.82.112.21                 education.github.com
 
 
-# Update time: 2023-07-02T23:44:37+08:00
+# Update time: 2023-07-03T02:05:24+08:00
 # Update url: https://raw.hellogithub.com/hosts
 # Star me: https://github.com/521xueweihan/GitHub520
 # GitHub520 Host End
 
 ```
 
-该内容会自动定时更新， 数据更新时间：2023-07-02T23:44:37+08:00
+该内容会自动定时更新， 数据更新时间：2023-07-03T02:05:24+08:00
 
 #### 2.1.2 修改 hosts 文件
 
@@ -135,11 +135,7 @@ hosts 文件在每个系统的位置不一，详情如下：
 
 #### GNU（Ubuntu/CentOS/Fedora）
 
-```
-sudo -i
-sed -i "/# GitHub520 Host Start/Q" /etc/hosts && curl https://raw.hellogithub.com/hosts >> /etc/hosts`
-exit
-```
+`sudo sh -c 'sed -i "/# GitHub520 Host Start/Q" /etc/hosts && curl https://raw.hellogithub.com/hosts >> /etc/hosts'`
 
 #### BSD/macOS
 
