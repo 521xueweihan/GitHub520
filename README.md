@@ -37,7 +37,7 @@
 # GitHub520 Host Start
 140.82.112.25                 alive.github.com
 140.82.114.6                  api.github.com
-185.199.110.153               assets-cdn.github.com
+185.199.109.153               assets-cdn.github.com
 185.199.111.133               avatars.githubusercontent.com
 185.199.111.133               avatars0.githubusercontent.com
 185.199.111.133               avatars1.githubusercontent.com
@@ -55,17 +55,17 @@
 140.82.113.3                  gist.github.com
 52.216.244.220                github-cloud.s3.amazonaws.com
 54.231.232.193                github-com.s3.amazonaws.com
-54.231.128.145                github-production-release-asset-2e65be.s3.amazonaws.com
+52.217.138.209                github-production-release-asset-2e65be.s3.amazonaws.com
 54.231.192.97                 github-production-repository-file-5c1aeb.s3.amazonaws.com
 52.217.105.180                github-production-user-asset-6210df.s3.amazonaws.com
 192.0.66.2                    github.blog
 140.82.112.3                  github.com
 140.82.113.18                 github.community
-185.199.110.154               github.githubassets.com
+185.199.109.154               github.githubassets.com
 151.101.1.194                 github.global.ssl.fastly.net
-185.199.110.153               github.io
+185.199.109.153               github.io
 185.199.111.133               github.map.fastly.net
-185.199.110.153               githubstatus.com
+185.199.109.153               githubstatus.com
 140.82.112.26                 live.github.com
 185.199.111.133               media.githubusercontent.com
 185.199.111.133               objects.githubusercontent.com
@@ -76,14 +76,14 @@
 140.82.112.22                 education.github.com
 
 
-# Update time: 2023-08-30T16:05:40+08:00
+# Update time: 2023-08-30T18:05:10+08:00
 # Update url: https://raw.hellogithub.com/hosts
 # Star me: https://github.com/521xueweihan/GitHub520
 # GitHub520 Host End
 
 ```
 
-该内容会自动定时更新， 数据更新时间：2023-08-30T16:05:40+08:00
+该内容会自动定时更新， 数据更新时间：2023-08-30T18:05:10+08:00
 
 #### 2.1.2 修改 hosts 文件
 
