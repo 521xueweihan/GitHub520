@@ -35,7 +35,7 @@
 
 ```bash
 # GitHub520 Host Start
-140.82.112.26                 alive.github.com
+140.82.114.25                 alive.github.com
 140.82.113.5                  api.github.com
 185.199.111.153               assets-cdn.github.com
 185.199.111.133               avatars.githubusercontent.com
@@ -76,14 +76,14 @@
 140.82.113.22                 education.github.com
 
 
-# Update time: 2023-09-21T22:05:06+08:00
+# Update time: 2023-09-22T00:05:17+08:00
 # Update url: https://raw.hellogithub.com/hosts
 # Star me: https://github.com/521xueweihan/GitHub520
 # GitHub520 Host End
 
 ```
 
-该内容会自动定时更新， 数据更新时间：2023-09-21T22:05:06+08:00
+该内容会自动定时更新， 数据更新时间：2023-09-22T00:05:17+08:00
 
 #### 2.1.2 修改 hosts 文件
 
