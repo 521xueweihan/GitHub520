@@ -72,18 +72,18 @@
 13.107.42.16                  pipelines.actions.githubusercontent.com
 185.199.111.133               raw.githubusercontent.com
 185.199.111.133               user-images.githubusercontent.com
-13.107.226.40                 vscode.dev
+13.107.253.40                 vscode.dev
 140.82.113.22                 education.github.com
 
 
-# Update time: 2023-09-25T02:05:12+08:00
+# Update time: 2023-09-25T12:05:24+08:00
 # Update url: https://raw.hellogithub.com/hosts
 # Star me: https://github.com/521xueweihan/GitHub520
 # GitHub520 Host End
 
 ```
 
-该内容会自动定时更新， 数据更新时间：2023-09-25T02:05:12+08:00
+该内容会自动定时更新， 数据更新时间：2023-09-25T12:05:24+08:00
 
 #### 2.1.2 修改 hosts 文件
 
