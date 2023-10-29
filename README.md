@@ -41,16 +41,16 @@
 185.199.108.133               avatars.githubusercontent.com
 185.199.108.133               avatars0.githubusercontent.com
 185.199.108.133               avatars1.githubusercontent.com
-185.199.109.133               avatars2.githubusercontent.com
-185.199.109.133               avatars3.githubusercontent.com
-185.199.109.133               avatars4.githubusercontent.com
-185.199.109.133               avatars5.githubusercontent.com
-185.199.109.133               camo.githubusercontent.com
+185.199.108.133               avatars2.githubusercontent.com
+185.199.108.133               avatars3.githubusercontent.com
+185.199.108.133               avatars4.githubusercontent.com
+185.199.108.133               avatars5.githubusercontent.com
+185.199.108.133               camo.githubusercontent.com
 140.82.114.22                 central.github.com
 185.199.108.133               cloud.githubusercontent.com
 140.82.113.10                 codeload.github.com
 140.82.112.21                 collector.github.com
-185.199.109.133               desktop.githubusercontent.com
+185.199.108.133               desktop.githubusercontent.com
 185.199.108.133               favicons.githubusercontent.com
 140.82.112.3                  gist.github.com
 54.231.132.145                github-cloud.s3.amazonaws.com
@@ -67,23 +67,23 @@
 185.199.108.133               github.map.fastly.net
 185.199.108.153               githubstatus.com
 140.82.114.25                 live.github.com
-185.199.109.133               media.githubusercontent.com
+185.199.108.133               media.githubusercontent.com
 185.199.108.133               objects.githubusercontent.com
 13.107.42.16                  pipelines.actions.githubusercontent.com
 185.199.108.133               raw.githubusercontent.com
 185.199.108.133               user-images.githubusercontent.com
-13.107.253.40                 vscode.dev
+13.107.226.40                 vscode.dev
 140.82.114.21                 education.github.com
 
 
-# Update time: 2023-10-29T10:12:12+08:00
+# Update time: 2023-10-29T12:05:11+08:00
 # Update url: https://raw.hellogithub.com/hosts
 # Star me: https://github.com/521xueweihan/GitHub520
 # GitHub520 Host End
 
 ```
 
-该内容会自动定时更新， 数据更新时间：2023-10-29T10:12:12+08:00
+该内容会自动定时更新， 数据更新时间：2023-10-29T12:05:11+08:00
 
 #### 2.1.2 修改 hosts 文件
 
