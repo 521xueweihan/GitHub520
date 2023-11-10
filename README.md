@@ -42,8 +42,8 @@
 185.199.109.133               avatars0.githubusercontent.com
 185.199.109.133               avatars1.githubusercontent.com
 185.199.109.133               avatars2.githubusercontent.com
-185.199.109.133               avatars3.githubusercontent.com
-185.199.109.133               avatars4.githubusercontent.com
+185.199.108.133               avatars3.githubusercontent.com
+185.199.108.133               avatars4.githubusercontent.com
 185.199.109.133               avatars5.githubusercontent.com
 185.199.109.133               camo.githubusercontent.com
 140.82.113.21                 central.github.com
@@ -51,7 +51,7 @@
 140.82.113.10                 codeload.github.com
 140.82.114.22                 collector.github.com
 185.199.109.133               desktop.githubusercontent.com
-185.199.109.133               favicons.githubusercontent.com
+185.199.108.133               favicons.githubusercontent.com
 140.82.114.3                  gist.github.com
 52.217.164.241                github-cloud.s3.amazonaws.com
 52.217.125.81                 github-com.s3.amazonaws.com
@@ -61,9 +61,9 @@
 192.0.66.2                    github.blog
 140.82.112.4                  github.com
 140.82.114.17                 github.community
-185.199.109.154               github.githubassets.com
+185.199.110.154               github.githubassets.com
 151.101.1.194                 github.global.ssl.fastly.net
-185.199.108.153               github.io
+185.199.111.153               github.io
 185.199.109.133               github.map.fastly.net
 185.199.111.153               githubstatus.com
 140.82.114.26                 live.github.com
@@ -76,14 +76,14 @@
 140.82.112.22                 education.github.com
 
 
-# Update time: 2023-11-10T06:04:51+08:00
+# Update time: 2023-11-10T08:18:13+08:00
 # Update url: https://raw.hellogithub.com/hosts
 # Star me: https://github.com/521xueweihan/GitHub520
 # GitHub520 Host End
 
 ```
 
-该内容会自动定时更新， 数据更新时间：2023-11-10T06:04:51+08:00
+该内容会自动定时更新， 数据更新时间：2023-11-10T08:18:13+08:00
 
 #### 2.1.2 修改 hosts 文件
 
