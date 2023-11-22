@@ -47,7 +47,7 @@
 185.199.108.133               avatars5.githubusercontent.com
 185.199.108.133               camo.githubusercontent.com
 140.82.112.22                 central.github.com
-185.199.110.133               cloud.githubusercontent.com
+185.199.108.133               cloud.githubusercontent.com
 140.82.114.9                  codeload.github.com
 140.82.114.21                 collector.github.com
 185.199.108.133               desktop.githubusercontent.com
@@ -62,7 +62,7 @@
 140.82.114.3                  github.com
 140.82.112.18                 github.community
 185.199.109.154               github.githubassets.com
-151.101.1.194                 github.global.ssl.fastly.net
+151.101.193.194               github.global.ssl.fastly.net
 185.199.110.153               github.io
 185.199.108.133               github.map.fastly.net
 185.199.110.153               githubstatus.com
@@ -72,18 +72,18 @@
 13.107.42.16                  pipelines.actions.githubusercontent.com
 185.199.108.133               raw.githubusercontent.com
 185.199.108.133               user-images.githubusercontent.com
-13.107.246.40                 vscode.dev
+13.107.213.40                 vscode.dev
 140.82.114.21                 education.github.com
 
 
-# Update time: 2023-11-22T14:06:07+08:00
+# Update time: 2023-11-22T16:06:08+08:00
 # Update url: https://raw.hellogithub.com/hosts
 # Star me: https://github.com/521xueweihan/GitHub520
 # GitHub520 Host End
 
 ```
 
-该内容会自动定时更新， 数据更新时间：2023-11-22T14:06:07+08:00
+该内容会自动定时更新， 数据更新时间：2023-11-22T16:06:08+08:00
 
 #### 2.1.2 修改 hosts 文件
 
