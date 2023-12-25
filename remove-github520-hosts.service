@@ -1,0 +1,11 @@
+[Unit]
+Description=Remove GitHub520 Hosts File
+After=network.target
+
+[Service]
+User=root
+PermissionsStartOnly=true
+ExecStart=/bin/bash -c 'sed -i "/# GitHub520 Host Start/,/# GitHub520 Host End/d" /etc/hosts'
+
+[Install]
+WantedBy=default.target

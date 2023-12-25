@@ -1,0 +1,9 @@
+[Unit]
+Description=Update GitHub520 Hosts File Timer
+
+[Timer]
+OnCalendar=*-*-* *:0/1:00
+Persistent=true
+
+[Install]
+WantedBy=timers.target

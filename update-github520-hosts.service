@@ -1,0 +1,14 @@
+[Unit]
+Description=Update GitHub520 Hosts File
+After=network.target
+
+[Service]
+User=root
+PermissionsStartOnly=true
+ExecStart=/bin/bash -c 'sed -i "/# GitHub520 Host Start/Q" /etc/hosts && { wget -O - https://raw.hellogithub.com/hosts || wget -O - https://raw.githubusercontent.com/521xueweihan/GitHub520/main/hosts; } >> /etc/hosts'
+Restart=on-failure
+RestartSec=30
+StartLimitInterval=3min
+
+[Install]
+WantedBy=default.target
