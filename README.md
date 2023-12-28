@@ -53,19 +53,19 @@
 185.199.110.133               desktop.githubusercontent.com
 185.199.110.133               favicons.githubusercontent.com
 140.82.112.4                  gist.github.com
-52.216.136.212                github-cloud.s3.amazonaws.com
+52.216.78.204                 github-cloud.s3.amazonaws.com
 52.217.118.249                github-com.s3.amazonaws.com
 52.217.202.65                 github-production-release-asset-2e65be.s3.amazonaws.com
-16.182.69.1                   github-production-repository-file-5c1aeb.s3.amazonaws.com
+52.217.115.97                 github-production-repository-file-5c1aeb.s3.amazonaws.com
 52.217.197.161                github-production-user-asset-6210df.s3.amazonaws.com
 192.0.66.2                    github.blog
 140.82.113.4                  github.com
 140.82.112.17                 github.community
 185.199.110.154               github.githubassets.com
 151.101.1.194                 github.global.ssl.fastly.net
-185.199.110.153               github.io
+185.199.109.153               github.io
 185.199.110.133               github.map.fastly.net
-185.199.109.153               githubstatus.com
+185.199.110.153               githubstatus.com
 140.82.114.25                 live.github.com
 185.199.110.133               media.githubusercontent.com
 185.199.110.133               objects.githubusercontent.com
@@ -76,14 +76,14 @@
 140.82.113.21                 education.github.com
 
 
-# Update time: 2023-12-28T10:12:41+08:00
+# Update time: 2023-12-28T12:05:40+08:00
 # Update url: https://raw.hellogithub.com/hosts
 # Star me: https://github.com/521xueweihan/GitHub520
 # GitHub520 Host End
 
 ```
 
-该内容会自动定时更新， 数据更新时间：2023-12-28T10:12:41+08:00
+该内容会自动定时更新， 数据更新时间：2023-12-28T12:05:40+08:00
 
 #### 2.1.2 修改 hosts 文件
 
@@ -143,7 +143,7 @@ hosts 文件在每个系统的位置不一，详情如下：
 
 将上面的命令添加到 cron，可定时执行。使用前确保 GitHub520 内容在该文件最后部分。
 
-#### 在 Docker 中运行，若遇到 `Device or resource busy` 错误，可使用以下命令执行
+#### 在 Dcker 中运行，若遇到 `Device or resource busy` 错误，可使用以下命令执行
 
 `cp /etc/hosts ~/hosts.new && sed -i "/# GitHub520 Host Start/Q" ~/hosts.new && curl https://raw.hellogithub.com/hosts >> ~/hosts.new && cp -f ~/hosts.new /etc/hosts`
 
