@@ -71,13 +71,13 @@ hosts 文件在每个系统的位置不一，详情如下：
 
 以 SwitchHosts 为例，看一下怎么使用的，配置参考下面：
 
-- Title: 随意
+- Hosts 类型: `Remote`
 
-- Type: `Remote`
+- Hosts 标题: 随意
 
 - URL: `https://raw.hellogithub.com/hosts`
 
-- Auto Refresh: 最好选 `1 hour`
+- 自动刷新: 最好选 `1 小时`
 
 如图：
 
