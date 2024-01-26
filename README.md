@@ -37,13 +37,13 @@
 # GitHub520 Host Start
 140.82.114.25                 alive.github.com
 140.82.112.5                  api.github.com
-185.199.108.153               assets-cdn.github.com
+185.199.110.153               assets-cdn.github.com
 185.199.111.133               avatars.githubusercontent.com
 185.199.111.133               avatars0.githubusercontent.com
 185.199.111.133               avatars1.githubusercontent.com
 185.199.111.133               avatars2.githubusercontent.com
 185.199.111.133               avatars3.githubusercontent.com
-185.199.111.133               avatars4.githubusercontent.com
+185.199.110.133               avatars4.githubusercontent.com
 185.199.111.133               avatars5.githubusercontent.com
 185.199.111.133               camo.githubusercontent.com
 140.82.114.21                 central.github.com
@@ -63,9 +63,9 @@
 140.82.112.17                 github.community
 185.199.108.154               github.githubassets.com
 151.101.193.194               github.global.ssl.fastly.net
-185.199.108.153               github.io
+185.199.110.153               github.io
 185.199.111.133               github.map.fastly.net
-185.199.108.153               githubstatus.com
+185.199.110.153               githubstatus.com
 140.82.112.25                 live.github.com
 185.199.111.133               media.githubusercontent.com
 185.199.111.133               objects.githubusercontent.com
@@ -76,14 +76,14 @@
 140.82.114.22                 education.github.com
 
 
-# Update time: 2024-01-26T14:05:35+08:00
+# Update time: 2024-01-26T16:05:41+08:00
 # Update url: https://raw.hellogithub.com/hosts
 # Star me: https://github.com/521xueweihan/GitHub520
 # GitHub520 Host End
 
 ```
 
-该内容会自动定时更新， 数据更新时间：2024-01-26T14:05:35+08:00
+该内容会自动定时更新， 数据更新时间：2024-01-26T16:05:41+08:00
 
 #### 2.1.2 修改 hosts 文件
 
