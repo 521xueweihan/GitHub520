@@ -54,7 +54,7 @@
 185.199.109.133               favicons.githubusercontent.com
 140.82.113.4                  gist.github.com
 52.216.9.35                   github-cloud.s3.amazonaws.com
-16.182.69.57                  github-com.s3.amazonaws.com
+3.5.20.16                     github-com.s3.amazonaws.com
 54.231.161.153                github-production-release-asset-2e65be.s3.amazonaws.com
 52.217.232.161                github-production-repository-file-5c1aeb.s3.amazonaws.com
 52.216.38.233                 github-production-user-asset-6210df.s3.amazonaws.com
@@ -76,14 +76,14 @@
 140.82.112.21                 education.github.com
 
 
-# Update time: 2024-02-09T10:09:28+08:00
+# Update time: 2024-02-09T12:05:22+08:00
 # Update url: https://raw.hellogithub.com/hosts
 # Star me: https://github.com/521xueweihan/GitHub520
 # GitHub520 Host End
 
 ```
 
-该内容会自动定时更新， 数据更新时间：2024-02-09T10:09:28+08:00
+该内容会自动定时更新， 数据更新时间：2024-02-09T12:05:22+08:00
 
 #### 2.1.2 修改 hosts 文件
 
