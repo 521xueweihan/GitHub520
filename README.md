@@ -62,7 +62,7 @@
 140.82.112.3                  github.com
 140.82.114.17                 github.community
 185.199.110.154               github.githubassets.com
-151.101.65.194                github.global.ssl.fastly.net
+151.101.129.194               github.global.ssl.fastly.net
 185.199.108.153               github.io
 185.199.108.133               github.map.fastly.net
 185.199.108.153               githubstatus.com
@@ -76,14 +76,14 @@
 140.82.114.21                 education.github.com
 
 
-# Update time: 2024-03-07T08:15:17+08:00
+# Update time: 2024-03-07T10:04:47+08:00
 # Update url: https://raw.hellogithub.com/hosts
 # Star me: https://github.com/521xueweihan/GitHub520
 # GitHub520 Host End
 
 ```
 
-该内容会自动定时更新， 数据更新时间：2024-03-07T08:15:17+08:00
+该内容会自动定时更新， 数据更新时间：2024-03-07T10:04:47+08:00
 
 #### 2.1.2 修改 hosts 文件
 
