@@ -133,6 +133,67 @@ hosts 文件在每个系统的位置不一，详情如下：
 
 ### 2.3 一行命令 (适用于类 Unix 系统)
 
+#### 使用 Systemd 管理的 Linux
+
+<details>
+<summary><b>Linux 发行版中 systemd 软件包状态</b></summary>
+
+[![Packaging status](https://repology.org/badge/vertical-allrepos/systemd.svg)](https://repology.org/project/systemd/versions)
+
+</details>
+
+```bash
+# 方式 1 ： 克隆 GitHub520 仓库
+git clone https://github.com/521xueweihan/GitHub520.git
+
+# 进入 GitHub520 仓库
+cd GitHub520
+
+# 方式 2：还可以通过下载 raw 文件方式下载相应的文件
+wget -O remove-github520-hosts.service https://raw.githubusercontent.com/521xueweihan/GitHub520/main/remove-github520-hosts.service && \
+wget -O update-github520-hosts.service https://raw.githubusercontent.com/521xueweihan/GitHub520/main/update-github520-hosts.service && \
+wget -O update-github520-hosts.timer https://raw.githubusercontent.com/521xueweihan/GitHub520/main/update-github520-hosts.timer
+
+# 安装 github520 host 的 systemd 服务到系统的 systemd 目录
+sudo install -Dm0644 *-github520-hosts.* -t /usr/lib/systemd/system/
+
+# 手动刷新 systemd 服务列表
+sudo systemctl daemon-reload
+
+# 使用 systemd 的 systemctl 设置 github520 定时服务自启并运行
+sudo systemctl enable --now update-github520-hosts.timer
+
+# 使用 systemd 的 systemctl 设置 github520 服务运行，如果不手动需要等定时服务自动运行
+sudo systemctl start update-github520-hosts.service
+
+# 使用 systemd 的 systemctl 查看 github520 服务运行状态
+sudo systemctl status update-github520-hosts.service
+
+# 核查 /etc/hosts 修改
+cat /etc/hosts
+
+# 使用 systemd 的 systemctl 移除 github520 对 /etc/hosts 的修改
+sudo systemctl start remove-github520-hosts.service
+
+# 核查 /etc/hosts 修改
+cat /etc/hosts
+
+# 使用 systemd 的 systemctl 移除 github520 定时服务自启
+sudo systemctl disable update-github520-hosts.timer
+
+# 使用 systemd 的 systemctl 停止 github520 定时服务
+sudo systemctl stop update-github520-hosts.timer
+
+# 系统的 systemd 目录中删除 github520 host 的 systemd 服务
+sudo rm -rf  *-github520-hosts.* -t /usr/lib/systemd/system/
+```
+
+- Arch Linux: [AUR github520-git](https://aur.archlinux.org/packages/github520-git)
+
+```bash
+yay -Syu github520
+```
+
 #### GNU（Ubuntu/CentOS/Fedora）
 
 `sudo sh -c 'sed -i "/# GitHub520 Host Start/Q" /etc/hosts && curl https://raw.hellogithub.com/hosts >> /etc/hosts'`
