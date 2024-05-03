@@ -19,8 +19,8 @@
 140.82.113.4                  gist.github.com
 52.217.194.97                 github-cloud.s3.amazonaws.com
 52.217.235.201                github-com.s3.amazonaws.com
-52.217.69.60                  github-production-release-asset-2e65be.s3.amazonaws.com
-54.231.230.49                 github-production-repository-file-5c1aeb.s3.amazonaws.com
+16.182.98.169                 github-production-release-asset-2e65be.s3.amazonaws.com
+16.182.35.225                 github-production-repository-file-5c1aeb.s3.amazonaws.com
 16.182.107.1                  github-production-user-asset-6210df.s3.amazonaws.com
 192.0.66.2                    github.blog
 140.82.112.4                  github.com
@@ -39,7 +39,7 @@
 140.82.113.22                 education.github.com
 
 
-# Update time: 2024-05-03T22:05:51+08:00
+# Update time: 2024-05-04T00:05:22+08:00
 # Update url: https://raw.hellogithub.com/hosts
 # Star me: https://github.com/521xueweihan/GitHub520
 # GitHub520 Host End
