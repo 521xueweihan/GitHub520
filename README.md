@@ -41,7 +41,7 @@
 185.199.111.133               avatars.githubusercontent.com
 185.199.111.133               avatars0.githubusercontent.com
 185.199.111.133               avatars1.githubusercontent.com
-185.199.108.133               avatars2.githubusercontent.com
+185.199.111.133               avatars2.githubusercontent.com
 185.199.111.133               avatars3.githubusercontent.com
 185.199.111.133               avatars4.githubusercontent.com
 185.199.111.133               avatars5.githubusercontent.com
@@ -53,10 +53,10 @@
 185.199.111.133               desktop.githubusercontent.com
 185.199.111.133               favicons.githubusercontent.com
 140.82.112.4                  gist.github.com
-52.216.44.89                  github-cloud.s3.amazonaws.com
-3.5.1.131                     github-com.s3.amazonaws.com
-52.217.162.73                 github-production-release-asset-2e65be.s3.amazonaws.com
-16.182.35.225                 github-production-repository-file-5c1aeb.s3.amazonaws.com
+54.231.234.81                 github-cloud.s3.amazonaws.com
+54.231.200.193                github-com.s3.amazonaws.com
+52.217.140.193                github-production-release-asset-2e65be.s3.amazonaws.com
+52.217.18.52                  github-production-repository-file-5c1aeb.s3.amazonaws.com
 54.231.171.81                 github-production-user-asset-6210df.s3.amazonaws.com
 192.0.66.2                    github.blog
 140.82.113.4                  github.com
@@ -72,17 +72,18 @@
 13.107.42.16                  pipelines.actions.githubusercontent.com
 185.199.111.133               raw.githubusercontent.com
 185.199.111.133               user-images.githubusercontent.com
+13.107.213.51                 vscode.dev
 140.82.112.22                 education.github.com
 
 
-# Update time: 2024-06-05T20:07:44+08:00
+# Update time: 2024-06-05T22:05:30+08:00
 # Update url: https://raw.hellogithub.com/hosts
 # Star me: https://github.com/521xueweihan/GitHub520
 # GitHub520 Host End
 
 ```
 
-该内容会自动定时更新， 数据更新时间：2024-06-05T20:07:44+08:00
+该内容会自动定时更新， 数据更新时间：2024-06-05T22:05:30+08:00
 
 #### 2.1.2 修改 hosts 文件
 
