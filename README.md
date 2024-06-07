@@ -37,7 +37,7 @@
 # GitHub520 Host Start
 140.82.112.25                 alive.github.com
 140.82.112.6                  api.github.com
-185.199.110.153               assets-cdn.github.com
+185.199.109.153               assets-cdn.github.com
 185.199.111.133               avatars.githubusercontent.com
 185.199.111.133               avatars0.githubusercontent.com
 185.199.111.133               avatars1.githubusercontent.com
@@ -53,15 +53,15 @@
 185.199.111.133               desktop.githubusercontent.com
 185.199.111.133               favicons.githubusercontent.com
 140.82.114.4                  gist.github.com
-52.217.140.185                github-cloud.s3.amazonaws.com
-54.231.136.9                  github-com.s3.amazonaws.com
-52.217.232.113                github-production-release-asset-2e65be.s3.amazonaws.com
-52.217.18.52                  github-production-repository-file-5c1aeb.s3.amazonaws.com
-54.231.171.81                 github-production-user-asset-6210df.s3.amazonaws.com
+52.216.44.89                  github-cloud.s3.amazonaws.com
+3.5.1.131                     github-com.s3.amazonaws.com
+52.217.140.193                github-production-release-asset-2e65be.s3.amazonaws.com
+16.182.35.225                 github-production-repository-file-5c1aeb.s3.amazonaws.com
+16.182.107.1                  github-production-user-asset-6210df.s3.amazonaws.com
 192.0.66.2                    github.blog
 140.82.113.4                  github.com
 140.82.113.17                 github.community
-185.199.109.154               github.githubassets.com
+185.199.110.154               github.githubassets.com
 151.101.1.194                 github.global.ssl.fastly.net
 185.199.109.153               github.io
 185.199.111.133               github.map.fastly.net
@@ -75,14 +75,14 @@
 140.82.112.22                 education.github.com
 
 
-# Update time: 2024-06-08T00:05:32+08:00
+# Update time: 2024-06-08T02:07:26+08:00
 # Update url: https://raw.hellogithub.com/hosts
 # Star me: https://github.com/521xueweihan/GitHub520
 # GitHub520 Host End
 
 ```
 
-该内容会自动定时更新， 数据更新时间：2024-06-08T00:05:32+08:00
+该内容会自动定时更新， 数据更新时间：2024-06-08T02:07:26+08:00
 
 #### 2.1.2 修改 hosts 文件
 
