@@ -1,10 +1,11 @@
 # GitHub520
+
 <p align="center">
-  <img src="https://cdn.jsdelivr.net/gh/521xueweihan/img_logo@main/logo/readme.gif"/>
-  <br><strong><a href="https://github.com/521xueweihan/HelloGitHub" target="_blank">HelloGitHub</a></strong> 分享 GitHub 上有趣、入门级的开源项目。<br>兴趣是最好的老师，这里能够帮你找到编程的兴趣！
+<a href="https://hellogithub.com/repository/d05ff820bf36470581c02cda5cbd17ea" target="_blank"><img src="https://api.hellogithub.com/v1/widgets/recommend.svg?rid=d05ff820bf36470581c02cda5cbd17ea&claim_uid=8MKvZoxaWt" alt="Featured｜HelloGitHub" style="width: 250px; height: 54px;" width="250" height="54" /></a><br>
+😘 让你“爱”上 GitHub，解决访问时图裂、加载慢的问题。
 </p>
 
-服务器续费到 2024.12 共花了：1500+💰 [点击扫码赞助](https://cdn.jsdelivr.net/gh/521xueweihan/img_logo@main/logo/receiving_code.png)，感谢🙏
+> 服务器已续费到 2024.12 共花了：1500+💰 [点击扫码赞助](https://cdn.jsdelivr.net/gh/521xueweihan/img_logo@main/logo/receiving_code.png)，感谢🙏
 
 ## 一、介绍
 对 GitHub 说"爱"太难了：访问慢、图片加载不出来。
