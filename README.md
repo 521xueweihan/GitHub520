@@ -131,7 +131,31 @@ hosts 文件在每个系统的位置不一，详情如下：
 
 这样每次 hosts 有更新都能及时进行更新，免去手动更新。
 
-### 2.3 一行命令 (适用于类 Unix 系统)
+### 2.3 一行命令
+
+#### windows
+
+使用命令需要安装[git bash](https://gitforwindows.org/)
+复制以下命令保存到本地命名为**fetch_github_hosts**
+
+```shell
+_hosts=$(mktemp /tmp/hostsXXX)
+hosts=/c/Windows/System32/drivers/etc/hosts
+remote=https://raw.hellogithub.com/hosts
+reg='/# GitHub520 Host Start/,/# Github520 Host End/d'
+
+sed "$reg" $hosts > "$_hosts"
+curl "$remote" >> "$_hosts"
+cat "$_hosts" > "$hosts"
+
+rm "$_hosts"
+```
+
+在**CMD**中执行以下命令，执行前需要替换**git-bash.exe**和**fetch_github_hosts**为你本地的路径，注意前者为windows路径格式后者为shell路径格式
+
+`"C:\Program Files\Git\git-bash.exe" -c "/c/Users/XXX/fetch_github_hosts"`
+
+可以将上述命令添加到windows的task schedular（任务计划程序）中以定时执行
 
 #### GNU（Ubuntu/CentOS/Fedora）
 
