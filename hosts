@@ -2,12 +2,12 @@
 140.82.112.26                 alive.github.com
 140.82.112.5                  api.github.com
 185.199.109.153               assets-cdn.github.com
-185.199.108.133               avatars.githubusercontent.com
+185.199.111.133               avatars.githubusercontent.com
 185.199.108.133               avatars0.githubusercontent.com
 185.199.111.133               avatars1.githubusercontent.com
-185.199.111.133               avatars2.githubusercontent.com
+185.199.108.133               avatars2.githubusercontent.com
 185.199.111.133               avatars3.githubusercontent.com
-185.199.108.133               avatars4.githubusercontent.com
+185.199.111.133               avatars4.githubusercontent.com
 185.199.111.133               avatars5.githubusercontent.com
 185.199.111.133               camo.githubusercontent.com
 140.82.112.22                 central.github.com
@@ -15,12 +15,12 @@
 140.82.112.10                 codeload.github.com
 140.82.113.22                 collector.github.com
 185.199.111.133               desktop.githubusercontent.com
-185.199.108.133               favicons.githubusercontent.com
+185.199.111.133               favicons.githubusercontent.com
 140.82.114.3                  gist.github.com
 52.217.200.241                github-cloud.s3.amazonaws.com
-3.5.1.131                     github-com.s3.amazonaws.com
+3.5.17.120                    github-com.s3.amazonaws.com
 16.182.71.9                   github-production-release-asset-2e65be.s3.amazonaws.com
-52.217.87.108                 github-production-repository-file-5c1aeb.s3.amazonaws.com
+16.182.74.129                 github-production-repository-file-5c1aeb.s3.amazonaws.com
 16.182.107.1                  github-production-user-asset-6210df.s3.amazonaws.com
 192.0.66.2                    github.blog
 140.82.112.3                  github.com
@@ -40,7 +40,7 @@
 140.82.114.22                 education.github.com
 
 
-# Update time: 2024-06-23T04:05:07+08:00
+# Update time: 2024-06-23T06:05:37+08:00
 # Update url: https://raw.hellogithub.com/hosts
 # Star me: https://github.com/521xueweihan/GitHub520
 # GitHub520 Host End
