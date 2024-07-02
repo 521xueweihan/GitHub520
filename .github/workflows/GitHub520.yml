@@ -4,6 +4,7 @@
 name: GitHub520
 
 on:
+  workflow_dispatch:
   push:
   schedule:
     - cron: '0 */2 * * *'
@@ -30,8 +31,8 @@ jobs:
       run: |
         # fetch new ip content and update readme file
         sudo python fetch_ips.py
-    - name: commit
-      id: commit
+    - name: 提交
+      id: 提交
       run: |
         git config --global user.email sunxuebangong@gmail.com
         git config --global user.name action_bot
