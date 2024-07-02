@@ -37,7 +37,7 @@ GITHUB_URLS = [
     'vscode.dev', 'education.github.com', 'private-user-images.githubusercontent.com',
     'archiveprogram.github.com', 'github.dev', 'www.thegithubshop.com',
     'support.github.com', 'partner.github.com', 'resources.github.com',
-    'skills.github.com'
+    'skills.github.com', 'education.github.com', 'github.careers'
 ]
 
 HOSTS_TEMPLATE = """# GitHub520 Host Start
