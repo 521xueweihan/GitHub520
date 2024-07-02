@@ -31,8 +31,8 @@ jobs:
       run: |
         # fetch new ip content and update readme file
         sudo python fetch_ips.py
-    - name: 提交
-      id: 提交
+    - name: commit
+      id: commit
       run: |
         git config --global user.email sunxuebangong@gmail.com
         git config --global user.name action_bot
