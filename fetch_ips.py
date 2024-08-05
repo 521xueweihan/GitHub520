@@ -34,7 +34,10 @@ GITHUB_URLS = [
     'githubstatus.com', 'live.github.com', 'media.githubusercontent.com',
     'objects.githubusercontent.com', 'pipelines.actions.githubusercontent.com',
     'raw.githubusercontent.com', 'user-images.githubusercontent.com',
-    'vscode.dev', 'education.github.com', 'private-user-images.githubusercontent.com'
+    'vscode.dev', 'education.github.com', 'private-user-images.githubusercontent.com',
+    'archiveprogram.github.com', 'github.dev', 'www.thegithubshop.com',
+    'support.github.com', 'partner.github.com', 'resources.github.com',
+    'skills.github.com', 'github.careers'
 ]
 
 HOSTS_TEMPLATE = """# GitHub520 Host Start
@@ -157,7 +160,7 @@ def main(verbose=False) -> None:
 
     if not content:
         return
-    update_time = datetime.utcnow().astimezone(
+    update_time = datetime.now().astimezone(
         timezone(timedelta(hours=8))).replace(microsecond=0).isoformat()
     hosts_content = HOSTS_TEMPLATE.format(content=content,
                                           update_time=update_time)
