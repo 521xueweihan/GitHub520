@@ -1,4 +1,4 @@
-
+[toc]
 
 ## powershell 版本的一键更新hosts文件
 
@@ -21,7 +21,7 @@ rm "$_hosts"
 
 ## 操作步骤
 
-
+- 如果你不想了解细节，直接跳转到后面的一键运行整合脚本一节
 
 ### 准备:设置powershell执行策略
 
@@ -36,7 +36,6 @@ Set-ExecutionPolicy -Scope CurrentUser -ExecutionPolicy bypass
 ### powrshell脚本
 
 ```powershell
-
 function Update-githubHosts
 {
     <# 
@@ -52,7 +51,7 @@ function Update-githubHosts
     .LINK
     https://github.com/521xueweihan/GitHub520
     .LINK
-    https://gitee.com/xuchaoxin1375/scripts/tree/main/PS/Deploy #获取最新版本
+    https://gitee.com/xuchaoxin1375/scripts/tree/main/PS/Deploy
     #>
     [CmdletBinding()]
     param (
@@ -61,7 +60,7 @@ function Update-githubHosts
         $remote = 'https://raw.hellogithub.com/hosts'
     )
     # 创建临时文件
-    $tempHosts = New-TemporaryFile
+    # $tempHosts = New-TemporaryFile
 
     # 定义 hosts 文件路径和远程 URL
 
@@ -86,31 +85,30 @@ function Update-githubHosts
     $content = $content -replace $reg, ''
 
     # 追加新内容到$tempHosts文件中
-    $content | Set-Content $tempHosts
+    # $content | Set-Content $tempHosts
     #也可以这样写:
     #$content | >> $tempHosts 
 
     # 下载远程内容并追加到临时文件
-    $NewHosts = New-TemporaryFile
-    Invoke-WebRequest -Uri $remote -UseBasicParsing -OutFile $NewHosts # "$home/downloads/tempRemoteFile"
-    #写入到临时文件$tempHosts
-    Add-Content -Path $tempHosts -Value (Get-Content $NewHosts)
-    # 也可以这样写:
-    # Get-Content $NewHosts >> $tempHosts
-    # Get-Content $tempHosts
-    # 将临时文件的内容覆盖到 hosts 文件 (需要管理员权限)
-    Get-Content $tempHosts | Set-Content $hosts
+    # $NewHosts = New-TemporaryFile
+    $New = Invoke-WebRequest -Uri $remote -UseBasicParsing #New是一个网络对象而不是字符串
+    $New = $New.ToString() #清理头信息
+    #移除结尾多余的空行,避免随着更新,hosts文件中的内容有大量的空行残留
+       
+    # 将内容覆盖添加到 hosts 文件 (需要管理员权限)
+    # $content > $hosts
+    $content.TrimEnd() > $hosts
+    ''>> $hosts #使用>>会引入一个换行符(设计实验:$s='123',$s > example;$s >> example就可以看出引入的换行),这里的策略是强控,即无论之前Github520的内容和前面的内容之间隔了多少个空格,
+    # 这里总是移除多余(全部)空行,然后手动插入一个空行,再追加新内容(Gith520 hosts)
+    $New.Trim() >> $hosts
 
-    # 删除临时文件
-    Remove-Item $tempHosts
-    Remove-Item $NewHosts
+    
+    Write-Verbose $($content + $NewContent)
     # 刷新配置
     ipconfig /flushdns
     
 }
-#调用
-Update-githubHosts 
-
+Update-githubHosts
 ```
 
 您可以将上述脚本复制粘贴到一个文本文件中（.txt),然后保存修改,并将文件重命名为`fetch-github-hosts.ps1`
@@ -137,7 +135,6 @@ Mode                 LastWriteTime         Length Name
 下面的代码可以作为一次性的代码,可以保存到powershell配置文件或某个模块中
 
 - ```powershell
-  
   param(
       $f = "$PSScriptRoot\fetch-github-hosts.ps1",
       [ValidateSet('pwsh', 'powershell')]$shell = 'powershell',
@@ -205,9 +202,7 @@ Mode                 LastWriteTime         Length Name
 
   
 
-### 补充
-
-相关目录结构
+### 相关目录结构
 
 ```powershell
 PS C:\Users\cxxu\Desktop> ls C:\GHU\
@@ -262,3 +257,34 @@ powershell -f  "$GHU\AutoFetch.ps1 " # -f $GHU\fetch-github-hosts.ps1 -shell pow
 ```
 
 管理员方式打开powershell,然后复制粘贴上述代码,运行即可
+
+## 检查
+
+- 你可以通过以下命令来立即触发更新host的任务，看看是否生效
+
+  ```powershell
+  start-scheduledTask -TaskName Update-githubhosts
+  
+  sleep 5 #等待5秒钟，让更新操作完成
+  # 检查hosts文件修改情况(上一次更改时间)
+  $hosts = 'C:\Windows\System32\drivers\etc\hosts'
+  ls $hosts|select LastWriteTime
+  cat $hosts|select -Last 5 #查看hosts文件的最后5行信息
+  # Notepad $hosts 查看整个hosts文件
+  ```
+
+- 例如
+
+  ```
+  PS> $hosts = 'C:\Windows\System32\drivers\etc\hosts'
+  
+  PS☀️[BAT:77%][MEM:23.37% (7.41/31.71)GB][10:23:35]
+  #⚡️[cxxu@CXXUCOLORFUL][192.168.1.178][C:\tmp\scoop-cn\Deploy-ScoopForCNUser]
+  PS> ls $hosts|select LastWriteTime
+  
+  LastWriteTime
+  -------------
+  2024/8/21 10:14:25
+  ```
+
+  
