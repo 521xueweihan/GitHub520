@@ -38,8 +38,8 @@
 # GitHub520 Host Start
 140.82.113.25                 alive.github.com
 140.82.112.5                  api.github.com
-185.199.109.153               assets-cdn.github.com
-185.199.111.133               avatars.githubusercontent.com
+185.199.110.153               assets-cdn.github.com
+185.199.108.133               avatars.githubusercontent.com
 185.199.111.133               avatars0.githubusercontent.com
 185.199.111.133               avatars1.githubusercontent.com
 185.199.111.133               avatars2.githubusercontent.com
@@ -52,13 +52,13 @@
 140.82.112.10                 codeload.github.com
 140.82.113.22                 collector.github.com
 185.199.111.133               desktop.githubusercontent.com
-185.199.111.133               favicons.githubusercontent.com
+185.199.108.133               favicons.githubusercontent.com
 140.82.114.4                  gist.github.com
 52.216.210.241                github-cloud.s3.amazonaws.com
-16.182.34.121                 github-com.s3.amazonaws.com
-52.216.43.65                  github-production-release-asset-2e65be.s3.amazonaws.com
+52.217.103.188                github-com.s3.amazonaws.com
+52.217.194.241                github-production-release-asset-2e65be.s3.amazonaws.com
 52.217.82.92                  github-production-repository-file-5c1aeb.s3.amazonaws.com
-16.182.105.145                github-production-user-asset-6210df.s3.amazonaws.com
+52.217.166.145                github-production-user-asset-6210df.s3.amazonaws.com
 192.0.66.2                    github.blog
 140.82.113.3                  github.com
 140.82.114.18                 github.community
@@ -72,19 +72,19 @@
 185.199.111.133               objects.githubusercontent.com
 13.107.42.16                  pipelines.actions.githubusercontent.com
 185.199.111.133               raw.githubusercontent.com
-185.199.111.133               user-images.githubusercontent.com
+185.199.108.133               user-images.githubusercontent.com
 140.82.112.22                 education.github.com
 185.199.108.133               private-user-images.githubusercontent.com
 
 
-# Update time: 2024-09-10T04:05:45+08:00
+# Update time: 2024-09-10T06:05:11+08:00
 # Update url: https://raw.hellogithub.com/hosts
 # Star me: https://github.com/521xueweihan/GitHub520
 # GitHub520 Host End
 
 ```
 
-该内容会自动定时更新， 数据更新时间：2024-09-10T04:05:45+08:00
+该内容会自动定时更新， 数据更新时间：2024-09-10T06:05:11+08:00
 
 #### 2.1.2 修改 hosts 文件
 
