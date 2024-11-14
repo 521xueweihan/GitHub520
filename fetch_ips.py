@@ -88,7 +88,8 @@ def get_best_ip(ip_list: list) -> str:
     ping_timeout = 2
     best_ip = ''
     min_ms = ping_timeout * 1000
-    for ip in ip_list:
+    ip_set = set(ip_list)
+    for ip in ip_set:
         ping_result = ping(ip, timeout=ping_timeout)
         print(ping_result.rtt_avg_ms)
         if ping_result.rtt_avg_ms == ping_timeout * 1000:
@@ -122,9 +123,8 @@ def get_ip(session: Any, github_url: str) -> Optional[str]:
                       '06.0.0.0 Safari/537.36'}
     try:
         rs = session.get(url, headers=headers, timeout=5)
-        table = rs.html.find('#dns', first=True)
         pattern = r"\b(?:[0-9]{1,3}\.){3}[0-9]{1,3}\b"
-        ip_list = re.findall(pattern, table.text)
+        ip_list = re.findall(pattern, rs.html.text)
         best_ip = get_best_ip(ip_list)
         if best_ip:
             return best_ip
@@ -147,7 +147,7 @@ def main(verbose=False) -> None:
     # for index, github_url in enumerate(GITHUB_URLS):
     #     try:
     #         ip = get_ip(session, github_url)
-    
+
     #         content += ip.ljust(30) + github_url + "\n"
     #         content_list.append((ip, github_url,))
     #     except Exception:
