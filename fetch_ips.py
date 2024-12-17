@@ -157,7 +157,7 @@ def main(verbose=False) -> None:
 
     if not content:
         return
-    update_time = datetime.utcnow().astimezone(
+    update_time = datetime.now(timezone.utc).astimezone(
         timezone(timedelta(hours=8))).replace(microsecond=0).isoformat()
     hosts_content = HOSTS_TEMPLATE.format(content=content,
                                           update_time=update_time)
