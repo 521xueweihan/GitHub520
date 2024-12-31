@@ -8,6 +8,7 @@
 import os
 import re
 import json
+import argparse
 from typing import Any, Optional
 
 from datetime import datetime, timezone, timedelta
@@ -87,12 +88,12 @@ def write_json_file(hosts_list: list) -> None:
 def get_best_ip(ip_list: list) -> str:
     ping_timeout = 2
     best_ip = ''
-    min_ms = ping_timeout * 1000
+    min_ms = ping_timeout * 500
     ip_set = set(ip_list)
     for ip in ip_set:
         ping_result = ping(ip, timeout=ping_timeout)
         print(ping_result.rtt_avg_ms)
-        if ping_result.rtt_avg_ms == ping_timeout * 1000:
+        if ping_result.rtt_avg_ms == ping_timeout * 500:
             # 超时认为 IP 失效
             continue
         else:
@@ -135,25 +136,27 @@ def get_ip(session: Any, github_url: str) -> Optional[str]:
         raise Exception
 
 
-def main(verbose=False) -> None:
+def main(verbose=False, model='server') -> None:
     if verbose:
         print('Start script.')
     session = HTMLSession()
     content = ""
-    content_list = get_json(session)
-    for item in content_list:
-       content += item[0].ljust(30) + item[1] + "\n"
-    # content_list = []
-    # for index, github_url in enumerate(GITHUB_URLS):
-    #     try:
-    #         ip = get_ip(session, github_url)
+    if model == 'server':
+        content_list = []
+        for index, github_url in enumerate(GITHUB_URLS):
+            try:
+                ip = get_ip(session, github_url)
 
-    #         content += ip.ljust(30) + github_url + "\n"
-    #         content_list.append((ip, github_url,))
-    #     except Exception:
-    #         continue
-    #     if verbose:
-    #         print(f'process url: {index + 1}/{len(GITHUB_URLS)}')
+                content += ip.ljust(30) + github_url + "\n"
+                content_list.append((ip, github_url,))
+            except Exception:
+                continue
+            if verbose:
+                print(f'process url: {index + 1}/{len(GITHUB_URLS)}')
+    else:
+        content_list = get_json(session)
+        for item in content_list:
+            content += item[0].ljust(30) + item[1] + "\n"
 
     if not content:
         return
@@ -170,4 +173,9 @@ def main(verbose=False) -> None:
 
 
 if __name__ == '__main__':
-    main(True)
+    parser = argparse.ArgumentParser(description="Run fetch ips script")
+    # 2. 定义参数
+    parser.add_argument('model', metavar='model', type=str, nargs='?')
+    # 3. 解析命令行
+    args = parser.parse_args()
+    main(True, args.model)
