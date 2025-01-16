@@ -24,11 +24,11 @@ jobs:
         python-version: ${{ matrix.python-version }}
     - name: Install dependencies
       run: |
-        if [ -f requirements.txt ]; then sudo pip install -r requirements.txt; fi
+        if [ -f actions_requirements.txt ]; then pip install -r actions_requirements.txt; fi
     - name: run script
       run: |
         # fetch new ip content and update readme file
-        sudo python fetch_ips.py
+        python update_ips.py
     - name: commit
       id: commit
       run: |
