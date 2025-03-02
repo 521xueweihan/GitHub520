@@ -6,7 +6,7 @@
 #   Date    :   2020-05-19 15:27
 #   Desc    :   获取最新的 GitHub 相关域名对应 IP
 import re
-from typing import Any, List, Optional
+from typing import Any, Dict, List, Optional
 from datetime import datetime
 import sys
 import asyncio
@@ -19,21 +19,28 @@ from retry import retry
 from common import GITHUB_URLS, write_hosts_content
 
 
-def select_ip_from_list(ip_list: list) -> str:
-    ping_timeout = 1
-    best_ip = ''
-    min_ms = ping_timeout * 1000
-    ip_set = set(ip_list)
-    for ip in ip_set:
-        ping_result = ping(ip, timeout=ping_timeout)
-        print(f'ping {ip} {ping_result.rtt_avg_ms} ms')
-        if ping_result.rtt_avg_ms == ping_timeout * 1000:
-            # 超时认为 IP 失效
-            continue
-        else:
-            if ping_result.rtt_avg_ms < min_ms:
-                min_ms = ping_result.rtt_avg_ms
-                best_ip = ip
+PING_LIST: Dict[str, int] = dict()
+
+
+def ping(ip: str) -> int:
+    global PING_LIST
+    if ip in PING_LIST:
+        return PING_LIST[ip]
+    ping_timeout_sec = 1
+    ping_times = [ping(ip, timeout=ping_timeout_sec).rtt_avg_ms for _ in range(3)]
+    ping_times.sort()
+    print(f'Ping {ip}: {ping_times} ms')
+    PING_LIST[ip] = ping_times[1] # 取中位数
+    return PING_LIST[ip]
+
+
+def select_ip_from_list(ip_list: List[str]) -> Optional[str]:
+    if len(ip_list) == 0:
+        return None
+    ping_results = [(ip, ping(ip)) for ip in ip_list]
+    ping_results.sort(lambda x: x[1])
+    best_ip = ping_results[0][0]
+    print(f"{ping_results}, selected {best_ip}")
     return best_ip
 
 
@@ -50,7 +57,7 @@ def get_ip_list_from_ipaddress_com(session: Any, github_url: str) -> Optional[Li
         ip_list = re.findall(pattern, rs.html.text)
         return ip_list
     except Exception as ex:
-        print("get: {url}, error: {ex}")
+        print(f"get: {url}, error: {ex}")
         raise Exception
 
 
@@ -88,7 +95,7 @@ async def get_ip_list_from_dns(
         result = await resolver.query(domain, record_type)
         return [answer.host for answer in result]
     except aiodns.error.DNSError as e:
-        print(f"DNS 查询失败: {e}")
+        print(f"{domain}: DNS 查询失败: {e}")
         return []
 
 
