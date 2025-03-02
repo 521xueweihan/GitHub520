@@ -137,11 +137,11 @@ async def main() -> None:
             ip = await get_ip(session, github_url)
             if ip is None:
                 print(f"{github_url}: IP Not Found")
-                ip = "# Not available"
+                ip = "# IP Address Not Found"
             content += ip.ljust(30) + github_url
             global PING_LIST
             if PING_LIST.get(ip) is not None and PING_LIST.get(ip) == PING_TIMEOUT_SEC * 1000:
-                content += "  # Not Available"
+                content += "  # Timeout"
             content += "\n"
             content_list.append((ip, github_url,))
         except Exception:
