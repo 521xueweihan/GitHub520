@@ -43,10 +43,6 @@ def select_ip_from_list(ip_list: List[str]) -> Optional[str]:
     ping_results = [(ip, ping_cached(ip)) for ip in ip_list]
     ping_results.sort(key=lambda x: x[1])
     best_ip = ping_results[0][0]
-    # 全都超时？那就不选了
-    if ping_results[0][1] == PING_TIMEOUT_SEC * 1000:
-        print(f"{ping_results}, no selection")
-        return None
     print(f"{ping_results}, selected {best_ip}")
     return best_ip
 
@@ -142,7 +138,11 @@ async def main() -> None:
             if ip is None:
                 print(f"{github_url}: IP Not Found")
                 ip = "# Not available"
-            content += ip.ljust(30) + github_url + "\n"
+            content += ip.ljust(30) + github_url
+            global PING_LIST
+            if PING_LIST.get(ip) is not None and PING_LIST.get(ip) == PING_TIMEOUT_SEC * 1000:
+                content += "  # Not Available"
+            content += "\n"
             content_list.append((ip, github_url,))
         except Exception:
             continue
