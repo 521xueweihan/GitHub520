@@ -19,16 +19,18 @@ from retry import retry
 from common import GITHUB_URLS, write_hosts_content
 
 
-PING_LIST: Dict[str, int] = dict()
+PING_TIMEOUT_SEC: int = 1
 DISCARD_LIST: List[str] = ["1.0.1.1", "1.2.1.1", "127.0.0.1"]
+
+
+PING_LIST: Dict[str, int] = dict()
 
 
 def ping_cached(ip: str) -> int:
     global PING_LIST
     if ip in PING_LIST:
         return PING_LIST[ip]
-    ping_timeout_sec = 1
-    ping_times = [ping(ip, timeout=ping_timeout_sec).rtt_avg_ms for _ in range(3)]
+    ping_times = [ping(ip, timeout=PING_TIMEOUT_SEC).rtt_avg_ms for _ in range(3)]
     ping_times.sort()
     print(f'Ping {ip}: {ping_times} ms')
     PING_LIST[ip] = ping_times[1] # 取中位数
@@ -41,6 +43,10 @@ def select_ip_from_list(ip_list: List[str]) -> Optional[str]:
     ping_results = [(ip, ping_cached(ip)) for ip in ip_list]
     ping_results.sort(key=lambda x: x[1])
     best_ip = ping_results[0][0]
+    # 全都超时？那就不选了
+    if ping_results[0][1] == PING_TIMEOUT_SEC * 1000:
+        print(f"{ping_results}, no selection")
+        return None
     print(f"{ping_results}, selected {best_ip}")
     return best_ip
 
