@@ -22,7 +22,7 @@ from common import GITHUB_URLS, write_hosts_content
 PING_LIST: Dict[str, int] = dict()
 
 
-def ping(ip: str) -> int:
+def ping_cached(ip: str) -> int:
     global PING_LIST
     if ip in PING_LIST:
         return PING_LIST[ip]
@@ -37,7 +37,7 @@ def ping(ip: str) -> int:
 def select_ip_from_list(ip_list: List[str]) -> Optional[str]:
     if len(ip_list) == 0:
         return None
-    ping_results = [(ip, ping(ip)) for ip in ip_list]
+    ping_results = [(ip, ping_cached(ip)) for ip in ip_list]
     ping_results.sort(lambda x: x[1])
     best_ip = ping_results[0][0]
     print(f"{ping_results}, selected {best_ip}")
@@ -104,15 +104,17 @@ async def get_ip(session: Any, github_url: str) -> Optional[str]:
     try:
         ip_list_web = get_ip_list_from_ipaddress_com(session, github_url)
     except Exception as ex:
-        raise Exception("url: {github_url}, ipaddress empty")
+        pass
     ip_list_dns = []
     try:
         ip_list_dns = await get_ip_list_from_dns(github_url, dns_server_list=DNS_SERVER_LIST)
     except Exception as ex:
         pass
     ip_list = list(set(ip_list_web + ip_list_dns))
+    ip_list.sort()
     if len(ip_list) == 0:
         return None
+    print(f"{github_url}: {ip_list}")
     best_ip = select_ip_from_list(ip_list)
     return best_ip
 
@@ -124,6 +126,7 @@ async def main() -> None:
     content = ""
     content_list = []
     for index, github_url in enumerate(GITHUB_URLS):
+        print(f'Start Processing url: {index + 1}/{len(GITHUB_URLS)}, {github_url}')
         try:
             ip = await get_ip(session, github_url)
             if ip is None:
@@ -133,7 +136,6 @@ async def main() -> None:
             content_list.append((ip, github_url,))
         except Exception:
             continue
-        print(f'Process url: {index + 1}/{len(GITHUB_URLS)}, {github_url}')
 
     write_hosts_content(content, content_list)
     # print(hosts_content)
