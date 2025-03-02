@@ -20,6 +20,7 @@ from common import GITHUB_URLS, write_hosts_content
 
 
 PING_LIST: Dict[str, int] = dict()
+DISCARD_LIST: List[str] = ["1.0.1.1", "1.2.1.1", "127.0.0.1"]
 
 
 def ping_cached(ip: str) -> int:
@@ -110,7 +111,10 @@ async def get_ip(session: Any, github_url: str) -> Optional[str]:
         ip_list_dns = await get_ip_list_from_dns(github_url, dns_server_list=DNS_SERVER_LIST)
     except Exception as ex:
         pass
-    ip_list = list(set(ip_list_web + ip_list_dns))
+    ip_list_set = set(ip_list_web + ip_list_dns)
+    for discard_ip in DISCARD_LIST:
+        ip_list_set.discard(discard_ip)
+    ip_list = list(ip_list_set)
     ip_list.sort()
     if len(ip_list) == 0:
         return None
