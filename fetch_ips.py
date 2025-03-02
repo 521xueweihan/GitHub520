@@ -38,7 +38,7 @@ def select_ip_from_list(ip_list: List[str]) -> Optional[str]:
     if len(ip_list) == 0:
         return None
     ping_results = [(ip, ping_cached(ip)) for ip in ip_list]
-    ping_results.sort(lambda x: x[1])
+    ping_results.sort(key=lambda x: x[1])
     best_ip = ping_results[0][0]
     print(f"{ping_results}, selected {best_ip}")
     return best_ip
