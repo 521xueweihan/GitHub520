@@ -141,7 +141,7 @@ async def main() -> None:
             ip = await get_ip(session, github_url)
             if ip is None:
                 print(f"{github_url}: IP Not Found")
-                continue
+                ip = "# Not available"
             content += ip.ljust(30) + github_url + "\n"
             content_list.append((ip, github_url,))
         except Exception:
