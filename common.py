@@ -13,7 +13,7 @@ from datetime import datetime, timezone, timedelta
 from retry import retry
 
 GITHUB_URLS = [
-    'alive.github.com', 'api.github.com', 'assets-cdn.github.com',
+    'alive.github.com', 'api.github.com', 'api.individual.githubcopilot.com',
     'avatars.githubusercontent.com', 'avatars0.githubusercontent.com',
     'avatars1.githubusercontent.com', 'avatars2.githubusercontent.com',
     'avatars3.githubusercontent.com', 'avatars4.githubusercontent.com',
