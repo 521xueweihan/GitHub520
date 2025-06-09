@@ -10,21 +10,21 @@
 185.199.109.133               avatars4.githubusercontent.com
 185.199.109.133               avatars5.githubusercontent.com
 185.199.109.133               camo.githubusercontent.com
-140.82.113.21                 central.github.com
+140.82.113.22                 central.github.com
 185.199.109.133               cloud.githubusercontent.com
 20.205.243.165                codeload.github.com
-140.82.112.21                 collector.github.com
+140.82.114.21                 collector.github.com
 185.199.109.133               desktop.githubusercontent.com
 185.199.109.133               favicons.githubusercontent.com
 20.205.243.166                gist.github.com
-16.182.41.225                 github-cloud.s3.amazonaws.com
-3.5.19.110                    github-com.s3.amazonaws.com
-54.231.134.9                  github-production-release-asset-2e65be.s3.amazonaws.com
-54.231.225.49                 github-production-repository-file-5c1aeb.s3.amazonaws.com
-52.217.198.41                 github-production-user-asset-6210df.s3.amazonaws.com
+3.5.30.204                    github-cloud.s3.amazonaws.com
+16.182.38.249                 github-com.s3.amazonaws.com
+52.216.204.115                github-production-release-asset-2e65be.s3.amazonaws.com
+52.216.244.180                github-production-repository-file-5c1aeb.s3.amazonaws.com
+16.15.179.58                  github-production-user-asset-6210df.s3.amazonaws.com
 192.0.66.2                    github.blog
 20.205.243.166                github.com
-140.82.114.18                 github.community
+140.82.112.18                 github.community
 185.199.110.154               github.githubassets.com
 151.101.193.194               github.global.ssl.fastly.net
 185.199.109.153               github.io
@@ -41,7 +41,7 @@
 185.199.109.133               private-user-images.githubusercontent.com
 
 
-# Update time: 2025-06-09T12:13:55+08:00
+# Update time: 2025-06-09T14:09:50+08:00
 # Update url: https://raw.hellogithub.com/hosts
 # Star me: https://github.com/521xueweihan/GitHub520
 # GitHub520 Host End
