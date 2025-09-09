@@ -1,7 +1,7 @@
 # GitHub520 Host Start
-140.82.112.26                 alive.github.com
+140.82.113.26                 alive.github.com
 20.205.243.168                api.github.com
-140.82.113.22                 api.individual.githubcopilot.com
+140.82.112.21                 api.individual.githubcopilot.com
 185.199.111.133               avatars.githubusercontent.com
 185.199.111.133               avatars0.githubusercontent.com
 185.199.111.133               avatars1.githubusercontent.com
@@ -10,18 +10,18 @@
 185.199.111.133               avatars4.githubusercontent.com
 185.199.111.133               avatars5.githubusercontent.com
 185.199.111.133               camo.githubusercontent.com
-140.82.112.22                 central.github.com
+140.82.114.22                 central.github.com
 185.199.111.133               cloud.githubusercontent.com
 20.205.243.165                codeload.github.com
-140.82.113.21                 collector.github.com
+140.82.112.21                 collector.github.com
 185.199.111.133               desktop.githubusercontent.com
 185.199.111.133               favicons.githubusercontent.com
 20.205.243.166                gist.github.com
 16.15.176.13                  github-cloud.s3.amazonaws.com
-54.231.133.225                github-com.s3.amazonaws.com
-54.231.167.33                 github-production-release-asset-2e65be.s3.amazonaws.com
-52.217.229.177                github-production-repository-file-5c1aeb.s3.amazonaws.com
-3.5.11.119                    github-production-user-asset-6210df.s3.amazonaws.com
+3.5.12.218                    github-com.s3.amazonaws.com
+52.216.35.33                  github-production-release-asset-2e65be.s3.amazonaws.com
+52.217.133.201                github-production-repository-file-5c1aeb.s3.amazonaws.com
+52.216.209.185                github-production-user-asset-6210df.s3.amazonaws.com
 192.0.66.2                    github.blog
 20.205.243.166                github.com
 140.82.114.17                 github.community
@@ -36,12 +36,12 @@
 13.107.42.16                  pipelines.actions.githubusercontent.com
 185.199.111.133               raw.githubusercontent.com
 185.199.111.133               user-images.githubusercontent.com
-13.107.246.40                 vscode.dev
+13.107.246.73                 vscode.dev
 140.82.113.22                 education.github.com
 185.199.111.133               private-user-images.githubusercontent.com
 
 
-# Update time: 2025-09-09T10:33:40+08:00
+# Update time: 2025-09-09T12:07:46+08:00
 # Update url: https://raw.hellogithub.com/hosts
 # Star me: https://github.com/521xueweihan/GitHub520
 # GitHub520 Host End
