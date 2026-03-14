@@ -84,9 +84,11 @@ def windows_compatibility_check():
 async def get_ip_list_from_dns(
     domain,
     record_type="A",
-    dns_server_list=["1.2.4.8", "114.114.114.114"],
+    dns_server_list=None,
 ):
     # Windows 兼容性检查
+    if dns_server_list is None:
+        dns_server_list = []
     windows_compatibility_check()
 
     # 配置 DNS 服务器
@@ -139,8 +141,7 @@ async def main() -> None:
                 print(f"{github_url}: IP Not Found")
                 ip = "# IP Address Not Found"
             content += ip.ljust(30) + github_url
-            global PING_LIST
-            if PING_LIST.get(ip) is not None and PING_LIST.get(ip) == PING_TIMEOUT_SEC * 1000:
+            if PING_LIST.get(ip) is not None and PING_LIST[ip] == PING_TIMEOUT_SEC * 1000:
                 content += "  # Timeout"
             content += "\n"
             content_list.append((ip, github_url,))
