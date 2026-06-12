@@ -59,11 +59,11 @@
 152.32.215.247                github-production-release-asset-2e65be.s3.amazonaws.com
 152.32.215.247                github-production-repository-file-5c1aeb.s3.amazonaws.com
 152.32.215.247                github-production-user-asset-6210df.s3.amazonaws.com
-192.0.66.2                    github.blog
+152.32.215.247                github.blog
 152.32.215.247                github.com
 152.32.215.247                github.community
 152.32.215.247                github.githubassets.com
-151.101.193.194               github.global.ssl.fastly.net
+152.32.215.247                github.global.ssl.fastly.net
 152.32.215.247                github.io
 152.32.215.247                github.map.fastly.net
 152.32.215.247                githubstatus.com
@@ -78,14 +78,14 @@
 152.32.215.247                private-user-images.githubusercontent.com
 
 
-# Update time: 2026-06-12T17:32:27+08:00
+# Update time: 2026-06-12T19:21:57+08:00
 # Update url: https://raw.hellogithub.com/hosts
 # Star me: https://github.com/521xueweihan/GitHub520
 # GitHub520 Host End
 
 ```
 
-该内容会自动定时更新， 数据更新时间：2026-06-12T17:32:27+08:00
+该内容会自动定时更新， 数据更新时间：2026-06-12T19:21:57+08:00
 
 #### 2.1.2 修改 hosts 文件
 
