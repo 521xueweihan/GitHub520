@@ -8,8 +8,8 @@
 import json
 from typing import Any, Optional
 
+import requests
 from retry import retry
-from requests_html import HTMLSession
 
 from common import write_hosts_content
 
@@ -28,7 +28,7 @@ def get_json(session: Any) -> Optional[list]:
 
 def main() -> None:
     print('Start script.')
-    session = HTMLSession()
+    session = requests.Session()
     content = ""
     content_list = get_json(session)
     for item in content_list:

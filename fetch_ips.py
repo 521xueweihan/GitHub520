@@ -5,21 +5,22 @@
 #   E-mail  :   595666367@qq.com
 #   Date    :   2020-05-19 15:27
 #   Desc    :   获取最新的 GitHub 相关域名对应 IP
-import re
 from typing import Any, Dict, List, Optional
 from datetime import datetime
+import socket
+import time
 import sys
 import asyncio
 import aiodns
 
-from pythonping import ping
-from requests_html import HTMLSession
+import requests
 from retry import retry
 
 from common import GITHUB_URLS, write_hosts_content
 
 
 PING_TIMEOUT_SEC: int = 1
+HTTPS_PORT: int = 443
 DISCARD_LIST: List[str] = ["1.0.1.1", "1.2.1.1", "127.0.0.1"]
 
 
@@ -27,13 +28,22 @@ PING_LIST: Dict[str, int] = dict()
 
 
 def ping_cached(ip: str) -> int:
+    """通过 TCP 连接 443 端口测速（毫秒），更能反映国内 HTTPS 实际可用性，且无需 root 权限"""
     global PING_LIST
     if ip in PING_LIST:
         return PING_LIST[ip]
-    ping_times = [ping(ip, timeout=PING_TIMEOUT_SEC).rtt_avg_ms for _ in range(3)]
-    ping_times.sort()
-    print(f'Ping {ip}: {ping_times} ms')
-    PING_LIST[ip] = ping_times[1] # 取中位数
+    latencies = []
+    for _ in range(3):
+        try:
+            start = time.time()
+            with socket.create_connection((ip, HTTPS_PORT), timeout=PING_TIMEOUT_SEC):
+                latencies.append((time.time() - start) * 1000)
+        except Exception:
+            # 连接失败按超时处理
+            latencies.append(PING_TIMEOUT_SEC * 1000)
+    latencies.sort()
+    print(f'TCP ping {ip}:{HTTPS_PORT}: {latencies} ms')
+    PING_LIST[ip] = latencies[1]  # 取中位数
     return PING_LIST[ip]
 
 
@@ -47,28 +57,41 @@ def select_ip_from_list(ip_list: List[str]) -> Optional[str]:
     return best_ip
 
 
+DOH_SERVERS = [
+    "https://dns.alidns.com/resolve",       # 阿里 DoH（国内视角）
+    "https://doh.pub/dns-query",            # DNSPod DoH（国内视角）
+    "https://dns.google/resolve",           # Google DoH（备用）
+]
+
+
 @retry(tries=3)
-def get_ip_list_from_ipaddress_com(session: Any, github_url: str) -> Optional[List[str]]:
-    url = f'https://sites.ipaddress.com/{github_url}'
-    headers = {
-        'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7)'
-                      ' AppleWebKit/537.36 (KHTML, like Gecko) Chrome/1'
-                      '06.0.0.0 Safari/537.36'}
-    try:
-        rs = session.get(url, headers=headers, timeout=5)
-        pattern = r"\b(?:[0-9]{1,3}\.){3}[0-9]{1,3}\b"
-        ip_list = re.findall(pattern, rs.html.text)
-        return ip_list
-    except Exception as ex:
-        print(f"get: {url}, error: {ex}")
-        raise Exception
+def get_ip_list_from_doh(domain: str) -> List[str]:
+    """通过 DNS over HTTPS (DoH) 查询域名的 A 记录，优先使用国内 DoH 服务器"""
+    for doh_url in DOH_SERVERS:
+        try:
+            rs = requests.get(
+                doh_url,
+                params={"name": domain, "type": "A"},
+                headers={"Accept": "application/dns-json"},
+                timeout=5,
+            )
+            data = rs.json()
+            if data.get("Status") == 0 and "Answer" in data:
+                ip_list = [r["data"] for r in data["Answer"] if r.get("type") == 1]
+                if ip_list:
+                    print(f"DoH {doh_url} -> {domain}: {ip_list}")
+                    return ip_list
+        except Exception as ex:
+            print(f"DoH query {doh_url} for {domain} failed: {ex}")
+    raise Exception(f"All DoH servers failed for {domain}")
 
 
 DNS_SERVER_LIST = [
-    "1.1.1.1",  # Cloudflare
-    "8.8.8.8",  # Google
-    "101.101.101.101",  # Quad101
-    "101.102.103.104",  # Quad101
+    "114.114.114.114",  # 114 DNS（国内）
+    "223.5.5.5",        # 阿里 DNS（国内）
+    "119.29.29.29",     # 腾讯 DNS（国内）
+    "1.1.1.1",          # Cloudflare（备用）
+    "8.8.8.8",          # Google（备用）
 ]
 
 
@@ -103,17 +126,17 @@ async def get_ip_list_from_dns(
 
 
 async def get_ip(session: Any, github_url: str) -> Optional[str]:
-    ip_list_web = []
+    ip_list_doh = []
     try:
-        ip_list_web = get_ip_list_from_ipaddress_com(session, github_url)
-    except Exception as ex:
+        ip_list_doh = get_ip_list_from_doh(github_url)
+    except Exception:
         pass
     ip_list_dns = []
     try:
         ip_list_dns = await get_ip_list_from_dns(github_url, dns_server_list=DNS_SERVER_LIST)
     except Exception as ex:
         pass
-    ip_list_set = set(ip_list_web + ip_list_dns)
+    ip_list_set = set(ip_list_doh + ip_list_dns)
     for discard_ip in DISCARD_LIST:
         ip_list_set.discard(discard_ip)
     ip_list = list(ip_list_set)
@@ -128,7 +151,7 @@ async def get_ip(session: Any, github_url: str) -> Optional[str]:
 async def main() -> None:
     current_time = datetime.now().strftime('%Y-%m-%d %H:%M:%S')
     print(f'{current_time} - Start script.')
-    session = HTMLSession()
+    session = requests.Session()
     content = ""
     content_list = []
     for index, github_url in enumerate(GITHUB_URLS):
