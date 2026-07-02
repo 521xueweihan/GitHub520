@@ -36,7 +36,7 @@
 
 ```bash
 # GitHub520 Host Start
-140.82.113.26                 alive.github.com
+140.82.112.25                 alive.github.com
 20.205.243.168                api.github.com
 140.82.112.21                 api.individual.githubcopilot.com
 185.199.109.133               avatars.githubusercontent.com
@@ -50,42 +50,42 @@
 140.82.113.22                 central.github.com
 185.199.109.133               cloud.githubusercontent.com
 20.205.243.165                codeload.github.com
-140.82.113.21                 collector.github.com
+140.82.113.22                 collector.github.com
 185.199.109.133               desktop.githubusercontent.com
 185.199.109.133               favicons.githubusercontent.com
-203.98.7.65                   gist.github.com
-54.231.193.209                github-cloud.s3.amazonaws.com
-16.182.70.137                 github-com.s3.amazonaws.com
-52.217.196.249                github-production-release-asset-2e65be.s3.amazonaws.com
-52.216.208.73                 github-production-repository-file-5c1aeb.s3.amazonaws.com
-52.216.44.153                 github-production-user-asset-6210df.s3.amazonaws.com
+46.82.174.68                  gist.github.com
+52.217.115.153                github-cloud.s3.amazonaws.com
+52.216.44.65                  github-com.s3.amazonaws.com
+52.217.164.113                github-production-release-asset-2e65be.s3.amazonaws.com
+52.217.164.209                github-production-repository-file-5c1aeb.s3.amazonaws.com
+52.217.236.209                github-production-user-asset-6210df.s3.amazonaws.com
 192.0.66.2                    github.blog
 20.205.243.166                github.com
-140.82.114.17                 github.community
-185.199.111.215               github.githubassets.com
-108.160.162.104               github.global.ssl.fastly.net
-185.199.108.153               github.io
+140.82.113.18                 github.community
+185.199.110.215               github.githubassets.com
+31.13.80.169                  github.global.ssl.fastly.net
+185.199.109.153               github.io
 185.199.109.133               github.map.fastly.net
-185.199.108.153               githubstatus.com
-140.82.114.26                 live.github.com
+185.199.109.153               githubstatus.com
+140.82.112.25                 live.github.com
 185.199.109.133               media.githubusercontent.com
 185.199.109.133               objects.githubusercontent.com
 13.107.42.16                  pipelines.actions.githubusercontent.com
 185.199.109.133               raw.githubusercontent.com
 185.199.109.133               user-images.githubusercontent.com
-150.171.110.103               vscode.dev
-140.82.113.22                 education.github.com
+150.171.110.98                vscode.dev
+140.82.114.21                 education.github.com
 185.199.109.133               private-user-images.githubusercontent.com
 
 
-# Update time: 2026-07-03T04:32:26+08:00
+# Update time: 2026-07-03T06:26:12+08:00
 # Update url: https://raw.hellogithub.com/hosts
 # Star me: https://github.com/521xueweihan/GitHub520
 # GitHub520 Host End
 
 ```
 
-该内容会自动定时更新， 数据更新时间：2026-07-03T04:32:26+08:00
+该内容会自动定时更新， 数据更新时间：2026-07-03T06:26:12+08:00
 
 #### 2.1.2 修改 hosts 文件
 
