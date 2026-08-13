@@ -97,7 +97,7 @@ hosts 文件在每个系统的位置不一，详情如下：
 _hosts=$(mktemp /tmp/hostsXXX)
 hosts=/c/Windows/System32/drivers/etc/hosts
 remote=https://raw.hellogithub.com/hosts
-reg='/# GitHub520 Host Start/,/# Github520 Host End/d'
+reg='/# GitHub520 Host Start/,/# GitHub520 Host End/d'
 
 sed "$reg" $hosts > "$_hosts"
 curl "$remote" >> "$_hosts"
@@ -118,7 +118,7 @@ rm "$_hosts"
 
 #### BSD/macOS
 
-`sudo sed -i "" "/# GitHub520 Host Start/,/# Github520 Host End/d" /etc/hosts && curl https://raw.hellogithub.com/hosts | sudo tee -a /etc/hosts`
+`sudo sed -i "" "/# GitHub520 Host Start/,/# GitHub520 Host End/d" /etc/hosts && curl https://raw.hellogithub.com/hosts | sudo tee -a /etc/hosts`
 
 将上面的命令添加到 cron，可定时执行。使用前确保 GitHub520 内容在该文件最后部分。
 
