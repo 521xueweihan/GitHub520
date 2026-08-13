@@ -8,6 +8,7 @@
 from typing import Any, Dict, List, Optional
 from datetime import datetime
 import socket
+import ssl
 import time
 import sys
 import asyncio
@@ -25,6 +26,18 @@ DISCARD_LIST: List[str] = ["1.0.1.1", "1.2.1.1", "127.0.0.1"]
 
 
 PING_LIST: Dict[str, int] = dict()
+
+
+def verify_ip_tls(hostname: str, ip: str, timeout: float = PING_TIMEOUT_SEC) -> bool:
+    """Accept an address only when its HTTPS certificate matches the hostname."""
+    context = ssl.create_default_context()
+    try:
+        with socket.create_connection((ip, HTTPS_PORT), timeout=timeout) as raw_socket:
+            with context.wrap_socket(raw_socket, server_hostname=hostname):
+                return True
+    except (OSError, ssl.SSLError) as exc:
+        print(f"TLS validation failed for {hostname} at {ip}: {exc}")
+        return False
 
 
 def ping_cached(ip: str) -> int:
@@ -144,7 +157,11 @@ async def get_ip(session: Any, github_url: str) -> Optional[str]:
     if len(ip_list) == 0:
         return None
     print(f"{github_url}: {ip_list}")
-    best_ip = select_ip_from_list(ip_list)
+    tls_valid_ips = [ip for ip in ip_list if verify_ip_tls(github_url, ip)]
+    if not tls_valid_ips:
+        print(f"{github_url}: no candidate passed TLS validation")
+        return None
+    best_ip = select_ip_from_list(tls_valid_ips)
     return best_ip
 
 
