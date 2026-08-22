@@ -35,10 +35,14 @@ jobs:
         git config --global user.email sunxuebangong@gmail.com
         git config --global user.name action_bot
         git add .
-        git commit -m "update readme content"
+        if git diff --cached --quiet; then
+          echo "No changes to commit"
+        else
+          git commit -m "update readme content"
+        fi
       continue-on-error: true
     - name: Check on failures
-      if: steps.commit.outputs.status == 'failure'
+      if: steps.commit.outcome == 'failure'
       run: exit 1
     - name: Push changes
       uses: ad-m/github-push-action@master
