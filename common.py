@@ -58,7 +58,6 @@ def write_file(hosts_content: str, update_time: str) -> bool:
     output_doc_file_path = os.path.join(os.path.dirname(__file__), "README.md")
     template_path = os.path.join(os.path.dirname(__file__),
                                  "README_template.md")
-    write_host_file(hosts_content)
     if os.path.exists(output_doc_file_path):
         with open(output_doc_file_path, "r") as old_readme_fb:
             old_content = old_readme_fb.read()
@@ -71,6 +70,7 @@ def write_file(hosts_content: str, update_time: str) -> bool:
                     print("host not change")
                     return False
 
+    write_host_file(hosts_content)
     with open(template_path, "r") as temp_fb:
         template_str = temp_fb.read()
         hosts_content = template_str.format(hosts_str=hosts_content,
