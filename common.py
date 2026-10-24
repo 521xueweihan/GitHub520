@@ -7,6 +7,7 @@
 #   Desc    :   公共函数
 import os
 import json
+import ipaddress
 from typing import Any, Optional
 from datetime import datetime, timezone, timedelta
 
@@ -40,6 +41,39 @@ HOSTS_TEMPLATE = """# GitHub520 Host Start
 # Update url: https://raw.hellogithub.com/hosts
 # Star me: https://github.com/521xueweihan/GitHub520
 # GitHub520 Host End\n"""
+
+
+def validate_hosts_list(content_list: list) -> None:
+    """Reject incomplete or unsafe DNS results before publishing any files."""
+    expected_hosts = set(GITHUB_URLS)
+    if len(content_list) != len(GITHUB_URLS):
+        raise ValueError(
+            f"expected {len(GITHUB_URLS)} host mappings, got {len(content_list)}")
+
+    seen_hosts = set()
+    invalid_entries = []
+    for entry in content_list:
+        if not isinstance(entry, (list, tuple)) or len(entry) != 2:
+            invalid_entries.append(entry)
+            continue
+        ip, hostname = entry
+        try:
+            if ipaddress.ip_address(ip).version != 4:
+                invalid_entries.append(entry)
+                continue
+        except (TypeError, ValueError):
+            invalid_entries.append(entry)
+            continue
+        if hostname not in expected_hosts or hostname in seen_hosts:
+            invalid_entries.append(entry)
+            continue
+        seen_hosts.add(hostname)
+
+    if invalid_entries or seen_hosts != expected_hosts:
+        missing_hosts = sorted(expected_hosts - seen_hosts)
+        raise ValueError(
+            f"invalid host mappings: {invalid_entries}; "
+            f"missing hosts: {missing_hosts}")
 
 
 @retry(tries=3)
@@ -94,7 +128,8 @@ def write_json_file(hosts_list: list) -> None:
 
 def write_hosts_content(content: str, content_list: list) -> str:
     if not content:
-        return ""
+        raise ValueError("refusing to publish an empty hosts payload")
+    validate_hosts_list(content_list)
     update_time = datetime.now(timezone.utc).astimezone(
         timezone(timedelta(hours=8))).replace(microsecond=0).isoformat()
     hosts_content = HOSTS_TEMPLATE.format(content=content,
