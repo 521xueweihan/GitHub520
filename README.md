@@ -133,7 +133,25 @@ hosts 文件在每个系统的位置不一，详情如下：
 
 这样每次 hosts 有更新都能及时进行更新，免去手动更新。
 
-### 2.3 一行命令
+### 2.3 原生 macOS 应用（GitHubHosts）
+
+macOS 用户如果希望有原生桌面体验，可以使用基于本项目的第三方应用
+[GitHubHosts](https://github.com/JiangWanZhengChouYv/GitHubHosts)（Swift + SwiftUI 编写，非官方）。
+
+使用步骤：
+
+1. 点击「获取最新」，拉取本项目的 hosts 内容并预览
+2. 点击「应用到 hosts」，在弹出的系统授权框中输入密码
+
+应用会自动完成：
+
+- 把内容写入 `/etc/hosts` 末尾的标记区块内（`# GitHub520 Host Start` ~ `# GitHub520 Host End`）
+- 重复应用只替换旧区块，不会产生重复行
+- 写入后自动刷新 DNS（`killall -HUP mDNSResponder`）
+
+写入与刷新 DNS 共用**同一次**系统授权，只会弹窗一次；应用还常驻菜单栏，便于随时更新。
+
+### 2.4 一行命令
 
 #### Windows
 
@@ -144,7 +162,7 @@ hosts 文件在每个系统的位置不一，详情如下：
 _hosts=$(mktemp /tmp/hostsXXX)
 hosts=/c/Windows/System32/drivers/etc/hosts
 remote=https://raw.hellogithub.com/hosts
-reg='/# GitHub520 Host Start/,/# Github520 Host End/d'
+reg='/# GitHub520 Host Start/,/# GitHub520 Host End/d'
 
 sed "$reg" $hosts > "$_hosts"
 curl "$remote" >> "$_hosts"
@@ -165,7 +183,7 @@ rm "$_hosts"
 
 #### BSD/macOS
 
-`sudo sed -i "" "/# GitHub520 Host Start/,/# Github520 Host End/d" /etc/hosts && curl https://raw.hellogithub.com/hosts | sudo tee -a /etc/hosts`
+`sudo sed -i "" "/# GitHub520 Host Start/,/# GitHub520 Host End/d" /etc/hosts && curl https://raw.hellogithub.com/hosts | sudo tee -a /etc/hosts`
 
 将上面的命令添加到 cron，可定时执行。使用前确保 GitHub520 内容在该文件最后部分。
 
@@ -173,7 +191,7 @@ rm "$_hosts"
 
 `cp /etc/hosts ~/hosts.new && sed -i "/# GitHub520 Host Start/Q" ~/hosts.new && curl https://raw.hellogithub.com/hosts >> ~/hosts.new && cp -f ~/hosts.new /etc/hosts`
 
-### 2.4 AdGuard 用户（自动方式）
+### 2.5 AdGuard 用户（自动方式）
 
 在 **过滤器>DNS 封锁清单>添加阻止列表>添加一个自定义列表**，配置如下：
 
